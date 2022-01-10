@@ -13,10 +13,11 @@
 ***
 Here you can find the list of all the langs files available with translators.
 
+If a language doesn't support the bot version (some variables are missing), the missing variables will be replaced by the default language or auto-translated.
 
-| Lang                                | Authors                                                                                   |
-|-------------------------------------|-------------------------------------------------------------------------------------------|
-| [it (italiano)](./langs/lang.it.js) | [@Polliog#7772](https://github.com/Polliog), [𝓝𝓪𝓴𝓪𝓶𝓸𝓽𝓸 𝓢𝓱𝓲𝓰𝓮𝓽𝓸𝓴𝓲#0016]() |
+| Lang                                | Authors                                                                                   | Bot Supported Version (latest 1) |
+|-------------------------------------|-------------------------------------------------------------------------------------------|----------------------------------|
+| [it (italiano)](./langs/lang.it.js) | [@Polliog#7772](https://github.com/Polliog), [𝓝𝓪𝓴𝓪𝓶𝓸𝓽𝓸 𝓢𝓱𝓲𝓰𝓮𝓽𝓸𝓴𝓲#0016]() | 1                                |
 
 # Meta
 ***
