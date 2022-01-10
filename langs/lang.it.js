@@ -1222,6 +1222,8 @@ module.exports = {
     ticketsInt_opened: "Ticket Aperto",
     ticketsInt_openedInChannel: (channel) => `Ticket aperto nel canale ${channel}`,
     ticketsInt_openedby: (member) => `Ticket aperto da ${member}`,
+    ticketsInt_reopenedby: (member) => `Ticket riaperto da ${member}`,
+    ticketsInt_reopened: "Ticket Riaperto",
     ticketsInt_panel: "Panel",
     ticketsInt_ticket: "Ticket",
     ticketsInt_close: "Chiudi",
@@ -1232,6 +1234,7 @@ module.exports = {
     ticketsInt_transcriptSavedTitle: "Trascrizione Salvata",
     ticketsInt_transcriptSavedDescriptionChannel: (channel) => `Trascrizione inviata nel canale ${channel}`,
     ticketsInt_transcriptSavedDescriptionUser: (user) => `Trascrizione salvata da ${user}`,
+    ticketsInt_transcriptSavedInfos: "Per visualizzare la trascrizione scarica il file qui sopra allegato",
     ticketsInt_delete_ask: "Vuoi davvero eliminare questo ticket?",
     ticketsInt_deleted_logs: "Ticket Eliminato",
     //TICKETS COMMANDS
