@@ -9,7 +9,7 @@
 - [Meta](#meta) (License info)
 - [Contributing](#contributing) (How to contribute)
 
-#Langs Table
+# Langs Table
 ***
 Here you can find the list of all the langs files available with translators.
 
