@@ -64,6 +64,7 @@ module.exports = {
     no_user_permission: "Per utilizzare il comando devi avere il permesso:",
     owner_restriction: "Solo l'Owner del server puo' eseguire questo comando",
     owner_restriction_plus: "Solo l'Owner del server o chi possiede un ruolo `manager` puo' eseguire questo comando",
+    command_not_found: "Comando non trovato",
     /*
         time_left: timestamp unix
         cmd: comando
