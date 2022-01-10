@@ -18,11 +18,11 @@ Here you can find the list of all the langs files available with translators.
 |-------------------------------------|-------------------------------------------------------------------------------------------|
 | [it (italiano)](./langs/lang.it.js) | [@Polliog#7772](https://github.com/Polliog), [𝓝𝓪𝓴𝓪𝓶𝓸𝓽𝓸 𝓢𝓱𝓲𝓰𝓮𝓽𝓸𝓴𝓲#0016]() |
 
-#Meta
+# Meta
 ***
 This project is licensed under the [GPL-3.0 License](LICENSE).
 
-#Contributing
+# Contributing
 ***
 
 1. Fork it (<https://github.com/Polliog/NISD-Langs/fork>)
