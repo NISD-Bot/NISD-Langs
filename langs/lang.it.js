@@ -11,11 +11,11 @@
 
 
 module.exports = {
-    lang: "it", // Lang del file
+    lang: "alb", // Lang del file
     //PAROLE GENERALI DEL BOT: Tradurle seguendo anche le maiuscole
-    maintenance: "Manutenzione",
-    message: "Messaggio",
-    messages: "Messaggi",
+    maintenance: "sdfsdfsd",
+    message: "Messaggsdfsdfio",
+    messages: "Mesdfsdfssaggi",
     examples: "Esempi",
     site: "Sito",
     support_discord: "Server di supporto",
