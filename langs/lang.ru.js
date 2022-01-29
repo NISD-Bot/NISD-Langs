@@ -2,6 +2,7 @@
     File della lingua del BOT NISD,
     @Authors: @Polliog#7772 | 𝓝𝓪𝓴𝓪𝓶𝓸𝓽𝓸 𝓢𝓱𝓲𝓰𝓮𝓽𝓸𝓴𝓲#0016
     @Translated by: @El Nobil Chapo Bonanz#3985
+
     Note per tradurre questo file:
     - Non modificare il nome dei metodi, delle variabili, delle funzioni
     - Non modificare gli autori
@@ -10,442 +11,443 @@
 
 
 module.exports = {
-    lang: "ru", // Russo
+    lang: "ru", // Lang del file -> tradotto "ру"
     //PAROLE GENERALI DEL BOT: Tradurle seguendo anche le maiuscole
-    maintenance: "Manutenzione",
-    message: "Messaggio",
-    messages: "Messaggi",
-    examples: "Esempi",
-    site: "Sito",
-    support_discord: "Server di supporto",
-    aliases: "Alias",
-    changes_saved: 'Impostazioni Aggiornate',
-    cmd_done: "Comando Eseguito",
-    author: "Autore",
-    reason: "Motivo",
-    reason_not_provided: "Non provveduto",
-    user: "Utente",
-    users: "Utenti",
-    page: "Pagina",
-    moderation: "Moderazione",
-    settings: "Impostazioni",
-    utility: "Utility",
-    active: "Abilitato",
-    not_active: "Disabilitato",
-    report: "Segnalazione",
-    nothing: "Nessuna",
-    action: "Azione",
-    limit: "Limite",
-    time: "Tempo",
-    actions: "Azioni",
-    measure: "Provvedimento",
-    actual_mode: "Modalità attuale",
-    mode: "Modalità",
-    role: "Ruolo",
-    title: "Titolo",
-    embed_message: "Messaggio Embed",
-    external_message: "Messaggio Esterno",
-    category: "Categoria",
-    support_role: "Ruolo di Supporto",
+    maintenance: "Поддержка",
+    message: "Сообщение",
+    messages: "Сообщения",
+    examples: "Примеры",
+    site: "Сайт",
+    support_discord: "Сервер поддержки",
+    aliases: "Клички",
+    changes_saved: 'Изменения Сохранены',
+    cmd_done: "Команда Выполнена",
+    author: "Автор",
+    reason: "Причина",
+    reason_not_provided: "Причина не предоставлена",
+    user: "Пользователь",
+    users: "Пользователи",
+    page: "Страница",
+    moderation: "Модерация",
+    settings: "Настройки",
+    utility: "Полезность",
+    active: "Действующий",
+    not_active: "Недействующий",
+    report: "Отчет",
+    nothing: "Ничего",
+    action: "Действие",
+    limit: "Ограничение",
+    time: "Время",
+    actions: "Действия",
+    measure: "Мера",
+    actual_mode: "Действующий режим",
+    mode: "Режим",
+    role: "Роль",
+    title: "Титул",
+    embed_message: "Встроенное сообщение",
+    external_message: "Внешнее сообщение",
+    category: "Категория",
+    support_role: "Роль поддержки",
     //Azioni utili per il bot tradurre seguendo le maiuscole
-    to_add: "da Aggiungere",
-    to_remove: "da Rimuovere",
+    to_add: "Добавить",
+    to_remove: "Удалить",
     //ERRORI del bot tradurre come meglio si crede
-    bot_error: "Si e' verificato un errore interno, l'errore verrà inviato automaticamente ai developer",
-    error: "Errore",
-    insufficient_permissions: "Permessi insufficienti",
-    invalid_user: "Utente non valido!",
-    invalid_member: "Membro non valido!",
-    invalid_role: "Ruolo non valido!",
-    invalid_channel: "Canale non valido!",
-    invalid_permission: "Al bot manca il permesso:",
-    no_basic_permissions: "Al bot mancano i permessi base, come quello di inviare link incorporati e mandare messaggi",
-    no_user_permission: "Per utilizzare il comando devi avere il permesso:",
-    owner_restriction: "Solo l'Owner del server puo' eseguire questo comando",
-    owner_restriction_plus: "Solo l'Owner del server o chi possiede un ruolo `manager` puo' eseguire questo comando",
+    bot_error: "Произошел внутренний сбой, данные об ошибке автоматически будут оправлены разработчикам",
+    error: "Ошибка",
+    insufficient_permissions: "Недостаточный доступ",
+    invalid_user: "Пользователь неверный!",
+    invalid_member: "Участник неверный!",
+    invalid_role: "Роль неверная!",
+    invalid_channel: "Канал неверный!",
+    invalid_permission: "Неверный доступ:",
+    no_basic_permissions: "Программе не хватает базовых разрешений, таких как отправка встроенных ссылок и отправка сообщений",
+    no_user_permission: "Необходимо иметь доступ, чтобы использовать команду:",
+    owner_restriction: "Только владелец сервера может воспользоваться данной командой",
+    owner_restriction_plus: "Только владелец сервера или тот, у кого есть роль `manager` может выполнить эту команду",
+    command_not_found: "Команда не найдена",
     /*
         time_left: timestamp unix
         cmd: comando
      */
     cmd_cooldown: (time_left, cmd) => {
-        return `Potrai riutilizzare il comando \`${cmd}\` <t:${time_left}:R>` // utilizzare <t:> per il tempo (discord timestamp)
+        return `Вы сможете повторно использовать эту команду через \`${cmd}\` <t:${time_left}:R>` // utilizzare <t:> per il tempo (discord timestamp)
     },
-    already_banned: "L'utente risulta gia' bannato",
-    actual_channel: "Canale attuale",
-    not_banned: "L'utente non risulta bannato",
-    cant_ban: "Non posso bannare questo utente",
-    cant_kick: "Non posso espellere questo utente",
-    user_rank_equal: "L'utente selezionato e' di grado maggiore o uguale al tuo",
-    invalid_mute_role: "Il ruolo `mute` selezionato non e' valido o inesistente, sei pregato di reimpostarlo tramite `setmuterole [@Ruolo/ID]`",
-    member_not_manageable: "Il BOT non puo' eseguire azioni su questo utente",
-    warn_not_exists: "Warn inesistente",
-    no_warns: "L'utente non ha warns",
-    bad_syntax: "Composizione del comando errata, controlla di aver usato correttamente le virgolette ecc",
-    message_too_long: "Il contenuto supera i 256 caratteri",
-    maximum_ticket_panels_reached: "Hai raggiunto il limite di pannelli disponibili",
-    tickets_channel_error_user: "Non è possibile creare il ticket attualmente",
-    tickets_channel_error_logs: "Non è stato possibile aprire un ticket a causa di permessi insufficienti",
-    tickets_channel_closed_logs: "Si è verificato un errore durante la chiusura del ticket",
+    already_banned: "Пользователь уже заблокирован",
+    actual_channel: "Действительный канал",
+    not_banned: "Пользователь не заблокирован",
+    cant_ban: "Данного пользователя нельзя заблокировать",
+    cant_kick: "Данного пользователя нельзя исключить",
+    user_rank_equal: "Выбранный пользователь имеет степень выше или равную вашей",
+    invalid_mute_role: "Выбранная роль `mute` не верна или не существует, пожалуйста, переустановите ее через `setmuterole [@Ruolo/ID]`",
+    member_not_manageable: "Бот не может выполнять никаких действий с этим пользователем",
+    warn_not_exists: "Предупреждение не существует",
+    no_warns: "У пользователя нет предупреждений",
+    bad_syntax: "Неверный синтаксис команды, проверьте правильное использование кавычек и т.д.",
+    message_too_long: "Длина сообщения превышает 256 символов",
+    maximum_ticket_panels_reached: "Вы достигли предела доступных панелей",
+    tickets_channel_error_user: "В настоящее время билет не может быть создан",
+    tickets_channel_error_logs: "Билет не может быть открыт из-за недостатка разрешений",
+    tickets_channel_closed_logs: "Произошла ошибка при закрытии билета",
     /*
         time: timestamp unix
      */
-    ticketsInt_rateLimit: (time) => `Potrai rifare questa azione: \<t:${time}:R\>`,
-    ticketsInt_alreadyClosed: "Il ticket è già chiuso.",
-    ticketsInt_transcriptAlreadySent: "La trascrizione del ticket è già stata richiesta in precedenza.",
+    ticketsInt_rateLimit: (time) => `Вы сможете повторить это действие через: \<t:${time}:R\>`,
+    ticketsInt_alreadyClosed: "Билет уже закрыт.",
+    ticketsInt_transcriptAlreadySent: "Сохранение билета уже запрашивалось.",
     //HELP (comando)
-    not_in_dm: "Non disponibile nei DMS",
-    i_cant_write_you: "Non posso scriverti nei DMS, aprili o aggiungi `-h` alla fine del comando.",
-    help_sent: "Ti ho inviato la lista nei DMS",
-    help_title: "Comandi NISD",
-    help_description: "Per controllare una sezione o un comando specifico usa `help [Sezione/Comando]`.\n" +
-        "Se vuoi che questo comando venga mostrato in chat piuttosto che nei DMS aggiungi `-h` alla fine del comando. Quindi `help -h` o `help moderation -h`",
-    arguments_legend: "**Legenda dei parametri**:\n" +
-        "`[]` - Significa che il parametro e' obbligatorio.\n" +
-        "`()` - Significa che il parametro e' opzionale.\n" +
-        "`{}` - Argomento condizionale, E' richiesto solo in alcuni casi.\n" +
-        "`1 | 2 | 3` - Scegli tra queste opzioni.\n" +
-        "`[@Utente/ID]` Il parametro puo' essere sia il tag che l'id in un utente\n" +
-        "**Non aggiungere anche i simboli {}, [], () ed emoji al comando**",
-    cmd_utilize: "Utilizzo del comando",
-    not_configured: "`Non configurato`",
-    actual_role: "Ruolo attuale",
-    time_format: "Formattazione del tempo",
-    moderation_description: "*Mantieni il tuo server sicuro e controlla cosa accade*",
-    automoderation_description: "*Mantieni il server sicuro in maniera automatica*",
-    automation_description: "*Automatizza le funzioni del bot*",
-    settings_description: "*Configura NISD tramite comandi*",
-    utility_description: "*Comandi utili che non so come classificare*",
-    info_description: "*Ricava informazioni sul bot, utenti, servers ecc.*",
+    not_in_dm: "Недоступно в личных сообщениях",
+    i_cant_write_you: "Не могу написать вам в личных сообщениях, откройте их или добавьте `-h` в конце команды.",
+    help_sent: "Отправил вам инструкции в личные сообщения",
+    help_title: "Команды NISD",
+    help_description: "Для управления определенным разделом или командой используйте `help [Раздел/Команда]`.\n" +
+        "Если вы хотите, чтобы эта команда отображалась в чате, а не в личных сообщениях, добавьте `-h` в конце команды. Затем `help -h` или `help moderation -h`",
+    arguments_legend: "**Значения параметров**:\n" +
+        "`[]` - Означает, что данный параметр является обязательным.\n" +
+        "`()` - Означает, что данный параметр является дополнительным.\n" +
+        "`{}` - Условный аргумент, требуется только в некоторых случаях.\n" +
+        "`1 | 2 | 3` - Выберете из предложенных вариантов.\n" +
+        "`[@Пользователь/ID]` Параметром может быть как тег, так и айди пользователя.\n" +
+        "**Не используйте символы {}, [], () и смайлики в команде**",
+    cmd_utilize: "Использование команд",
+    not_configured: "`Не настроено`",
+    actual_role: "Действующая роль",
+    time_format: "Форматирование времени",
+    moderation_description: "*Обеспечение безопасности сервера и контроль происходящего*",
+    automoderation_description: "*Автоматическое обеспечение безопасности сервера*",
+    automation_description: "*Автоматизация функций бота*",
+    settings_description: "*Настройки NISD с помощью команд*",
+    utility_description: "*Прочие полезные команды*",
+    info_description: "*Получить информацию о боте, пользователях, серверах и т.д.*",
     //TIMES,
-    year: "Anno",
-    years: "Anni",
-    month: "Mese",
-    months: "Mesi",
-    day: "Giorno",
-    days: "Giorni",
-    hour: "Ora",
-    hours: "Ore",
-    minute: "Minuto",
-    minutes: "Minuti",
-    second: "Secondo",
-    seconds: "Secondi",
-    duration: "Durata",
+    year: "Год",
+    years: "Годы",
+    month: "Месяц",
+    months: "Месяцы",
+    day: "День",
+    days: "Дни",
+    hour: "Час",
+    hours: "Часы",
+    minute: "Минута",
+    minutes: "Минуты",
+    second: "Секунда",
+    seconds: "Секунды",
+    duration: "Продолжительность",
     //AVATAR
-    avatar_use: "avatar (@Utente/ID)",
-    avatar_description: "Visualizza l'avatar dell'utente o bot selezionato",
-    avatar_small_desc: "Visualizza l'avatar dell'utente o bot selezionato",
+    avatar_use: "avatar (@Пользователь/ID)",
+    avatar_description: "Показать аватарку выбранного пользователя или бота",
+    avatar_small_desc: "Показать аватарку выбранного пользователя или бота",
     avatar_examples: "`avatar @Polliog`\n `avatar ID`",
     required_by: (user) => {
-        return `Richiesto da ${user.username}#${user.discriminator}`
+        return `Запрошено ${user.username}#${user.discriminator}`
     },
     avatar_of: (user) => {
-        return `Avatar di ${user.username}#${user.discriminator}`
+        return `Аватарка ${user.username}#${user.discriminator}`
     },
     //USERINFO
-    userinfo_use: "user (@Utente/ID)",
-    userinfo_description: "Visualizza le informazioni di un utente",
-    userinfo_small_desc: "Visualizza le informazioni di un utente",
+    userinfo_use: "user (@Пользователь/ID)",
+    userinfo_description: "Показать информацию о пользователе",
+    userinfo_small_desc: "Показать информацию о пользователе",
     userinfo_examples: "`user ID`\n`user @Polliog`",
     info_of: (member) => {
-        return `Info di ${member.user.username} | ${member.user.id}`
+        return `Информация о ${member.user.username} | ${member.user.id}`
     },
-    name: "Nome",
-    mention: "Menzione",
-    status: "Stato",
-    created: "Account Creato",
-    entered: "Entrato nel server",
-    yes: "Si",
-    no: "No",
-    roles: "Ruoli",
-    no_role: "Nessun ruolo",
+    name: "Имя",
+    mention: "Упоминание",
+    status: "Статус",
+    created: "Создан аккаунт",
+    entered: "Зашел на сервер",
+    yes: "Да",
+    no: "Нет",
+    roles: "Роли",
+    no_role: "Без роли",
     //SERVERINFO
-    icon: "Icona",
-    region: "Regione",
-    categories: "Categorie",
-    text_channels: "Canali Testuali",
-    voice_channels: "Canali Vocali",
-    members: "Membri",
-    channels: "Canali",
-    server_use: "server",
-    server_description: "Visualizza informazioni sul server",
-    server_small_desc: "Visualizza informazioni sul server",
+    icon: "Икона",
+    region: "Область",
+    categories: "Категории",
+    text_channels: "Текстовые Каналы",
+    voice_channels: "Голосовые Каналы",
+    members: "Участники",
+    channels: "Каналы",
+    server_use: "сервер",
+    server_description: "Показать информацию о сервере",
+    server_small_desc: "Показать информацию о сервере",
     //SAY
-    say_use: "say [Messaggio]",
-    say_description: "Fai ripetere al bot un messaggio",
-    say_examples: "`say ciao mondo`",
+    say_use: "say [Сообщение]",
+    say_description: "Попросите бот повторить сообщение",
+    say_examples: "`say привет мир`",
     //BUG
-    bug_sent: "Segnalazione del bug inviata!",
-    bug_use: "bug [Messaggio]",
-    bug_description: "Segnala un errore al nostro team di supporto (minimo 50 caratteri)\n" +
-        "Nella segnalazione includete più dettagli possibili.\n\n" +
-        ":warning: **Attenzione** qualunque abuso del comando porterà a delle conseguenze!",
-    bug_small_desc: 'Segnala un errore al nostro team di supporto',
-    bug_examples: "`bug Il comando warn mi da questo errore...`",
-    bug_min_chars: "Il messaggio deve essere lungo almeno 50 caratteri.",
+    bug_sent: "Отчет об ошибке отправлен!",
+    bug_use: "bug [Сообщение]",
+    bug_description: "Сообщает об ошибке нашей службе поддержки (минимум 50 символов)\n" +
+        "Включите в отчет как можно больше деталей и подробностей.\n\n" +
+        ":warning: **Внимание** любое злоупотребление этим повлечет за собой последствия!",
+    bug_small_desc: 'Сообщает об ошибке в нашу службу поддержки',
+    bug_examples: "`bug Команда предупреждение дает мне эту ошибку...`",
+    bug_min_chars: "Сообщение должно содержать не менее 50 символов.",
     //INVITE
-    invite_content: "Grazie per l'interesse al bot",
-    invite_me: "Invitami",
+    invite_content: "Спасибо за интерес к боту",
+    invite_me: "Пригласите меня",
     //MANAGER
     manager_use: "manager [@Ruolo/ID/None]",
-    manager_description: "Imposta un ruolo che puo' modificare le impostazioni riservate solo all'owner del server, utilizzare `none` per rimuovere il ruolo.\n" +
-        "Il ruolo `manager` e' anche automaticamente bypassato dall'AntiNuke" +
-        "\n\n :warning: **Utilizzare il comando con cautela, Lo staff del BOT non si prende responsibilità di eventuali danni al server**",
-    manager_small_desc: "Imposta un ruolo che puo' modificare le impostazioni riservate solo all'owner",
-    manager_examples: "`manager @⚡ | Amministratore `\n" +
+    manager_description: "Установить роль, позволяющую поменять настройки, зарезервированные только для владельца сервера, используйте `none` для удаления данной роли.\n" +
+        "Роль `manager` по умолчанию выше программ AntiNuke" +
+        "\n\n :warning: **Осторожно используйте эту команду, персонал бота не несет ответственности за любые повреждения сервера**",
+    manager_small_desc: "Установить роль, позволяющую изменять настройки, зарезервированные только для владельца",
+    manager_examples: "`manager @Админ `\n" +
         "`manager 589443292673081385`\n" +
         "`manager none`",
     manager_saved: (role) => {
-        return `Ruolo \`Manager\` impostato. **Nuovo ruolo**: ${role}`
+        return `Роль \`Manager\` присвоена. **Новая роль**: ${role}`
     },
-    manager_removed: "Ruolo \`Manager\` eliminato",
+    manager_removed: "Роль \`Manager\` удалена",
     //CLEAR
-    clear_use: "clear [Numero]",
-    clear_description: "Cancella un numero di messaggi in un canale. **[Max. 1000]**",
-    clear_small_desc: "Cancella un numero di messaggi in un canale",
+    clear_use: "clear [Число]",
+    clear_description: "Удаляет количество сообщений в канале. **[Max. 1000]**",
+    clear_small_desc: "Удаляет количество сообщений в канале",
     clear_examples: "`clear 1000`",
-    max_messages: "Puoi eliminare un massimo di 100 messaggi per volta",
+    max_messages: "Вы можете удалить максимум 100 сообщений за раз",
     clear_done: (number) => {
-        return `<a:accettato_gif:742023278071119913> Eliminati \`${number}\` messaggi`
+        return `<a:accettato_gif:742023278071119913> Были удалены \`${number}\` сообщения`
     },
     //BAN
-    ban_use: "ban [@Utente/ID] (tempo) (motivo) (-c)",
-    ban_description: "Banna un utente dal server permanentemente o per un tempo specifico, aggiungi al comando `-c` per eliminare anche i messaggi dell'utente" +
-        " inviati negli ultimi 7 giorni. Se vuoi bannare temporaneamente un utente formatta il tempo come `3h 16m 8s` per 3 ore, 16 minuti e 8 secondi" +
-        "\nIl comando funziona anche per gli utenti non presenti nel server",
-    ban_small_desc: "Banna un utente dal server, tempo facoltativo",
-    ban_examples: "`ban @Utente`\n" +
+    ban_use: "ban [@Пользователь/ID] (время) (причина) (-c)",
+    ban_description: "Блокирует пользователя на сервере навсегда или на определенное время, добавить `-c` к команде, чтобы одновременно удалить сообщения пользователя" +
+        " отправленные за последнии 7 дней. При временной блокировке пользователя используйте данный формат `3h 16m 8s` для указания времени 3 часа, 16 минут и 8 секунд" +
+        "\n Данная команда работает и для пользователей, не присутствующих на сервере",
+    ban_small_desc: "Заблокирует пользователя на сервере, указание времени произвольно",
+    ban_examples: "`ban @Пользователь`\n" +
         "`ban ID flood -c`\n" +
-        "`ban @Utente 1d reca fastidio`\n",
-    user_banned: "Utente bandito",
+        "`ban @Пользователь 1d раздражает`\n",
+    user_banned: "Заблокированный пользователь",
     user_banned_dm: (guild) => {
-        return `Sei stato bandito da ${guild.name}`
+        return `Вы были заблокированы ${guild.name}`
     },
-    ban_timeout: "Ban scaduto",
+    ban_timeout: "Время блокировки истекло",
     ban_timeout_dm: (guild) => {
-        return `Il tuo ban su ${guild.name} e' scaduto, adesso puoi rientrare nel server`
+        return `Ваша блокировка от ${guild.name} закончена, вы можете опять войти на сервер`
     },
     //unban
-    unban_use: "unban [@Utente/ID] (motivo)",
-    unban_small_desc: "Sbanna un utente dal server",
-    unban_description: "Sbanna un utente dal server in modo da poter farlo rientrare",
-    unban_examples: "`unban @Utente`" +
-        "\n`unban ID opls persona sbagliata`",
-    user_unbanned: "Utente Sbannato",
+    unban_use: "unban [@Пользователь/ID] (причина)",
+    unban_small_desc: "Отменяет блокировку пользователя на сервере",
+    unban_description: "Отменяет блокировку пользователя на сервере, чтобы он смог снова войти в систему",
+    unban_examples: "`unban @Пользователь`" +
+        "\n`unban ID упс не тот пользователь`",
+    user_unbanned: "Разблокированный пользователь",
     user_unbanned_dm: (guild) => {
-        return `Sei stato sbannato da ${guild.name}`
+        return `Вы были заблокированы ${guild.name}`
     },
     //kick
-    kick_use: "kick [@Utente/ID] (motivo) (-c)",
-    kick_description: "Espelli un utente dal server, aggiungi `-c` per eliminare anche i messaggi inviati dall'utente negli ultimi 7 giorni",
-    kick_small_desc: "Espelli un utente dal server",
+    kick_use: "kick [@Пользователь/ID] (причина) (-c)",
+    kick_description: "Удаляет пользователя с сервера, добавить `-c` для удаления сообщений, отпрвленных пользователем за последнии 7 дней",
+    kick_small_desc: "Удаляет пользователя с сервера",
     kick_examples: "`kick ID`" +
-        "\n`kick @Utente -c`" +
-        "\n`kick @Utente reca fastidio in vocale`" +
-        "\n`kick @Utente spamma nella chat principale -c`",
-    user_kicked: "Utente Espulso",
+        "\n`kick @Пользователь -c`" +
+        "\n`kick @Пользователь раздражает в голосовой связи`" +
+        "\n`kick @Пользователь постоянный спам в основном чате -c`",
+    user_kicked: "Пользователь удален",
     user_kicked_dm: (guild) => {
-        return `Sei stato espulso da ${guild.name}`
+        return `Вас удалил ${guild.name}`
     },
     //mute
-    mute_use: "mute [@Utente/ID] (tempo) (motivo)",
-    mute_description: "Muta un utente in modo che non possa piu' parlare. " +
-        "Se vuoi mutare temporaneamente un utente formatta il tempo come `3h 16m 8s` per 3 ore, 16 minuti e 8 secondi. " +
-        "L'utente rimarrà mutato anche se esce e rientra dal server.\n" +
-        "**Per favore tieni nota che con i server con un ruolo di default custom il comando potrebbe non funzionare a causa della sovrascrittura dei permessi**",
-    mute_small_desc: "Muta un utente, tempo facoltativo",
+    mute_use: "mute [@Пользователь/ID] (время) (причина)",
+    mute_description: "Отключает пользователю текстовые каналы, чтобы он больше не мог общаться. " +
+        "Если вы хотите временно отключить пользователя, используйте данный формат `3h 16m 8s` для указания времени 3 часа, 16 минут и 8 секунд. " +
+        "Пользователь останется в данном режиме даже при выходе и повторном входе на сервер.\n" +
+        "**Обратите внимание, что на серверах, где настройки базовых ролей были персонализированы, данная команда может не работать из-за блокировки разрешений**",
+    mute_small_desc: "Отключает пользователю текстовые каналы, указание времени произвольно",
     mute_examples:
         "`mute ID`\n" +
-        "`mute @Utente`\n" +
-        "`mute @Utente 15m basta spammare`\n" +
-        "`mute @Utente reca continuamente fastidio in vocale`",
-    user_muted: "Utente Mutato",
+        "`mute @Пользователь`\n" +
+        "`mute @Пользователь 15m хватит спама`\n" +
+        "`mute @Пользователь постоянно раздражает в голосовой связи `",
+    user_muted: "Пользователь отключен",
     user_muted_dm: (guild) => {
-        return `Sei stato mutato su ${guild.name}`
+        return `Вас отключил ${guild.name}`
     },
-    mute_timeout: "Mute scaduto",
+    mute_timeout: "Срок действия отключения истек",
     mute_timeout_dm: (guild) => {
-        return `Non sei piu' mutato su ${guild.name}, puoi tornare a parlare nel server`
+        return `Ваше отлючение от ${guild.name} закончено, вы опять можете общаться на сервере`
     },
     //unmute
-    unmute_use: "unmute [@Utente/ID] (motivo)",
-    unmute_description: "Smuta un utente in modo che possa di nuovo parlare nel server",
-    unmute_small_desc: "Smuta un utente nel server",
+    unmute_use: "unmute [@Пользователь/ID] (причина)",
+    unmute_description: "Подключить пользователю текстовые каналы,чтобы он снова мог общаться на сервере",
+    unmute_small_desc: "Подключить пользователя",
     unmute_examples:
         "`unmute ID`\n" +
-        "`unmute @Utente`\n" +
-        "`unmute @Utente persona sbagliata, scusa <3`",
-    user_unmuted: "Utente Smutato",
+        "`unmute @Пользователь`\n" +
+        "`unmute @Пользователь отключено по ошибке, извините <3`",
+    user_unmuted: "Пользователь подключен",
     user_unmuted_dm: (guild) => {
-        return `Sei stato smutato su ${guild.name}`
+        return `Вас подключил ${guild.name}`
     },
     //muterole
-    muterole_use: "muterole [@Ruolo/ID] (-n)",
-    muterole_description: "Imposta il ruolo da utilizzare per il comando `mute`" +
-        "\n\n **:warning: Utilizzando il comando il BOT provera' a impostare il ruolo in tutti i canali presenti nel server, per evitare cio' aggiungi `-n` al comando**",
-    muterole_small_desc: "Imposta il ruolo da utilizzare per il comando `mute`",
+    muterole_use: "muterole [@Роль**/ID] (-n)",
+    muterole_description: "Присваивает роль для использования с командой `mute`" +
+        "\n\n **:предупреждение: При использовании данной команды бот попытается установить данную роль во всех каналах сервера, чтобы этого избежать, добавьте `-n` к команде**",
+    muterole_small_desc: "Присваивает роль для команды `mute`",
     muterole_examples:
         "`muterole ID`\n" +
-        "`muterole @Ruolo`\n" +
-        "`muterole @Ruolo -n`",
+        "`muterole @Роль`\n" +
+        "`muterole @Роль -n`",
     muterole_saved: (role) => {
-        return `Ruolo \`mute\` impostato. **Nuovo ruolo**: ${role}`
+        return `Роль \`mute\` присвоена. **Новая роль**: ${role}`
     },
     //warn
-    warn_use: "warn [@Utente/ID] (motivo)",
-    warn_description: "Avvisa un utente",
-    warn_small_desc: "Avvisa un utente",
+    warn_use: "warn [@Пользователь/ID] (причина)",
+    warn_description: "Предупреждает пользователя",
+    warn_small_desc: "Предупреждает пользователя",
     warn_examples:
         "`warn ID`\n" +
-        "`warn @Utente smettila di spammare`",
-    user_warned: "Utente Warnato",
+        "`warn @Пользователь прекратите спам`",
+    user_warned: "Пользователь Предупрежден",
     user_warned_dm: (guild) => {
-        return `Sei stato warnato su ${guild.name}`
+        return `Вас предупредил ${guild.name}`
     },
     //unwarn
-    unwarn_use: "unwarn [@Utente/ID] [Numero] (Motivo)",
-    unwarn_description: "Rimuovi un avvertimento ad un utente, per trovare il numero di un warn utilizza `warnings [@Utente]`",
-    unwarn_small_desc: "Rimuovi un avvertimento ad un utente",
+    unwarn_use: "unwarn [@Пользователь/ID] [Номер] (Причина)",
+    unwarn_description: "Удаляет предупреждение у пользователя, чтобы найти номер предупреждения, используйте `warnings [@Пользователь]`",
+    unwarn_small_desc: "Удаляет предупреждение у пользователя",
     unwarn_examples:
         "`unwarn ID`\n" +
-        "`unwarn @Utente`\n" +
-        "`unwarn @Utente ti perdono bro`",
-    user_unwarned: "Warn eliminato",
+        "`unwarn @Пользователь`\n" +
+        "`unwarn @Пользователь я тебя прощаю, братан`",
+    user_unwarned: "Предупреждение удалено",
     user_unwarned_dm: (guild) => {
-        return `Warn eliminato su ${guild.name}`
+        return `Предупреждение удалено ${guild.name}`
     },
     //clearwarn
-    clearwarns_use: "clearwarns [@Utente/ID] (Motivo)",
-    clearwarns_description: "Cancella tutti gli avvisi dati ad un utente",
-    clearwarns_small_desc: "Cancella tutti gli avvisi di un utente",
+    clearwarns_use: "clearwarn [@Пользователь/ID] (Причина)",
+    clearwarns_description: "Удаляет все предупреждения у пользователя",
+    clearwarns_small_desc: "удаляет все предупреждения у пользователя",
     clearwarns_examples:
         "`clearwarns ID`\n" +
-        "`clearwarns @Utente`\n" +
-        "`clearwarns @Utente hai preso il perdono`",
-    user_clearwarns: "Warns totalmente eliminati",
+        "`clearwarns @Пользователь`\n" +
+        "`clearwarns @Пользователь вам все простили`",
+    user_clearwarns: "Все ваши предупреждения полностью удалены",
     user_clearwarns_dm: (guild) => {
-        return `Warn totalmente eliminati su ${guild.name}`
+        return `Все предупреждения полностью удалены ${guild.name}`
     },
     //warnings
-    warnings_use: "warnings [@Utente/ID] (pagina)",
-    warnings_description: "Guarda gli avvisi di un'utente specifico",
-    warnings_small_desc: "Guarda gli avvisi di un'utente specifico",
+    warnings_use: "warnings [@Пользователь/ID] (страница)",
+    warnings_description: "Просмотр предупреждений у определенного пользователя",
+    warnings_small_desc: "Просмотр предупреждений у определенного пользователя",
     warnings_examples:
         "`warnings ID`\n" +
         "`warnings ID 2`\n" +
         "`warnings @Polliog`\n" +
         "`warnings @Polliog 2`",
     warns_of: (user) => {
-        return `Avvertimenti di ${user.username}#${user.discriminator}`
+        return `Предупреждения у ${user.username}#${user.discriminator}`
     },
     //reportchannel
-    reportchannel_use: "reportchannel [#Canale/ID]",
-    reportchannel_description: "Imposta un canale per le segnalazioni degli utenti",
-    reportchannel_small_desc: "Imposta un canale per le segnalazioni degli utenti",
+    reportchannel_use: "reportchannel [#Канал/ID]",
+    reportchannel_description: "Настойка канала для отчетов пользователей",
+    reportchannel_small_desc: "Настройка канала для отчета пользователей",
     reportchannel_examples:
         "`reportchannel ID`\n" +
-        "`reportchannel #Canale`",
+        "`reportchannel #Канал`",
     reportchannel_saved: (channel) => {
-        return `Canale per le segnalazioni impostato, **Nuovo canale**:${channel}`
+        return `Канал для отчетов установлен, **Новый канал**:${channel}`
     },
     //prefix
     my_prefix: (prefix) => {
-        return `Il mio prefisso in questo server e' \`${prefix}\``
+        return `Мой префикс на этом сервере \`${prefix}\``
     },
     prefix_use: "prefix [Prefix]",
-    prefix_description: "Imposta un prefisso personalizzato al server, Il BOT risponderà al nuovo prefisso e al prefisso `nisd`. \n" +
-        "**Potrai ugualmente taggare il bot per vedere il prefisso in questo server**",
-    prefix_small_desc: "Cambia il prefisso del bot",
+    prefix_description: "Устанавливает персонализированный префикс для сервера, Бот ответит на новый префикс и на префикс `nisd`. \n" +
+        "**Вы сможете также прикрепить ярлык боту, чтобы увидеть префикс на этом сервере**",
+    prefix_small_desc: "Меняет префикс у бота",
     prefix_examples:
         "`prefix ?`\n" +
         "`prefix n!!`",
     prefix_changed: (prefix) => {
-        return `Prefisso del bot cambiato, **Prefisso Nuovo**: \`${prefix}\``
+        return `Префикс бота изменен, **Новый префикс**: \`${prefix}\``
     },
     //mod
-    mod_logs: "Logs Moderazione",
-    mod_deleteAfter: "Elimina Comando",
-    mod_dmUser: "Messaggia Utente",
-    mod_use: "mod logs | dms | delete {#Canale/ID/none} {True/False}",
+    mod_logs: "Регистры Модерации",
+    mod_deleteAfter: "Удалить команду",
+    mod_dmUser: "Отправить сообщение пользователю",
+    mod_use: "mod logs | dms | delete {#Канал/ID/none} {True/False}",
     mod_description:
-        "**Modifica le impostazioni riguardante la moderazione**\n" +
-        ":small_blue_diamond: `mod logs [#Canale/ID/none]`\n" +
-        "Imposta un canale per mostrare le azioni prese dallo staff\n" +
+        "**Меняет настройки модерации**\n" +
+        ":small_blue_diamond: `mod logs [#Канал/ID/none]`\n" +
+        "Настраивает канал, чтобы показать действия персонала\n" +
         ":small_blue_diamond: `mod dms [True/False]`\n" +
-        "Imposta se mandare o meno un messaggio in privato all'utente ad azione intrapresa\n" +
+        "Устанавливает, следует ли отправлять личное сообщение пользователю после выполнения действия\n" +
         ":small_blue_diamond: `mod delete [True/False]`\n" +
-        "Imposta se cancellare automaticamente il comando ad azione eseguita",
-    mod_small_desc: "Apri le impostazioni della moderazione, usa `mod` per info",
+        "Устанавливает, следует ли автоматически удалять команду после выполнения действия",
+    mod_small_desc: "Откройте настройки модерации, используйте `mod` для получения информации",
     mod_examples:
         "`mod dms true` \n" +
         "`mod logs none`\n" +
-        "`mod logs #Canale`\n" +
+        "`mod logs #Канал`\n" +
         "`mod delete true`",
     //modlogs
-    mod_logs_use: "mod logs [#Canale/ID/none]",
-    mod_logs_description: "Imposta un canale per mostrare le azioni prese dallo staff\n" +
-        "Usa `none` al posto del canale per disabilitare i logs",
-    mod_logs_small_desc: "Imposta un canale per mostrare le azioni prese dallo staff",
+    mod_logs_use: "mod logs [#Канал/ID/none]",
+    mod_logs_description: "Настройка канала для показа действий персонала\n" +
+        "Используйте `none` вместо канала, чтобы отключить регистры",
+    mod_logs_small_desc: "Настройка канала для показа действий персонала",
     mod_logs_examples:
         "`mod logs ID`\n" +
         "`mod logs none`\n" +
-        "`mod logs #Canale`",
+        "`mod logs #Канал`",
     mod_logs_channel_saved: (channel) => {
-        return `Canale per i logs della moderazione aggiornato, **Nuovo canale**: ${channel}`
+        return `Обновлен канал регистров модерации, **Новый канал**: ${channel}`
     },
-    mod_logs_disabled: "Logs della moderazione disattivati!",
+    mod_logs_disabled: "Регистры модерации отключены!",
     //mod dms
     mod_dms_use: "mod dms [True/False]",
-    mod_dms_description: "Imposta se mandare o meno un messaggio in privato all'utente ad azione intrapresa",
-    mod_dms_small_desc: "Imposta se mandare o meno un messaggio in privato all'utente ad azione intrapresa",
+    mod_dms_description: "Устанавливает, следует ли отправлять личное сообщение пользователю после выполнения действия",
+    mod_dms_small_desc: "Устанавливает, следует ли отправлять личное сообщение пользователю после выполнения действия",
     mod_dms_examples:
         "`mod dms true`\n" +
         "`mod dms false`",
-    mod_dms_true: "Adesso gli utenti verranno avvisati nei DMS",
-    mod_dms_false: "Adesso gli utenti non riceveranno piu' avvisi nei DMS",
+    mod_dms_true: "Теперь пользователи будут уведомлены личным сообщением",
+    mod_dms_false: "Теперь пользователи больше не будут получать уведомлений в личных сообщениях",
     //mod delete
     mod_delete_use: "mod delete [True/False]",
-    mod_delete_description: "Imposta se cancellare automaticamente il comando ad azione eseguita",
-    mod_delete_small_desc: "Imposta se cancellare automaticamente il comando ad azione eseguita",
+    mod_delete_description: "Устанавливает, следует ли автоматически удалить команду после выполнения действия",
+    mod_delete_small_desc: "Устанавливает, следует ли автоматически удалить команду после выполнения действия",
     mod_delete_examples:
         "`mod delete true`\n" +
         "`mod delete false`",
-    mod_delete_true: "Adesso i comandi verranno eliminato ad azione finita",
-    mod_delete_false: "Adesso i comandi non verranno eliminato ad azione finita",
+    mod_delete_true: "Теперь команды будут удаляться после завершения действия",
+    mod_delete_false: "Теперь команды не будут удаляться после завершения действия",
     //report
-    report_use: "report [Messaggio]",
-    report_description: "Segnala qualcosa allo staff del server (minimo 10 caratteri)",
-    report_small_desc: "Segnala qualcosa allo staff del server",
+    report_use: "report [Сообщение]",
+    report_description: "Сообщает что-либо персоналу сервера (мин 10 символов)",
+    report_small_desc: "Сообщает что-либо персоналу сервера",
     report_examples:
-        "`report Polliog ha offeso la mia persona :(`",
-    report_min_chars: "Il messaggio deve essere lungo almeno 10 caratteri.",
-    report_not_configured: "Nel server non e' configurato nessun canale valido per le segnalazioni.",
-    report_sent: "Segnalazione inviata!",
+        "`report Polliog оскорбил меня :(`",
+    report_min_chars: "сообщение должно содержать не менее 10 символов.",
+    report_not_configured: "На сервере не настроен канал для приема сообщений.",
+    report_sent: "Сообщение отправлено!",
     //poll
-    poll_use: "poll \"[Titolo]\" \"[Opzione1]\" \"[Opzione2]\" \"(Opzioni)\"",
-    poll_description: "Crea un sondaggio con multiple opzioni, Massimo 9 opzioni",
-    poll_small_desc: "Crea un sondaggio con multiple opzioni",
+    poll_use: "poll \"[Наименование]\" \"[Вариант1]\" \"[Вариант2]\" \"(Опции)\"",
+    poll_description: "Создание опроса с несколькими вариантами, максимум 9 ввариантов",
+    poll_small_desc: "Создание опроса с несколькими вариантами",
     poll_examples:
-        '`poll "Meglio il sushi o la pizza?" "pizza bro" "sushi"`\n',
-    poll_max_options: "Puoi usare massimo 9 opzioni",
+        '`poll "Что лучше: суши или пицца?" "пицца" "суши"`\n',
+    poll_max_options: "Вы можете использовать до 9 вариантов",
     //info
-    info_bot: "Informazioni sul bot",
-    info_use: "info",
-    info_cmd_description: "Mostra informazioni sul BOT",
-    started: "Avvio",
-    version: "Versione",
+    info_bot: "Информация о боте",
+    info_use: "информация",
+    info_cmd_description: "Показывает информацию о боте",
+    started: "Начало",
+    version: "Версия",
     //antiflood
-    antiflood_use: "antiflood [enable/disable | limit | action | time] {Numero} {Azione}",
+    antiflood_use: "antiflood [enable/disable | limit | action | time] {Количество} {Действие}",
     antiflood_description:
-        "L'AntiFlood permette di proteggere il server contro le persone che scrivono molti messaggi ripetutamente\n\n" +
+        "Программа Антифлуд позволяет защитить сервер от пользователей, которые постоянно набирают большое количество однотипных сообщений, т.н. паразитного трафика\n\n" +
         ":small_blue_diamond: `antiflood [enable/disable]`\n" +
-        "Abilita o disabilita l'AntiFlood\n" +
-        ":small_blue_diamond: `antiflood limit [Limite]`\n" +
-        "Imposta il numero massimo di messaggi inviabili nel tempo determinato\n" +
+        "Подключить или отключить Антифлуд\n" +
+        ":small_blue_diamond: `antiflood limit [Предел]`\n" +
+        "Установка максимального количество сообщений, которые можно отправить за определенное время\n" +
         ":small_blue_diamond: `antiflood action [Ban | Kick | Warn | Mute | none]`\n" +
-        "Imposta l'azione che esegue il bot quando rileva del flood\n" +
-        ":small_blue_diamond: `antiflood time [Tempo]`\n" +
-        "Imposta il tempo **in secondi**, in cui va determinato il flood",
-    antiflood_small_desc: "Apri le impostazioni dell'AntiFlood",
+        "Установка конкретного действия, которое выполнит бот при обнаружении флуда\n" +
+        ":small_blue_diamond: `antiflood time [Время]`\n" +
+        "Установка времени **в секундах**, которое определяет флуд",
+    antiflood_small_desc: "Открывает настройки программы Антифлуд",
     antiflood_examples:
         "`antiflood enable`\n" +
         "`antiflood limit 4`\n" +
@@ -453,424 +455,424 @@ module.exports = {
         "`antiflood time 5`",
     //antiflood enable/disable
     antiflood_mode_use: "antiflood [Enable | Disable]",
-    antiflood_mode_description: "Abilita o disabilita l'AntiFlood",
-    antiflood_mode_small_desc: "Abilita o disabilita l'AntiFlood",
+    antiflood_mode_description: "Включает или выключает Антифлуд",
+    antiflood_mode_small_desc: "Включает или выключает Антифлуд",
     antiflood_mode_examples:
         "`antiflood enable`\n" +
         "`antiflood disable`",
-    antiflood_enabled: "AntiFlood attivato!",
-    antiflood_disabled: "AntFlood disattivato!",
+    antiflood_enabled: "Антифлуд включен!",
+    antiflood_disabled: "Антифлуд отключен!",
     //antiflood limit
-    antiflood_limit_use: "antiflood limit [Limite]",
-    antiflood_limit_description: "Imposta il numero massimo di messaggi inviabili nel tempo determinato\n" +
-        "**Piu' aumenterai il limite, maggiore saranno i messaggi da inviare per farlo attivare**",
-    antiflood_limit_small_desc: "Imposta il numero massimo di messaggi inviabili nel tempo determinato",
+    antiflood_limit_use: "antiflood limit [Ограничение]",
+    antiflood_limit_description: "Установка максимального количества сообщений, которые можно отправить за определенное время\n" +
+        "**Чем выше ограничение, тем больше сообщений нужно отправить для активации Антифлуда**",
+    antiflood_limit_small_desc: "Установка максимального количества сообщений, которые можно отправить за определенное время",
     antiflood_limit_examples: "`antiflood limit 5`",
-    antiflood_limit_min: "Il limite minino per l'AntiFlood e' di 3 messaggi",
+    antiflood_limit_min: "3 сообщения состовляют минимальное ограничение Антифлуда",
     antiflood_limit_updated: (limit) => {
-        return `Limite dell'AntiFlood modificato, **Nuovo Limite**: \`${limit}\``
+        return `Ограничение Антифлуда изменено, **Новое Ограничение**: \`${limit}\``
     },
     //antiflood action
     antiflood_action_use: "antiflood action [Ban | Kick | Warn | Mute | none]",
-    antiflood_action_description: "Imposta l'azione che esegue il bot quando rileva del flood, usa `none` per non fare nessuna azione (oltre a cancellare i messaggi)",
-    antiflood_action_small_desc: "Imposta l'azione che esegue il bot quando rileva del flood",
+    antiflood_action_description: "Установка конкретного действия, которое выполнит бот при обнаружении флуда, используйте `none`, чтобы не выполнять никаких действий (кроме удаления сообщений)",
+    antiflood_action_small_desc: "Установка конкретного действия, которое выполнит бот при обнаружении флуда",
     antiflood_action_examples:
         "`antiflood action ban`\n" +
         "`antiflood action none`",
     antiflood_action_updated: (action) => {
-        return `Azione dell'AntiFlood aggiornata, **Azione**: \`${action}\``
+        return `Действие Антифлуда обновлено, **Действие**: \`${action}\``
     },
     //antiflood time
-    antiflood_time_use: "antiflood time [Secondi]",
-    antiflood_time_description: "Imposta il tempo **in secondi**, in cui va determinato il flood",
-    antiflood_time_small_desc: "Imposta il tempo in cui va determinato il flood",
+    antiflood_time_use: "antiflood time [Секунды]",
+    antiflood_time_description: "Установка времени **в секундах**, которое определяет флуд",
+    antiflood_time_small_desc: "Установка времени, которое определяет флуд",
     antiflood_time_examples:
         "`antiflood time 4`",
-    antiflood_time_min: "Il tempo limite minino per l'AntiFlood e' di 3 secondi",
+    antiflood_time_min: "Минимальное время для Антифлуда 3 секунды ",
     antiflood_time_updated: (time) => {
-        return `Tempo dell'AntiFlood aggiornato, **Tempo nuovo**: \`${time} Secondi\``
+        return `Время Антифлуда обновлено, **Новое Время**: \`${time} Секунды\``
     },
     antiflood_in_action: (member) => {
-        return `${member}**, Stai mandando troppi messaggi velocemente!**`
+        return `${member}**, Вы отправляете слишком много сообщений и слишком быстро!**`
     },
-    antiflood_acted: "[NISD AutoMod] L'utente ha inviato troppi messaggi velocemente!",
+    antiflood_acted: "[NISD AutoMod] Пользователь отправил слишком много сообщений слишком быстро!",
     //antispam
-    antispam_use: "antispam [enable/disable | action] {Azione}",
+    antispam_use: "antispam [enable/disable | action] {Действие}",
     antispam_description:
-        "L'AntiSpam e' una funzione che cancella automaticamente tutti i messaggi di spam (inviti dei server) nel server\n\n" +
+        "Антиспам является функцией, которая автоматически удаляет все спам-сообщения (приглашения на сервер) на сервере\n\n" +
         ":small_blue_diamond: `antispam [enable/disable]`\n" +
-        "Abilita o disabilita l'AntiSpam\n" +
+        "Подключить или отключить Антиспам\n" +
         ":small_blue_diamond: `antispam action [Ban | Kick | Warn | Mute | none]`\n" +
-        "Imposta l'azione che esegue il bot quando rileva un link spam",
-    antispam_small_desc: "Apri le impostazioni dell'AntiSpam",
+        "Установка действия, которое будет выполнять бот при обнаружении спам-ссылки",
+    antispam_small_desc: "Открывает настройки Антиспама",
     antispam_examples:
         "`antispam enable`\n" +
         "`antispam action warn`",
     antispam_in_action: (member) => {
-        return `${member}**, Link d'invito rilevato!**`
+        return `${member}**, Обнаружена ссылка-приглашение !**`
     },
-    antispam_acted: "[NISD AutoMod] Link d'invito rilevato!",
+    antispam_acted: "[NISD AutoMod] Обнаружена ссылка-приглашение!",
     //antispam action
     antispam_action_use: "antispam action [Ban | Kick | Warn | Mute | none]",
-    antispam_action_description: "Imposta l'azione che esegue il bot quando rileva un messaggio di spam, " +
-        "usa `none` per non fare nessuna azione (oltre a cancellare il messaggio)",
-    antispam_action_small_desc: "Imposta l'azione che esegue il bot se rileva dello spam",
+    antispam_action_description: "Установка конкретного действия, которое предпримет бот при обнаружении спам-сообщения, " +
+        "используйте `none`, чтобы не предпринимать никаких действий (кроме удаления сообщения)",
+    antispam_action_small_desc: "Установка конкретного действия, которое предпримет бот при обнаружении спама",
     antispam_action_examples:
         "`antispam action ban`\n" +
         "`antispam action none`",
     //antispam enable/disable
-    antispam_enabled: "AntiSpam abilitato!",
-    antispam_disabled: "AntiSpam disabled!",
+    antispam_enabled: "Антиспам подключен!",
+    antispam_disabled: "Антиспам отключен!",
     //antinuke
-    antinuke_use: "antinuke [Categoria] [limit | action | enable/disable] {Opzioni}",
+    antinuke_use: "antinuke [Категория] [limit | action | enable/disable] {Опции}",
     antinuke_description:
-        "Per visualizzare le impostazioni attuali usa \`antinuke info\`\n\n" +
-        "Modifica le impostazioni dell'AntiNuke, per modificare una impostazione specifica utilizza `antinuke [categoria]`\n" +
-        "Se un utente raggiunge il \"limite\" di un azione il bot lo punisce, ogni azione ha una propria punizione\n" +
-        "Puoi impostare un limite \"globale\" tramite `antinuke global [numero]`\n\n" +
-        ":small_blue_diamond: \`antinuke ban [limit | action | enable/disable] {Opzioni}\`\n" +
-        "Modifica il numero di ban prima di far scattare l'AntiNuke del bot\n" +
-        ":small_blue_diamond: \`antinuke kick [limit | action | enable/disable] {Opzioni}\`\n" +
-        "Modifica il numero di kick prima di far scattare l'AntiNuke del bot\n" +
-        ":small_blue_diamond: \`antinuke rolecreate [limit | action | enable/disable] {Opzioni}\`\n" +
-        "Modifica il numero di ruoli creati prima di far scattare l'AntiNuke del bot\n" +
-        ":small_blue_diamond: \`antinuke roledel [limit | action | enable/disable] {Opzioni}\`\n" +
-        "Modifica il numero di ruoli eliminati prima di far scattare l'AntiNuke del bot\n" +
-        ":small_blue_diamond: \`antinuke channelcreate [limit | action | enable/disable] {Opzioni}\`\n" +
-        "Modifica il numero di canali creati prima di far scattare l'AntiNuke del bot\n" +
-        ":small_blue_diamond: \`antinuke channeldel [limit | action | enable/disable] {Opzioni}\`\n" +
-        "Modifica il numero di canali eliminati prima di far scattare l'AntiNuke del bot\n" +
-        ":small_blue_diamond: \`antinuke global [Numero]\`\n" +
-        "Imposta un nuovo limite globale\n" +
+        "Для просмотра действующих настроек используйте\`antinuke info\`\n\n" +
+        "Изменение настроек AntiNuke, для изменения конкретной найстройки используйте `antinuke [категория]`\n" +
+        "Если пользователь достигает \"предела\" какого-либо действия, бот его наказывате, за каждое действие полагается свое наказание\n" +
+        "Можно установить  \"глобальный/общий\" предел через `antinuke global [Число]`\n\n" +
+        ":small_blue_diamond: \`antinuke ban [limit | action | enable/disable] {Опции}\`\n" +
+        "Измените количество блокировок до срабатывания программы AntiNuke бота\n" +
+        ":small_blue_diamond: \`antinuke kick [limit | action | enable/disable] {Опции}\`\n" +
+        "Измените количество удалений до срабатывания программы AntiNuke бота\n" +
+        ":small_blue_diamond: \`antinuke rolecreate [limit | action | enable/disable] {Опции}\`\n" +
+        "Измените количество созданных ролей до срабатывания программы AntiNuke бота\n" +
+        ":small_blue_diamond: \`antinuke roledel [limit | action | enable/disable] {Опции}\`\n" +
+        "Измените количество удаленных ролей до срабатывания программы AntiNuke бота\n" +
+        ":small_blue_diamond: \`antinuke channelcreate [limit | action | enable/disable] {Опции}\`\n" +
+        "Измените количество созданных каналов до срабатывания программы AntiNuke бота\n" +
+        ":small_blue_diamond: \`antinuke channeldel [limit | action | enable/disable] {Опции}\`\n" +
+        "Измените количество удаленных каналов до срабатывания программы AntiNuke бота\n" +
+        ":small_blue_diamond: \`antinuke global [Число]\`\n" +
+        "Установка нового глобального предела\n" +
         ":small_blue_diamond: \`antinuke info\`\n" +
-        "Controlla le attuali impostazioni dell'AntiNuke",
-    antinuke_small_desc: "Visualizza tutte le impostazioni dell'AntiNuke",
+        "Проверка текущих настроек AntiNuke",
+    antinuke_small_desc: "Просмотр всех настроек AntiNuke",
     antinuke_examples:
         "`antinuke info`\n" +
         "`antinuke global 5`\n" +
         "`antinuke ban enable`\n" +
         "`antinuke kick action ban`\n" +
         "`antinuke rolecreate limit 4`",
-    antinuke_warnings: "[ANTINUKE] Attenzione stai superando un limite dell'AntiNuke",
+    antinuke_warnings: "[ANTINUKE] Внимание, вы превышаете допустимый предел программы AntiNuke",
     //antiban
-    antiban_use: "antiban [limit | action | enable/disable] {Opzioni}",
+    antiban_use: "antiban [limit | action | enable/disable] {Опции}",
     antiban_description:
-        "L'AntiBan e' una funzione dell'AntiNuke che agisce sugli utenti che bannano molti membri ripetutamente\n\n" +
+        "Антибан является функцией AntiNuke, воздействующая на пользователей, которые постоянно блокируют множество других участников\n\n" +
         ":small_blue_diamond: \`antiban enable/disable\`\n" +
-        "Abilita/Disabilita l'AntiBan\n" +
-        ":small_blue_diamond: \`antiban limit [Numero]\`\n" +
-        "Modifica il numero di ban necessari a far attivare l'AntiBan\n" +
-        ":small_blue_diamond: \`antiban action [Sanzione]\`\n" +
-        "Modifica la sanzione dell'AntiBan",
-    antiban_small_desc: "Modifica le impostazioni dell'AntiBan dell'AntiNuke",
+        "Подключите/Отключите Антибан\n" +
+        ":small_blue_diamond: \`antiban limit [Число]\`\n" +
+        "Измените количество блокировок, необходимое для активации Антибана\n" +
+        ":small_blue_diamond: \`antiban action [Санкции]\`\n" +
+        "Измените санкции Антибана",
+    antiban_small_desc: "Изменить настройки функции AntiNuke Антибана",
     antiban_examples:
         "`antiban enable`\n" +
         "`antiban disable`\n" +
         "`antiban limit 5`\n" +
         "`antiban action ban`",
-    antiban_enabled: "AntiBan abilitato!",
-    antiban_disabled: "AntiBan disabilitato!",
-    antiban_acted: "[ANTIBAN] Rilevato un grosso numero di ban eseguiti dall'utente",
+    antiban_enabled: "Антибан включен!",
+    antiban_disabled: "Антибан выключен!",
+    antiban_acted: "[ANTIBAN] Обнаружено большое количество банов, выполненных пользователем",
     //antiban action
     antiban_action_use: "antiban action [Ban | Kick | Warn | Mute]",
     antiban_action_description:
-        "Imposta l'azione che il BOT deve eseguire in caso un utente superi il limite impostato",
+        "Установка конкретного действия, которое должен выполнить бот в случае превышения пользователем установленного предела",
     antiban_action_examples:
         "`antiban action ban`",
     antiban_action_updated: (action) => {
-        return `Azione dell'AntiBan aggiornata, **Azione**: \`${action}\``
+        return `Действие Антибана обновлено, **Действие**: \`${action}\``
     },
     //antiban limit
-    antiban_limit_use: "antiban limit [Numero]",
+    antiban_limit_use: "antiban limit [Количество]",
     antiban_limit_description:
-        "Imposta il limite per l'AntiBan dell'AntiNuke",
+        "Установка предела функции AntiNuke Антибана",
     antiban_limit_examples:
         "`antiban limit 3`",
     antiban_limit_updated: (limit) => {
-        return `Limite dell'AntiBan modificato, **Nuovo Limite**: \`${limit}\``
+        return `Предел Антибана изменен, **Новый предел**: \`${limit}\``
     },
     //antikick
-    antikick_use: "antikick [limit | action | enable/disable] {Opzioni}",
+    antikick_use: "antikick [limit | action | enable/disable] {Опции}",
     antikick_description:
-        "L'AntiKick e' una funzione dell'AntiNuke che agisce sugli utenti che espellono molti membri ripetutamente\n\n" +
+        "Антикик является функцией AntiNuke, воздействующая на пользователей, которые постоянно исключают множество других участников\n\n" +
         ":small_blue_diamond: \`antikick enable/disable\`\n" +
-        "Abilita/Disabilita l'AntiKick\n" +
-        ":small_blue_diamond: \`antikick limit [Numero]\`\n" +
-        "Modifica il numero di kick necessari a far attivare l'AntiKick\n" +
-        ":small_blue_diamond: \`antikick action [Sanzione]\`\n" +
-        "Modifica la sanzione dell'AntiKick",
-    antikick_small_desc: "Modifica le impostazioni dell'AntiKick dell'AntiNuke",
+        "Подключите/Отключите Антикик\n" +
+        ":small_blue_diamond: \`antikick limit [Число]\`\n" +
+        "Измените количество исключений, необходимое для активации Антикика\n" +
+        ":small_blue_diamond: \`antikick action [Санкции]\`\n" +
+        "Измените санкции Антикика",
+    antikick_small_desc: "Изменить настройки функции AntiNuke Антикика",
     antikick_examples:
         "`antikick enable`\n" +
         "`antikick disable`\n" +
         "`antikick limit 5`\n" +
         "`antikick action ban`",
-    antikick_enabled: "AntiKick abilitato!",
-    antikick_disabled: "AntiKick disabilitato!",
-    antikick_acted: "[ANTIKICK] Rilevato un grosso numero di kicks eseguiti dall'utente",
+    antikick_enabled: "Антикик включен!",
+    antikick_disabled: "Антикик выключен!",
+    antikick_acted: "[ANTIKICK] Обнаружено большое количество исключений, выполненных пользователем",
     //antikick action
     antikick_action_use: "antikick action [Ban | Kick | Warn | Mute]",
     antikick_action_description:
-        "Imposta l'azione che il BOT deve eseguire in caso un utente superi il limite impostato",
+        "Установка конкретного дейстсвия,которое должен выполнить бот в случае превышения пользователем установленного предела",
     antikick_action_examples:
         "`antikick action ban`",
     antikick_action_updated: (action) => {
-        return `Azione dell'AntiKick aggiornata, **Azione**: \`${action}\``
+        return `Действие Антикика обновлено, **Действие**: \`${action}\``
     },
     //antikick limit
-    antikick_limit_use: "antikick limit [Numero]",
+    antikick_limit_use: "antikick limit [Количество]",
     antikick_limit_description:
-        "Imposta il limite per l'AntiKick dell'AntiNuke",
+        "Установка предела функции AntiNuke Антикика",
     antikick_limit_examples:
         "`antikick limit 3`",
     antikick_limit_updated: (limit) => {
-        return `Limite dell'AntiKick modificato, **Nuovo Limite**: \`${limit}\``
+        return `Предел Антикика изменен, **Новый Предел**: \`${limit}\``
     },
     //antirolecreate
-    antirolecreate_use: "antirolecreate [limit | action | enable/disable] {Opzioni}",
+    antirolecreate_use: "antirolecreate [limit | action | enable/disable] {Опции}",
     antirolecreate_description:
-        "L'AntiRoleCreate e' una funzione dell'AntiNuke che agisce sugli utenti che creano molti ruoli in poco tempo\n\n" +
+        "Ограничитель созданных ролей является функцией AntiNuke,которая используется против пользователей, создающих множество ролей за короткое время\n\n" +
         ":small_blue_diamond: \`antirolecreate enable/disable\`\n" +
-        "Abilita/Disabilita l'AntiRoleCreate\n" +
-        ":small_blue_diamond: \`antirolecreate limit [Numero]\`\n" +
-        "Modifica il numero di ruoli creati necessari a far attivare l'AntiRoleCreate\n" +
-        ":small_blue_diamond: \`antirolecreate action [Sanzione]\`\n" +
-        "Modifica la sanzione dell'AntiRoleCreate",
-    antirolecreate_small_desc: "Modifica le impostazioni dell'AntiRoleCreate dell'AntiNuke",
+        "Подлючите/Отключите Ограничитель созданных ролей\n" +
+        ":small_blue_diamond: \`antirolecreate limit [Число]\`\n" +
+        "Измените количество созданных ролей, необходимых для активации Ограничителя созданных ролей\n" +
+        ":small_blue_diamond: \`antirolecreate action [Санкции]\`\n" +
+        "Измените санкции Ограничения созданных ролей",
+    antirolecreate_small_desc: "Измените настройки Ограничителя созданных ролей",
     antirolecreate_examples:
         "`antirolecreate enable`\n" +
         "`antirolecreate disable`\n" +
         "`antirolecreate limit 5`\n" +
         "`antirolecreate action ban`",
-    antirolecreate_enabled: "AntiRoleCreate abilitato!",
-    antirolecreate_disabled: "AntiRoleCreate disabilitato!",
-    antirolecreate_acted: "[ANTIROLECREATE] Rilevato un grosso numero di ruoli creati dall'utente",
+    antirolecreate_enabled: "Ограничитель созданных ролей подключен!",
+    antirolecreate_disabled: "Ограничитель созданных ролей отключен!",
+    antirolecreate_acted: "[ANTIROLECREATE] Обнаружено большое количество ролей, созданных пользователем",
     //antirolecreate action
     antirolecreate_action_use: "antirolecreate action [Ban | Kick | Warn | Mute]",
     antirolecreate_action_description:
-        "Imposta l'azione che il BOT deve eseguire in caso un utente superi il limite impostato",
+        "Установка конкретного действия, которое должен выполнить бот в случае превышения пользователем установленного предела",
     antirolecreate_action_examples:
         "`antirolecreate action ban`",
     antirolecreate_action_updated: (action) => {
-        return `Azione dell'AntiRoleCreate aggiornata, **Azione**: \`${action}\``
+        return `Действие Ограничителя созданных ролей обновлено, **Действие**: \`${action}\``
     },
     //antirolecreate limit
-    antirolecreate_limit_use: "antirolecreate limit [Numero]",
+    antirolecreate_limit_use: "antirolecreate limit [Количество]",
     antirolecreate_limit_description:
-        "Imposta il limite per l'AntiRoleCreate dell'AntiNuke",
+        "Установка предела Ограничителя созданных ролей AntiNuke",
     antirolecreate_limit_examples:
         "`antirolecreate limit 3`",
     antirolecreate_limit_updated: (limit) => {
-        return `Limite dell'AntiRoleCreate modificato, **Nuovo Limite**: \`${limit}\``
+        return `Предел Ограничителя созданных ролей изменен, **Новый предел**: \`${limit}\``
     },
     //antiroledelete
-    antiroledelete_use: "antiroledelete [limit | action | enable/disable] {Opzioni}",
+    antiroledelete_use: "antiroledelete [limit | action | enable/disable] {Опции}",
     antiroledelete_description:
-        "L'AntiRoleDelete e' una funzione dell'AntiNuke che agisce sugli utenti che eliminano molti ruoli in poco tempo\n\n" +
+        "Ограничитель удаленных ролей является функцией AntiNuke, которая используется против пользователей, удаляющих большое количество ролей за короткое время\n\n" +
         ":small_blue_diamond: \`antiroledelete enable/disable\`\n" +
-        "Abilita/Disabilita l'AntiRoleDelete\n" +
-        ":small_blue_diamond: \`antiroledelete limit [Numero]\`\n" +
-        "Modifica il numero di ruoli eliminati necessari a far attivare l'AntiRoleDelete\n" +
-        ":small_blue_diamond: \`antiroledelete action [Sanzione]\`\n" +
-        "Modifica la sanzione dell'AntiRoleDelete",
-    antiroledelete_small_desc: "Modifica le impostazioni dell'AntiRoleDelete dell'AntiNuke",
+        "Подключите/Отключите Ограничитель удаленных ролей\n" +
+        ":small_blue_diamond: \`antiroledelete limit [Количество]\`\n" +
+        "Измените количество удаленных ролей, необходимое для активации Ограничителя удаленных ролей\n" +
+        ":small_blue_diamond: \`antiroledelete action [Санкции]\`\n" +
+        "Измените санкции Ограничителя удаленных ролей",
+    antiroledelete_small_desc: "Измените настройки Ограничителя удаленных ролей",
     antiroledelete_examples:
         "`antiroledelete enable`\n" +
         "`antiroledelete disable`\n" +
         "`antiroledelete limit 5`\n" +
         "`antiroledelete action ban`",
-    antiroledelete_enabled: "AntiRoleDelete abilitato!",
-    antiroledelete_disabled: "AntiRoleDelete disabilitato!",
-    antiroledelete_acted: "[ANTIROLEDELETE] Rilevato un grosso numero di ruoli eliminati dall'utente",
+    antiroledelete_enabled: "Ограничитель удаленных ролей включен!",
+    antiroledelete_disabled: "Ограничитель удаленных ролей отключен!",
+    antiroledelete_acted: "[ANTIROLEDELETE] Обнаружено большое количество ролей, удаленных пользователем",
     //antiroledelete action
     antiroledelete_action_use: "antiroledelete action [Ban | Kick | Warn | Mute]",
     antiroledelete_action_description:
-        "Imposta l'azione che il BOT deve eseguire in caso un utente superi il limite impostato",
+        "Установка конкретного действия, которое должен выполнить бот в случае превышения пользователем установленного предела",
     antiroledelete_action_examples:
         "`antiroledelete action ban`",
     antiroledelete_action_updated: (action) => {
-        return `Azione dell'AntiRoleDelete aggiornata, **Azione**: \`${action}\``
+        return `Действие Ограничителя удаленных ролей обновлено, **Действие**: \`${action}\``
     },
     //antiroledelete limit
-    antiroledelete_limit_use: "antiroledelete limit [Numero]",
+    antiroledelete_limit_use: "antiroledelete limit [Количество]",
     antiroledelete_limit_description:
-        "Imposta il limite per l'AntiRoleDelete dell'AntiNuke",
+        "Установка предела Ограничителя удаленных ролей",
     antiroledelete_limit_examples:
         "`antiroledelete limit 3`",
     antiroledelete_limit_updated: (limit) => {
-        return `Limite dell'AntiRoleDelete modificato, **Nuovo Limite**: \`${limit}\``
+        return `Предел Ограничителя удаленных ролей изменен, **Новый предел**: \`${limit}\``
     },
     //antichannelcreate
-    antichannelcreate_use: "antichannelcreate [limit | action | enable/disable] {Opzioni}",
+    antichannelcreate_use: "antichannelcreate [limit | action | enable/disable] {Опции}",
     antichannelcreate_description:
-        "L'AntiChannelCreate e' una funzione dell'AntiNuke che agisce sugli utenti che creano molti canali in poco tempo\n\n" +
+        "Ограничитель созданых каналов является функцией AntiNuke, которая используется против пользователей, создающих большое количество каналов за короткое время\n\n" +
         ":small_blue_diamond: \`antichannelcreate enable/disable\`\n" +
-        "Abilita/Disabilita l'AntiChannelCreate\n" +
-        ":small_blue_diamond: \`antichannelcreate limit [Numero]\`\n" +
-        "Modifica il numero di canali creati necessari a far attivare l'AntiChannelCreate\n" +
-        ":small_blue_diamond: \`antichannelcreate action [Sanzione]\`\n" +
-        "Modifica la sanzione dell'AntiChannelCreate",
-    antichannelcreate_small_desc: "Modifica le impostazioni dell'AntiChannelCreate dell'AntiNuke",
+        "Включите/Отключите Ограничитель созданных каналов\n" +
+        ":small_blue_diamond: \`antichannelcreate limit [Число]\`\n" +
+        "Измените количество созданных каналов, необходимое для активации Ограничителя созданных каналов\n" +
+        ":small_blue_diamond: \`antichannelcreate action [Санкции]\`\n" +
+        "Измените санкции Ограничителя созданных каналов",
+    antichannelcreate_small_desc: "Измените настройки Ограничителя созданных каналов",
     antichannelcreate_examples:
         "`antichannelcreate enable`\n" +
         "`antichannelcreate disable`\n" +
         "`antichannelcreate limit 5`\n" +
         "`antichannelcreate action ban`",
-    antichannelcreate_enabled: "AntiChannelCreate abilitato!",
-    antichannelcreate_disabled: "AntiChannelCreate disabilitato!",
-    antichannelcreate_acted: "[ANTICHANNELCREATE] Rilevato un grosso numero di canali creati dall'utente",
+    antichannelcreate_enabled: "Ограничитель созданных каналов включен!",
+    antichannelcreate_disabled: "Ограничитель созданных каналов отключен!",
+    antichannelcreate_acted: "[ANTICHANNELCREATE] Обнаружено большое количество каналов, созданных пользователем",
     //antichannelcreate action
     antichannelcreate_action_use: "antichannelcreate action [Ban | Kick | Warn | Mute]",
     antichannelcreate_action_description:
-        "Imposta l'azione che il BOT deve eseguire in caso un utente superi il limite impostato",
+        "Установка конкретного действия, которое должен выполнить бот в случае превышения пользователем установленного предела",
     antichannelcreate_action_examples:
         "`antichannelcreate action ban`",
     antichannelcreate_action_updated: (action) => {
-        return `Azione dell'AntiChannelCreate aggiornata, **Azione**: \`${action}\``
+        return `Действие Ограничителя созданных каналов обновлено, **Действие**: \`${action}\``
     },
     //antichannelcreate limit
-    antichannelcreate_limit_use: "antichannelcreate limit [Numero]",
-    antichannelcreate_limit_description: "Imposta il limite per l'AntiChannelCreate dell'AntiNuke",
+    antichannelcreate_limit_use: "antichannelcreate limit [Количество]",
+    antichannelcreate_limit_description: "Установите предел Ограничителя созданных каналов",
     antichannelcreate_limit_examples:
         "`antichannelcreate limit 3`",
     antichannelcreate_limit_updated: (limit) => {
-        return `Limite dell'AntiChannelCreate modificato, **Nuovo Limite**: \`${limit}\``
+        return `Предел Ограничителя созданных каналов изменен, **Новый предел**: \`${limit}\``
     },
     //antichanneldelete
-    antichanneldelete_use: "antichanneldelete [limit | action | enable/disable] {Opzioni}",
+    antichanneldelete_use: "antichanneldelete [limit | action | enable/disable] {Опции}",
     antichanneldelete_description:
-        "L'AntiChannelDelete e' una funzione dell'AntiNuke che agisce sugli utenti che eliminano molti canali in poco tempo\n\n" +
+        "Ограничитель удаленных каналов является функцией AntiNuke, который используется против пользователей, удаляющих большое количество каналов за короткое время\n\n" +
         ":small_blue_diamond: \`antichanneldelete enable/disable\`\n" +
-        "Abilita/Disabilita l'AntiChannelDelete\n" +
-        ":small_blue_diamond: \`antichanneldelete limit [Numero]\`\n" +
-        "Modifica il numero di canali eliminati necessari a far attivare l'AntiChannelDelete\n" +
-        ":small_blue_diamond: \`antichanneldelete action [Sanzione]\`\n" +
-        "Modifica la sanzione dell'AntiChannelDelete",
-    antichanneldelete_small_desc: "Modifica le impostazioni dell'AntiChannelDelete dell'AntiNuke",
+        "Подключите/Отключите Ограничитель удаленных каналов\n" +
+        ":small_blue_diamond: \`antichanneldelete limit [Число]\`\n" +
+        "Измените количество удаленных каналов, необходимое для активации Ограничителя удаленных каналов\n" +
+        ":small_blue_diamond: \`antichanneldelete action [Санкции]\`\n" +
+        "Измените санкции Ограничителя удаленных каналов",
+    antichanneldelete_small_desc: "Измените настройки Ограничителя удаленных каналов",
     antichanneldelete_examples:
         "`antichanneldelete enable`\n" +
         "`antichanneldelete disable`\n" +
         "`antichanneldelete limit 5`\n" +
         "`antichanneldelete action ban`",
-    antichanneldelete_enabled: "AntiChannelDelete abilitato!",
-    antichanneldelete_disabled: "AntiChannelDelete disabilitato!",
-    antichanneldelete_acted: "[ANTICHANNELDELETE] Rilevato un grosso numero di canali eliminati dall'utente",
+    antichanneldelete_enabled: "Ограничитель удаленных каналов включен!",
+    antichanneldelete_disabled: "Ограничитель удаленных каналов выключен!",
+    antichanneldelete_acted: "[ANTICHANNELDELETE] Обнаружено большое количество каналов, удаленных пользователем",
     //antichanneldelete action
     antichanneldelete_action_use: "antichanneldelete action [Ban | Kick | Warn | Mute]",
     antichanneldelete_action_description:
-        "Imposta l'azione che il BOT deve eseguire in caso un utente superi il limite impostato",
+        "Установка конкретного действия, которое должен выполнить бот в случае превышения пользователем установленного предела",
     antichanneldelete_action_examples:
         "`antichanneldelete action ban`",
     antichanneldelete_action_updated: (action) => {
-        return `Azione dell'AntiChannelDelete aggiornata, **Azione**: \`${action}\``
+        return `Действие Ограничителя удаленных каналов обновлено, **Действие**: \`${action}\``
     },
     //antichanneldelete limit
-    antichanneldelete_limit_use: "antichanneldelete limit [Numero]",
-    antichanneldelete_limit_description: "Imposta il limite per l'AntiChannelDelete dell'AntiNuke",
+    antichanneldelete_limit_use: "antichanneldelete limit [Количество]",
+    antichanneldelete_limit_description: "Установите предел Ограничителя удаленных каналов",
     antichanneldelete_limit_examples:
         "`antichanneldelete limit 3`",
     antichanneldelete_limit_updated: (limit) => {
-        return `Limite dell'AntiChannelDelete modificato, **Nuovo Limite**: \`${limit}\``
+        return `Предел Ограничителя удаленных каналов изменен, **Новый предел**: \`${limit}\``
     },
     //antinuke global
-    antinukeglobal_use: "antinuke global [Numero]",
+    antinukeglobal_use: "antinuke global [Количество]",
     antinukeglobal_description:
-        "**Imposta il limite globale dell'AntiNuke**\n" +
-        "Per limite globale si intende la somma di tutte le azioni commesse dall'utente e registrate dall'AntiNuke del BOT negli ultimi ±30 secondi.\n" +
-        "**Il BOT terra' conto solo delle azioni di funzioni attivate, per vedere che funzioni dell'AntiNuke sono attivate utilizza `antinuke info`**",
-    antinukeglobal_small_desc: "Imposta il limite globale dell'AntiNuke",
+        "**Установите общий предел AntiNuke**\n" +
+        "Под общим пределом понимается сумма всех действий, совершенных пользователем и зафиксированных AntiNuke бота за последнии ±30 секунд.\n" +
+        "**Бот будет учитывать только действия активированных функций, для просмотра активированных функций AntiNuke используйте`antinuke info`**",
+    antinukeglobal_small_desc: "Установите общий предел AntiNuke",
     antinukeglobal_examples:
         "`antinuke global 10`",
     antinukeglobal_updated: (limit) => {
-        return `Limite globale dell'AntiNuke modificato, **Nuovo Limite**: \`${limit}\``
+        return `Общий предел AntiNuke изменен, **Новый предел**: \`${limit}\``
     },
-    antinukeglobal_warnings: "[ANTINUKE] Attenzione stai superando il limite globale dell'AntiNuke",
+    antinukeglobal_warnings: "[ANTINUKE] Внимание, вы превышаете общий предел AntiNuke",
     //antinuke info
-    antinuke_info_title: "Impostazioni AntiNuke",
+    antinuke_info_title: "Настройки AntiNuke",
     antinuke_info_description:
-        "In questo pannello sono mostrate tutte le attuali impostazioni dell'AntiNuke, " +
-        "puoi modificare le varie impostazioni utilizzando `antinuke [Sezione]` oppure tramite comandi singoli `antiban {...}`",
-    antinuke_info_global_title: "Limite Globale",
+        "На этой панели отображаются все текущие настройки AntiNuke, " +
+        "вы можете изменить различные настройки с помощью `antinuke [Раздел]` или с помощью отдельных команд `antiban {...}`",
+    antinuke_info_global_title: "Общий предел",
     //antiraid
-    antiraid_use: "antiraid [limit | action | enable/disable | time] {Opzioni}",
+    antiraid_use: "antiraid [limit | action | enable/disable | time] {Опции}",
     antiraid_description:
-        "L'AntiRaid permette di proteggere il server dall'ingresso di molti utenti in breve tempo\n\n" +
+        "Антирейд позволяет защитить сервер от проникновения слишком многих пользователей за короткое время\n\n" +
         ":small_blue_diamond: \`antiraid enable/disable\`\n" +
-        "Abilita/Disabilita l'AntiRaid\n" +
-        ":small_blue_diamond: \`antiraid limit [Numero]\`\n" +
-        "Modifica il numero di utenti entrati entro un determinato tempo necessari a far attivare l'AntiRaid\n" +
-        ":small_blue_diamond: `antiraid time [Tempo]`\n" +
-        "Imposta il tempo **in secondi**, in cui va determinato il raid \n" +
-        ":small_blue_diamond: \`antiraid action [Sanzione]\`\n" +
-        "Modifica la sanzione dell'AntiRaid",
-    antiraid_small_desc: "Modifica le impostazioni dell'AntiRaid",
+        "Включите/Отключите Антирейд\n" +
+        ":small_blue_diamond: \`antiraid limit [Количество]\`\n" +
+        "Измените количество пользователей, вошедших в систему за определенное время, необходимое для активации Антирейда\n" +
+        ":small_blue_diamond: `antiraid time [Время]`\n" +
+        "Установите время **в секундах**, за которое определяется рейд\n" +
+        ":small_blue_diamond: \`antiraid action [Санкции]\`\n" +
+        "Измените санкции Антирейда",
+    antiraid_small_desc: "Измените настройки Антирейда",
     antiraid_examples:
         "`antiraid enable`\n" +
         "`antiraid disable`\n" +
         "`antiraid time 6`\n" +
         "`antiraid limit 5`\n" +
         "`antiraid action ban`",
-    antiraid_enabled: "AntiRaid abilitato!",
-    antiraid_disabled: "AntiRaid disabilitato!",
-    antiraid_acted: "[ANTIRAID] Rilevato un grosso numero di utenti entrati contemporaneamente",
+    antiraid_enabled: "Антирейд включен!",
+    antiraid_disabled: "Антирейд выключен!",
+    antiraid_acted: "[ANTIRAID] Обнаружено большое количество пользователей, вошедших в систему одновременно",
     //antiraid limit
-    antiraid_limit_use: "antiraid limit [Limite]",
-    antiraid_limit_description: "Imposta il numero massimo di utenti entrati nel tempo determinato\n" +
-        "**Piu' aumenterai il limite, maggiore saranno gli utenti entrati per farlo attivare**",
-    antiraid_limit_small_desc: "Imposta il numero massimo di utenti entrati nel tempo determinato",
+    antiraid_limit_use: "antiraid limit [Предел]",
+    antiraid_limit_description: "Установка максимально допустимого количества пользователей, вошедших в систему за определенное время\n" +
+        "**Чем выше установленный предел, тем большее количество пользователй, вошедших в систему, понадобится для активации Антирейда**",
+    antiraid_limit_small_desc: "Установите максимально допустимое количество пользователей, вошедших в систему за определенное время",
     antiraid_limit_examples: "`antiraid limit 5`",
-    antiraid_limit_min: "Il limite minino per l'AntiRaid e' di 3 utenti",
+    antiraid_limit_min: "Минимальный предел для Антирейда составляют 3 пользователя",
     antiraid_limit_updated: (limit) => {
-        return `Limite dell'AntiRaid modificato, **Nuovo Limite**: \`${limit}\``
+        return `Предел Антирейда изменен, **Новый Предел**: \`${limit}\``
     },
     //antiraid action
     antiraid_action_use: "antiraid action [Ban | Kick | Warn | Mute]",
-    antiraid_action_description: "Imposta l'azione che esegue il bot quando rileva un raid",
-    antiraid_action_small_desc: "Imposta l'azione che esegue il bot quando rileva un raid",
+    antiraid_action_description: "Установите конкретное действие, которое выполнит бот при обнаружении рейда",
+    antiraid_action_small_desc: "Установите конкретное действие, которое выполнит бот при обнаружении рейда",
     antiraid_action_examples:
         "`antiraid action ban`\n" +
         "`antiraid action none`",
     antiraid_action_updated: (action) => {
-        return `Azione dell'AntiRaid aggiornata, **Azione**: \`${action}\``
+        return `Действие Антирейда обновлено, **Дейтсвие**: \`${action}\``
     },
     //antiraid time
-    antiraid_time_use: "antiraid time [Secondi]",
-    antiraid_time_description: "Imposta il tempo **in secondi**, in cui va determinato il raid",
-    antiraid_time_small_desc: "Imposta il tempo in cui va determinato il raid",
+    antiraid_time_use: "antiraid time [Секунды]",
+    antiraid_time_description: "Установите время **в секундах**, за которое определяется рейд",
+    antiraid_time_small_desc: "Установите время, за которое определяется рейд",
     antiraid_time_examples:
         "`antiraid time 4`",
-    antiraid_time_min: "Il tempo limite minino per l'AntiRaid e' di 3 secondi",
+    antiraid_time_min: "Минимальное ограничение времени для Антирейда составляют 3 секунды",
     antiraid_time_updated: (time) => {
-        return `Tempo dell'AntiRaid aggiornato, **Tempo nuovo**: \`${time} Secondi\``
+        return `Время Антирейда обновлено, **Новое время**: \`${time} Секунды\``
     },
     //autoaction
-    autoaction_use: "autoaction [add | remove | list] {Opzioni}",
+    autoaction_use: "autoaction [add | remove | list] {Опции}",
     autoaction_description:
-        "Imposta un'azione da eseguire quando un utente raggiunge un determinato numero di warns\n\n" +
-        ":small_blue_diamond: `autoaction add [numero] [ban | kick | mute] {tempo}`\n" +
-        "Aggiungi un azione che eseguirà il bot al numero impostato di warns\n" +
-        ":small_blue_diamond: `autoaction remove [numero]`\n" +
-        "Rimuovi un azione dell'autoAction\n" +
+        "Установите действие, которое будет выполняться автоматически, как только пользователь достигнет определенного количества предупреждений\n\n" +
+        ":small_blue_diamond: `autoaction add [число] [ban | kick | mute] {время}`\n" +
+        "Добавьте действие, которое выполнит бот при заданном количестве предупреждений\n" +
+        ":small_blue_diamond: `autoaction remove [число]`\n" +
+        "Удалите действие Автодействия\n" +
         ":small_blue_diamond: `autoaction list`\n" +
-        "Mostra le azioni che eseguirà il bot a determinati numeri di warns",
-    autoaction_small_desc: "Modifica le azioni automatiche del bot a determinati warns",
+        "Покажите действия, которые будут выполняться ботом при определенном количестве предупреждений",
+    autoaction_small_desc: "Измените автоматические действия бота в ответ на определенные предупреждения",
     autoaction_examples:
         "`autoaction list`\n" +
         "`autoaction remove 2`\n" +
         "`autoaction add 3 kick`\n" +
         "`autoaction add 5 ban 2d`",
     //autoaction add
-    autoaction_add_use: "autoaction add [numero] [ban | kick | mute] {tempo}",
+    autoaction_add_use: "autoaction add [число] [ban | kick | mute] {время}",
     autoaction_add_description:
-        "**Azioni Disponibili**:\n" +
-        "`ban (Tempo)` = Bandisce l'utente dal server, tempo facoltativo\n" +
-        "`kick` = Espelle l'utente dal server\n" +
-        "`mute (Tempo)` = Muta l'utente, tempo facoltativo\n" +
-        "**Nota**: va selezionato un ruolo per il mute tramite `setmuterole [Ruolo]`",
+        "**Доступные действия**:\n" +
+        "`ban (Время)` = Блокирует пользователя на сервере, указание времени произвольно\n" +
+        "`kick` = Изгоняет пользователя с сервера\n" +
+        "`mute (Время)` = Отключает текстовые каналы пользователя, указание времени произвольно\n" +
+        "**Примечание**: Роль пользователя с отключенными текстовыми каналами должна быть выбрана с помощью `setmuterole [Роль]`",
     autoaction_add_examples:
         "`autoaction add 5 mute 12h`",
     autoaction_already_exists: (number) => {
-        return `Esiste gia' un altro provvedimento impostato per \`${number}\` warns. Controlla gli altri provvedimenti tramite il comando \`autoaction list\``
+        return `Для данного количества \`${number}\` предупреждений уже установлена мера наказания. Проверьте другие распоряжения с помощью команды \`autoaction list\``
     },
     autoaction_added: (number, action, time) => {
         let real_action
@@ -878,452 +880,454 @@ module.exports = {
 
         switch (action) {
             case 'ban':
-                real_action = 'bannato'
+                real_action = 'заблокирован'
                 break
             case 'kick':
-                real_action = 'espulso'
+                real_action = 'исключен'
                 break
             case 'mute':
-                real_action = 'mutato'
+                real_action = 'отключен'
                 break
             default:
                 real_action = "?"
                 break
         }
 
-        let send = `Impostazioni aggiornate, da ora raggiunti i \`${number}\` warns, l'utente verra' ${real_action}`
+        let send = `Настройки обновлены, уже получено \`${number}\` предупреждений, пользователь будет ${real_action}`
 
         if (time !== null) {
-            send = send + ' temporaneamente'
+            send = send + ' временно'
         }
 
         return send
     },
     //autoaction remove
-    autoaction_remove_use: "autoaction remove [Numero]",
-    autoaction_remove_description: "Rimuovi un azione automatica",
+    autoaction_remove_use: "autoaction remove [Количество]",
+    autoaction_remove_description: "Удалите автоматические действия",
     autoaction_remove_examples:
         "`autoaction remove 3`",
     autoaction_dont_exists: (number) => {
-        return `Non esiste nessun provvedimento impostato per \`${number}\` warns. Controlla gli provvedimenti tramite il comando \`autoaction list\``
+        return `Не установлено никакого распоряжения для данного количества \`${number}\` предупреждений. Проверьте другие распоряжения с помощью команды \`autoaction list\``
     },
-    autoaction_removed: "Provvedimento rimosso",
+    autoaction_removed: "Распоряжение удалено",
     //autoaction list
-    autoaction_list_description: "**Provvedimenti Impostati**:",
-    autoaction_list_null: "Nessun provvedimento impostato :(",
+    autoaction_list_description: "**Установленные распоряжения**:",
+    autoaction_list_null: "Не установлено никакого распоряжения :(",
     //autoaction reasons
-    autoaction_reason: "[AUTOACTION] Raggiunti i warns prestabiliti",
+    autoaction_reason: "[AUTOACTION] Вы получили слишком много предупреждений",
     //autodelwarn
-    autodelwarn_use: "autodelwarn [enable/disable | Set] {Tempo}",
+    autodelwarn_use: "autodelwarn [enable/disable | Set] {Время}",
     autodelwarn_description:
-        "Questa funzione permette di eliminare i warns dopo un tempo determinato\n" +
+        "Данная функция позволяет удалить предупреждения через определенное время\n" +
         ":small_blue_diamond: `autodelwarn enable/disable`\n" +
-        "Abilita/Disabilita la cancellazione automatica dei warn\n" +
-        ":small_blue_diamond: `autodelwarn set [Tempo]\n`" +
-        "Imposta il tempo dopo il quale i warn verranno automaticamente cancellati",
-    autodelwarn_small_desc: "Imposta la cancellazione automatica dei warns",
+        "Включить/Отключить автоматическое удаление предупреждений\n" +
+        ":small_blue_diamond: `autodelwarn set [Время]\n`" +
+        "Установите время, по истечении которого предупреждения будут автоматически удалены",
+    autodelwarn_small_desc: "Установите автоматическое удаление предупреждений",
     autodelwarn_examples:
         "`autodelwarn enable`\n" +
         "`autodelwarn set 1M`",
-    autodelwarn_enabled: "AutoDelWarn abilitato!",
-    autodelwarn_disabled: "AutoDelWarn disabilitato!",
+    autodelwarn_enabled: "Автоматическое удаление предупреждений включено!",
+    autodelwarn_disabled: "Автоматическое удаление предупреждений выключено!",
     //autodelwarn set
-    autodelwarn_set_use: "autodelwarn set [Tempo]",
-    autodelwarn_set_description: "Imposta il tempo dopo il quale i warn verranno automaticamente cancellati",
+    autodelwarn_set_use: "autodelwarn set [Время]",
+    autodelwarn_set_description: "Установите время, по истечении которого предупреждения будут автоматически удалены",
     autodelwarn_set_examples:
         "`autodelwarn set 1m`",
     autodelwarn_set_updated: (time) => {
-        return `Tempo dell'AutoDelWarn aggiornato, **Tempo nuovo**: \`${time}\``
+        return `Время автоматического удаления предупреждений обновлено, **Новое время**: \`${time}\``
     },
     //blacklist
-    blacklist_use: "blacklist [enable/disable | add/remove | action | list] {Opzioni}",
+    blacklist_use: "blacklist [enable/disable | add/remove | action | list] {Опции}",
     blacklist_description:
-        "La blacklist e' una lista di parole vietate che verranno automaticamente eliminate, anche se comprese nelle frasi, **Il bot tenterà di rilevare anche frasi/parole simili (con caratteri speciali o poco diversi)**\n\n" +
+        "Черный список представляет собой список запрещенных слов, которые будут автоматически исключены, даже если они являются частью предложения, **Бот также постарается обнаружить похожие фразы/слова (набранные специальными символами или похожими знаками)**\n\n" +
         ":small_blue_diamond: `blacklist enable/disable`\n" +
-        "Abilita/Disabilita la blacklist nel server\n" +
-        ":small_blue_diamond: `blacklist add/remove [Parola/Frase]`" +
-        "Aggiungi/Rimuovi una parola o frase dalla BlackList\n" +
-        ":small_blue_diamond: `blacklist action [Azione]`\n" +
-        "Modifica l'azione intrapresa dal bot quando rileva una parola/frase vietata, utilizzare come azione **none** per non eseguire un'azione nei confronti dell'utente (oltre a cancellare il messaggio)\n" +
+        "Включите/Отключите черный список на сервере\n" +
+        ":small_blue_diamond: `blacklist add/remove [Слово/Фраза]`" +
+        "Добавьте/Удалите слово или фразу к черному списку\n" +
+        ":small_blue_diamond: `blacklist action [Действие]`\n" +
+        "Измените действие, предпринимаемое ботом при обнаружении запрещенного слова, используйте к качестве действия **none**, чтобы не выполнять никаких действий против пользователя (кроме удаления сообщения)\n" +
         ":small_blue_diamond: `blacklist list`\n" +
-        "Visualizza l'attuale lista di parole e frasi vietate",
-    blacklist_small_desc: "Apri le impostazioni della blacklist",
+        "Показ текущего черного списка",
+    blacklist_small_desc: "Откройте настройки черного списка",
     blacklist_examples:
         "\`blacklist enable\`\n" +
-        "\`blacklist add \"parola\"\`\n" +
-        "\`blacklist add \"una frase\" \`\n" +
-        "\`blacklist remove parola\`\n" +
+        "\`blacklist add \"слово\"\`\n" +
+        "\`blacklist add \"фраза\" \`\n" +
+        "\`blacklist remove слово\`\n" +
         "\`blacklist action ban\`\n" +
         "\`blacklist list\`",
-    blacklist_enabled: "BlackList abilitata!",
-    blacklist_disabled: "BlackList disabled!",
-    blacklist_add_remove_use: "blacklist add/remove [Parola/Frase]",
-    blacklist_add_remove_description: "Aggiungi/Rimuovi una parola o frase dalla BlackList, utilizza `blacklist list` per visualizzare le parole/frasi vietate",
+    blacklist_enabled: "Черный список включен!",
+    blacklist_disabled: "Черный список выключен!",
+    blacklist_add_remove_use: "blacklist add/remove [Слово/Фраза]",
+    blacklist_add_remove_description: "Добавьте в/Удалите слово или фразу из Черного списка, изпользуйте `blacklist list` для показа запрещенных слов/фраз",
     blacklist_add_remove_examples:
-        "\`blacklist add \"parola\"\`\n" +
-        "\`blacklist add \"una frase\"\`\n" +
-        "\`blacklist remove \"parola\"\`\n" +
-        "\`blacklist remove \"una frase\"\`\n",
-    blacklist_word_already_added: "La parola/frase inserita e' gia' nella blacklist",
-    blacklist_word_not: "La parola/frase inserita non e' presente nella blacklist",
+        "\`blacklist add \"слово\"\`\n" +
+        "\`blacklist add \"фраза\"\`\n" +
+        "\`blacklist remove \"слово\"\`\n" +
+        "\`blacklist remove \"фраза\"\`\n",
+    blacklist_word_already_added: "Введенное слово/фраза уже в черном списке",
+    blacklist_word_not: "Введенное слово/фраза не входят в черный список",
     blacklisted_word_added: (word) => {
-        return `BlackList aggiornata, **Aggiunto**: \`${word}\``
+        return `Черный список обновлен, **Добавлен**: \`${word}\``
     },
     blacklisted_word_removed: (word) => {
-        return `BlackList aggiornata, **Rimosso**: \`${word}\``
+        return `Черный список обновлен, **Удален**: \`${word}\``
     },
-    blacklisted_words: "Parole Vietate",
-    blacklist_list_clear: "Nessuna parola vietata :(",
-    blacklist_acted: "[NISD AUTOMOD] Parola vietata rilevata!",
+    blacklisted_words: "Запрещенные слова",
+    blacklist_list_clear: "Никаких запрещенных слов :(",
+    blacklist_acted: "[NISD AUTOMOD] Обнаружено запрещенное слово!",
     blacklist_in_action: (member) => {
-        return `${member}**, Parola vietata rilevata!**`
+        return `${member}**, Обнаружено запрещенное слово!**`
     },
     blacklist_action_use: "blacklist action [Ban | Kick | Warn | Mute | None]",
     blacklist_action_description:
-        "Imposta l'azione che il BOT deve eseguire in caso un utente invia un messaggio contenente" +
-        " una parola non ammessa, usa **none** per non eseguire nessuna azione (oltre ad eliminare il messaggio)",
+        "Установите действие, которое должен выполнить бот, если пользователь отправляет сообщение, содержащее" +
+        " запрещенное слово, используйте **none**, чтобы не выполнять никаких действий (кроме удаления сообщения)",
     blacklist_action_examples:
         "`blacklist action ban`",
     blacklist_action_updated: (action) => {
-        return `Azione della BlackList aggiornata, **Azione**: \`${action}\``
+        return `Действие Черного списка обновлено, **Действие**: \`${action}\``
     },
-    blacklist_action_removed: "Azione della BlackList rimossa",
+    blacklist_action_removed: "Действие Черного списка удалено",
     //bypassrole
-    bypassrole_use: "bypassrole [add / remove | list] {@Ruolo/ID}",
+    bypassrole_use: "bypassrole [add / remove | list] {@Роль/ID}",
     bypassrole_description:
-        "Crea una lista di ruoli \"ignorati\" dall'AutoMod\n\n" +
-        ":small_blue_diamond: \`bypassrole add/remove [@Ruolo/ID]\`\n" +
-        "Aggiungi/Rimuovi un ruolo da far \"ignorare\" dall'AutoMod\n" +
+        "Создание списка ролей \"игнорируемых\" Автомодерацией \n\n" +
+        ":small_blue_diamond: \`bypassrole add/remove [@Роль/ID]\`\n" +
+        "Добавьте/Удалите роль, которую \"игнорирует\" Автоматическая Модерация\n" +
         ":small_blue_diamond: \`bypassrole list\`\n" +
-        "Mostra la lista di tutti i ruoli \"ignorati\" dall'AutoMod",
-    bypassrole_small_desc: "Imposta dei ruoli da far ignorare all'AutoMod",
+        "Показ всего списка ролей \"игнорируемых\" Автомодерацией",
+    bypassrole_small_desc: "Установка ролей, которые будут игнорироваться Автомодерацией",
     bypassrole_examples:
-        "\`bypassrole add @ruolo\`\n" +
+        "\`bypassrole add @роль\`\n" +
         "\`bypassrole remove id\`\n" +
         "\`bypassrole list\`",
     //bypassrole add/remove
-    bypassrole_add_remove_use: "bypassrole add/remove [@Ruolo/ID]",
-    bypassrole_add_remove_description: "Aggiungi/Rimuovi un ruolo da far \"ignorare\" dall'AutoMod",
+    bypassrole_add_remove_use: "bypassrole add/remove [@Роль/ID]",
+    bypassrole_add_remove_description: "Добавьте/Удалите роль, которая будет \"игнорироваться\" Автомодерацией",
     bypassrole_add_remove_examples:
-        "\`bypassrole add @ruolo\`\n" +
+        "\`bypassrole add @роль\`\n" +
         "\`bypassrole remove id\`\n",
-    bypassrole_role_already: "Il ruolo selezionato e' gia' ignorato",
-    bypassrole_role_not: "Il ruolo selezionato non e' nella lista dei ruoli ignorati",
+    bypassrole_role_already: "Выбранная роль уже игнорируется",
+    bypassrole_role_not: "Выбранная роль отсутствует в списке игнорируемых ролей",
     bypassrole_role_added: (role) => {
-        return `Ruolo aggiunto, **Ruolo**: ${role}`
+        return `Роль добавлена, **Роль**: ${role}`
     },
     bypassrole_role_removed: (role) => {
-        return `Ruolo rimosso, **Ruolo**: ${role}`
+        return `Роль удалена, **Роль**: ${role}`
     },
-    bypassrole_ignored_roles: "Ruoli ignorati",
-    bypassrole_clear: "Nessun ruolo ignorato",
+    bypassrole_ignored_roles: "Игнорируемые роли",
+    bypassrole_clear: "Игнорируемые роли отсутствуют",
     //bypasschannel
-    bypasschannel_use: "bypasschannel [add/remove | list] {#Canale/ID}",
+    bypasschannel_use: "bypasschannel [add/remove | list] {#Канал/ID}",
     bypasschannel_description:
-        "Crea una lista di canali ignorati dall'AutoMod del bot\n\n" +
-        ":small_blue_diamond: \`bypasschannel add/remove [#Canale/ID]\`\n" +
-        "Aggiungi/Rimuovi un canale dalla lista dei canali ignorati\n" +
+        "Создание списка каналов, игнорируемых Автомодерацией бота\n\n" +
+        ":small_blue_diamond: \`bypasschannel add/remove [#Канал/ID]\`\n" +
+        "Добавьте в/Удалите канал из списка игнорируемых\n" +
         ":small_blue_diamond:\`bypasschannel list\`\n" +
-        "Mostra la lista dei canali ignorati",
-    bypasschannel_small_desc: "Imposta dei canali da far ignorare all'AutoMod",
+        "Показ всего списка игнорируемых каналов",
+    bypasschannel_small_desc: "Установка каналов, которые будут игнорироваться Автомодерацией",
     bypasschannel_examples:
-        "\`bypasschannel add #canale\`\n" +
+        "\`bypasschannel add #канал\`\n" +
         "\`bypasschannel remove id\`\n" +
         "\`bypasschannel list\`",
     //bypasschannel add/remove
-    bypasschannel_add_remove_use: "bypasschannel add/remove [@Ruolo/ID]",
-    bypasschannel_add_remove_description: "Aggiungi/Rimuovi un canale da far \"ignorare\" dall'AutoMod",
+    bypasschannel_add_remove_use: "bypasschannel add/remove [@Роль/ID]",
+    bypasschannel_add_remove_description: "Добавьте/Удалите канал, который будет\"игнорироваться\" Автомодерацией",
     bypasschannel_add_remove_examples:
-        "\`bypasschannel add #canale\`\n" +
+        "\`bypasschannel add #канал\`\n" +
         "\`bypasschannel remove id\`\n",
-    bypasschannel_channel_already: "Il canale selezionato e' gia' ignorato",
-    bypasschannel_channel_not: "Il canale selezionato non e' nella lista dei canali ignorati",
+    bypasschannel_channel_already: "Выбранный канал уже игнорируется",
+    bypasschannel_channel_not: "Выбранный канал отсутствует в списке игнорируемых каналов",
     bypasschannel_channel_added: (channel) => {
-        return `Canale aggiunto, **Canale**: ${channel}`
+        return `Канал добавлен, **Канал**: ${channel}`
     },
     bypasschannel_channel_removed: (channel) => {
-        return `Canale rimosso, **Canale**: ${channel}`
+        return `Канал удален, **Канал**: ${channel}`
     },
-    bypasschannel_ignored_channels: "Canali ignorati",
-    bypasschannel_clear: "Nessun canale ignorato",
+    bypasschannel_ignored_channels: "Игнорируемые каналы",
+    bypasschannel_clear: "Игнорируемые каналы отсутствуют",
     //Captcha
-    captcha_use: "captcha [Categoria] {Opzioni}",
+    captcha_use: "captcha [Категория] {Параметры}",
     captcha_description:
-        "La verifica tramite Captcha permette di inviare un codice in privato all'utente che per essere verificato dovrà riscriverlo.\n" +
-        "Ognuno dei comandi qui sotto contiene una pagina di help a se dove sono contenute maggiori informazioni\n" +
-        "**Per funzionare, la verifica necessita di un ruolo da assegnare ed e' consigliato impostare un canale per i log.**\n\n" +
+        "Верификация с помощью полностью автоматизированного публичного теста Тьюринга для различения компьютеров и людей, далее тест капча, позволяет послать код пользователю в частном порядке, которой должен будет переписать его для проверки.\n" +
+        "Каждая из приведенных ниже команд содержит отдельную справочную страницу, где можно найти дополнительную информацию\n" +
+        "**Для работы, тест капча требует задать пользователю роль и рекомендуется установить канал для регистров.**\n\n" +
         ":small_blue_diamond: `captcha enable/disable`\n" +
-        "Abilita/Disabilita la verifica tramite captcha\n" +
+        "Включите/Отключите тест капча\n" +
         ":small_blue_diamond: `captcha mode [fake | new | all]`\n" +
-        "Imposta su quali utenti eseguire gli utenti\n" +
-        ":small_blue_diamond: `captcha role [@Ruolo/ID]`\n" +
-        "Seleziona un ruolo da aggiungere all'utente a verifica completa\n" +
+        "Установите, к каким пользователям применять тест капча\n" +
+        ":small_blue_diamond: `captcha role [@Роль/ID]`\n" +
+        "Выберите роль, которая будет присвоена пользователю после прохождения теста капча\n" +
         ":small_blue_diamond: `captcha action [ban | kick | mute | none]`\n" +
-        "Seleziona un provvedimento da far eseguire al bot nei confronti di un utente che fallisce la verifica\n" +
-        ":small_blue_diamond: `captcha time [minuti]`\n" +
-        "Imposta quanti minuti ha un utente per inserire il codice\n" +
-        ":small_blue_diamond: `captcha bypass [@Membro/ID]`\n" +
-        "Fai saltare la verifica ad un utente\n" +
-        ":small_blue_diamond: `captcha resend [@Membro/ID]`\n" +
-        "Fai rifare la verifica ad un utente\n" +
-        ":small_blue_diamond: `captcha log-channel [#Canale/ID | None]`\n" +
-        "Seleziona un canale dove ricevere tutte le informazioni sulle verifiche\n" +
-        ":small_blue_diamond: `captcha toggle-role [@Ruolo/ID | None]`\n" +
-        "Seleziona un ruolo da rimuovere una volta che l'utente si verifica\n" +
+        "Выберите действие, которое выполнит бот по отношению к пользователю, не прошедшему тест капча\n" +
+        ":small_blue_diamond: `captcha time [минуты]`\n" +
+        "Установите, сколько минут есть у пользователя, чтобы ввести код\n" +
+        ":small_blue_diamond: `captcha bypass [@Участник/ID]`\n" +
+        "Не запускайте теста капча для пользователя\n" +
+        ":small_blue_diamond: `captcha resend [@Участник/ID]`\n" +
+        "Повторите тест капча для пользователя\n" +
+        ":small_blue_diamond: `captcha log-channel [#Канал/ID | None]`\n" +
+        "Выберите канал для получения всей информации о тесте капча\n" +
+        ":small_blue_diamond: `captcha toggle-role [@Роль/ID | None]`\n" +
+        "Выберите роль, которая будет удалена после прохождения пользователем теста капча\n" +
         ":small_blue_diamond: `captcha info`\n" +
-        "Mostra l'attuale configurazione della verifica tramite captcha",
-    captcha_examples: "A causa del grosso numero di comandi, tutti gli esempi sono presenti nelle varie categorie^^",
-    captcha_small_desc: "Configura la verifica tramite captcha",
+        "Показ текущих настроек теста капча",
+    captcha_examples: "Из-за большого количества команд, все примеры представлены в разных категориях^^",
+    captcha_small_desc: "Настройка теста капча ",
     //captcha
-    captcha_enabled: "Verifica tramite captcha abilitata",
-    captcha_disabled: "Verifica tramite captcha disabilitata",
+    captcha_enabled: "Тест капча включен",
+    captcha_disabled: "Тест капча выключен",
     //captcha mode
     captcha_mode_use: "captcha mode [fake | new | all]",
-    captcha_mode_description: "Imposta su quali utenti eseguire la verifica tramite le modalità pre-create elencate:\n" +
-        "`fake` = Esegui la verifica a gli utenti con un account d'eta minore alle \`2-3 ore\`\n" +
-        "`new` = Esegui la verifica a gli utenti che si sono registrati ultimamente a Discord \`~15 giorni\`\n" +
-        "`all` = Fai eseguire la verifica a \`tutti gli utenti\`\n\n" +
-        "**Ovviamente, se gli utenti non rientrano nella fascia di tempo della modalità essi verranno automaticamente verificati**",
+    captcha_mode_description: "Укажите, каких пользователей следует проверять с помощью теста капча, используя перечисленные режимы, созданные заранее:\n" +
+        "`fake` = Провести проверку пользователей, учетная запись которых была создана меньше \`2-3 часов\`\n" +
+        "`new` = Провести проверку пользователей, которые недавно зарегистрировались в Discord \`~15 дней\`\n" +
+        "`all` = Провести проверку \`всех пользователей\`\n\n" +
+        "**Если пользователи не попадают во временные диапазоны режимов `fake` и `new`, тест капча будет игнорироваться, а пользователи автоматически зайдут на сервер**",
     captcha_mode_examples: "\`captcha mode all\`",
     captcha_mode_updated: (mode) => {
-        return `Modalità della verifica tramite captcha cambiata, **Modalità**: \`${mode}\``
+        return `Режим проверки с помощью теста капчи изменен, **Режим**: \`${mode}\``
     },
     //captcha role
-    captcha_role_use: "captcha role [@Ruolo/ID]",
-    captcha_role_description: "Aggiungi il ruolo da far aggiungere all'utente a verifica completa",
+    captcha_role_use: "captcha role [@Роль/ID]",
+    captcha_role_description: "Добавьте роль, которая будет присвоена пользователю после прохождения теста капча",
     captcha_role_examples:
         "\`captcha role 123456789\`\n" +
-        "\`captcha role @ruolo\`",
+        "\`captcha role @роль\`",
     captcha_role_updated: (role) => {
-        return `Ruolo della verifica aggiornato, **Ruolo**: ${role}`
+        return `Роль теста капча обновлена, **Роль**: ${role}`
     },
     //captcha action
     captcha_action_use: "captcha action [Ban | Kick | Warn | Mute | None]",
     captcha_action_description:
-        "Imposta l'azione che il BOT deve eseguire in caso di fallimento nella verifica",
+        "Установите действие, которое должен выполнить бот, если тест капча не выполнен",
     captcha_action_examples:
         "`captcha action ban`",
     captcha_action_updated: (action) => {
-        return `Azione della verifica captcha aggiornata, **Azione**: \`${action}\``
+        return `Действие теста капча обновлено, **Действие**: \`${action}\``
     },
-    captcha_action_removed: "Azione della verifica captcha rimossa",
+    captcha_action_removed: "Действие теста капча удалено",
     //captcha time
-    captcha_time_use: "captcha time [minuti]",
-    captcha_time_description: "Imposta in quanti minuti l'utente deve eseguire la verifica **PER TENTATIVO**, **max 60 minuti**",
+    captcha_time_use: "captcha time [минуты]",
+    captcha_time_description: "Укажите, за сколько минут пользователь должен выполнить тест капча **ЗА ОДНУ ПОПЫТКУ**, **максимум 60 минут**",
     captcha_time_examples: "`captcha time 15`",
     captcha_time_updated: (time) => {
-        return `Minutaggio del captcha aggiornato, **Tempo**: \`${time} minuti\``
+        return `Время выполнения теста капча обновлено, **Время**: \`${time} минуты\``
     },
-    captcha_time_invalid_time: "Il numero da inserire deve essere compreso tra 1 e 60",
+    captcha_time_invalid_time: "Вводимое число должно быть от 1 до 60",
     //captcha log-channel
-    captcha_logchannel_use: "captcha log-channel [#Canale/ID | None]",
-    captcha_logchannel_description: "Imposta un canale dove far inviare tutti i logs della verifica tramite captcha, usa **none** per rimuovere il canale",
+    captcha_logchannel_use: "captcha log-channel [#Канал/ID | None]",
+    captcha_logchannel_description: "Установите канал для отправки всех регистров теста капчи, используйте **none** для удаления канала",
     captcha_logchannel_examples: "`captcha log-channel #canale`\n`captcha log-channel 133243243525324`\n`captcha log-channel none`",
     captcha_logchannel_updated: (channel) => {
         if (channel === null) {
-            return "Canale dei logs disabilitato"
+            return "Канал регистров отключен"
         } else {
-            return `Canale per i logs del captcha impostato, **Canale**: ${channel}`
+            return `Канал регистров теста капча установлен, **Канал**: ${channel}`
         }
     },
     //captcha toggle-role
-    captcha_togglerole_use: "captcha toggle-role [@Ruolo/ID | None]",
-    captcha_togglerole_description: "Seleziona un ruolo da rimuovere una volta che l'utente si verifica, usa **none** per disabilitare questa funzione",
-    captcha_togglerole_examples: "`captcha toggle-role @ruolo`\n`captcha toggle-role none`\n`captcha toggle-role 12321432432545`",
+    captcha_togglerole_use: "captcha toggle-role [@Роль/ID | None]",
+    captcha_togglerole_description: "Выберите роль, которая будет удалена после прохождения пользователем теста капча, используйте **none** для отмены этой функции",
+    captcha_togglerole_examples: "`captcha toggle-role @роль`\n`captcha toggle-role none`\n`captcha toggle-role 12321432432545`",
     captcha_togglerole_updated(role) {
         if (role === null) {
-            return "Ruolo da rimuovere disabilitato"
+            return "Роль для удаления отключена"
         } else {
-            return `Ruolo da rimuovere a verifica eseguita impostato, **Ruolo**: ${role}`
+            return `Роль для удаления после прохождения теста капча установлена, **Роль**: ${role}`
         }
     },
     //CAPTCHA EMBEDS
-    captcha_embed_title: "Verifica Richiesta",
-    captcha_embed_retry_title: "Verifica fallita, riprova",
-    captcha_embed_failed_title: "Verifica fallita",
-    captcha_embed_impossible_title: "Verifica Impossibile",
-    captcha_embed_stopped_title: "Verifica Annullata",
-    captcha_embed_auto_title: "Verifica Automatica",
-    captcha_embed_auto_started_title: "Verifica Automatica Iniziata",
-    captcha_embed_started_title: "Verifica Iniziata",
-    captcha_embed_completed_title: "Verifica Eseguita",
-    captcha_embed_error_title: "Errore durante la verifica",
-    captcha_acted: "Verifica tramite Captcha fallita",
-    captcha_embed_bypass_title: "Verifica Bypassata",
-    autocaptcha_embed_impossible_title: "Verifica automatica, impossibile",
+    captcha_embed_title: "Требуется тест капча",
+    captcha_embed_retry_title: "Тест капча не выполнен, попробуйте еще раз",
+    captcha_embed_failed_title: "Тест капча не выполнен",
+    captcha_embed_impossible_title: "Тест капча невозможен",
+    captcha_embed_stopped_title: "Тест капча отменен",
+    captcha_embed_auto_title: "Автоматический тест капча",
+    captcha_embed_auto_started_title: "Автоматический тест капча начался",
+    captcha_embed_started_title: "Тест капча начался",
+    captcha_embed_completed_title: "Тест капча выполнен",
+    captcha_embed_error_title: "Ошибка во время теста капча",
+    captcha_acted: "Проверка с помощью теста капча не выполнена",
+    captcha_embed_bypass_title: "Тест капча игнорируется",
+    autocaptcha_embed_impossible_title: "Невозможно провести автоматический тест капча",
     captcha_embed_description: (minutes, tries) => {
-        return `**Per accedere al server e' necessario inviare il codice sottostante in questa chat**\n` +
-            `**Tempo per inviare il codice**: \`${minutes} Minuti\`\n` +
-            `**Tentativi rimanenti**: \`${tries}\`\n\n` +
-            `**Codice da inviare**:`
+        return `**Для доступа к серверу необходимо отправить приведенный ниже код в данный чат**\n` +
+            `**Время для отправки кода**: \`${minutes} Минуты\`\n` +
+            `**Оставшиеся попытки**: \`${tries}\`\n\n` +
+            `**Код для отправки**:`
     },
     captcha_embed_retry_description: (mode) => {
         if (mode === "time") {
-            return "Tempo scaduto"
+            return "Время истекло"
         } else if (mode === "fail") {
-            return "Codice errato"
+            return "Неправильный код"
         } else if (mode === "tries") {
-            return "Tentativi terminati"
+            return "Попытки закончились"
         }
     },
     captcha_embed_stopped_description: (member) => {
-        return `L'utente ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` e' uscito dal server, di conseguenza la sua verifica e' stata annullata`
+        return `Пользователь ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` покинул сервер, соответственно, проверка с помощью теста капча была отменена`
     },
     captcha_embed_started_description: (member) => {
-        return `L'utente ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` ha iniziato la verifica`
+        return `Пользователь ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` начал проверку с помощью теста капча`
     },
-    captcha_embed_auto_description_user: "E' stato rilevato che gia' possiedi il ruolo nel server, per tanto sei stato verificato automaticamente",
+    captcha_embed_auto_description_user: "Выяснилось, что у вас уже есть роль на сервере, поэтому вы прошли проверку капча автоматически",
     captcha_embed_auto_description: (member) => {
-        return `L'utente ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` e' stato automaticamente verificato, in quanto aveva il ruolo da aggiungere`
+        return `Пользователь ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` был проверен автоматически, так как ему нужно было добавить роль на сервере`
     },
-    captcha_embed_completed_description_user: "Verifica eseguita con successo, a breve riceverai il ruolo",
+    captcha_embed_completed_description_user: "проверка капча прошло успешно, скоро вы получите роль",
     captcha_embed_completed_description: (member) => {
-        return `L'utente ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` si e' verificato con successo`
+        return `Пользователь ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` успешно прошел тест капча `
     },
     captcha_embed_failed_description: (member) => {
-        return `L'utente ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` ha fallito la verifica`
+        return `Пользователь ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` не прошел тест капча`
     },
     captcha_embed_auto_started_description: (member) => {
-        return `L'utente ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` non rientra nella fascia d'azione della verifica, verifica bypassata`
+        return `Пользователь ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` не попадает в диапазон действия теста капча, проверка опущена`
     },
     captcha_embed_bypass_description: (user, bypassMember) => {
-        return `L'utente ${user.username}#${user.discriminator} || \`${user.id}\` ha bypassato la verifica di L'utente ${bypassMember.user.username}#${bypassMember.user.discriminator} || \`${bypassMember.user.id}\``
+        return `Пользователь ${user.username}#${user.discriminator} || \`${user.id}\` пропустил тест капча Пользователя ${bypassMember.user.username}#${bypassMember.user.discriminator} || \`${bypassMember.user.id}\``
     },
     //CAPTCHA ERRORS
     captcha_owner_error: (member, error) => {
-        return `Sembrerebbe esserci stato un errore durante la verifica dell'utente \`${member.user.username}#${member.user.discriminator} || ${member.user.id}\`\n\n` +
-            `**Errore**: \`${error}\`\n\n` +
-            `*E' consigliabile impostare un canale per i log del captcha se non si vuole piu' ricevere questi messaggi*`
+        return `Кажется, произошла ошибка во время проверки пользователя \`${member.user.username}#${member.user.discriminator} || ${member.user.id}\`\n\n` +
+            `**Ошибка**: \`${error}\`\n\n` +
+            `*Желательна настройка специального канала регистров капча, если вы больше не хотите получать данные сообщения*`
     },
-    captcha_error_invalid_role: "Il ruolo da assegnare a verifica completa e' mancante/non valido",
-    captcha_error_invalid_togglerole: "Il ruolo da rimuovere a verifica completa e' mancante/non valido",
-    captcha_error_invalid_permissions: "Il bot non puo' eseguire la verifica in quanto non ha i permessi necessari",
+    captcha_error_invalid_role: "Роль, присваеваемая пользователю после прохождения теста капча, отсутствует/недействительна",
+    captcha_error_invalid_togglerole: "Роль, удаляемая после прохождения теста капча, отсутствует/недействительна",
+    captcha_error_invalid_permissions: "Бот не может выполнить проверку капча из-за отсутствия необходимых разрешений",
     captcha_error_dm_blocked: (member) => {
-        return `L'utente \`${member.user.username}#${member.user.discriminator} || ${member.user.id}\` ha i DM bloccati, quindi non posso eseguire la verifica`
+        return `Пользователь \`${member.user.username}#${member.user.discriminator} || ${member.user.id}\` заблокировал личные сообщения, поэтому не могу провести проверку капча`
     },
-    captcha_error_user: "Non posso eseguire la verifica per un problema di configurazione",
+    captcha_error_user: "Не могу провести тест капча из-за проблемы конфигурации",
     //CAPTCHA BYPASS
-    captcha_bypass_use: "captcha bypass [@Utente/ID]",
-    captcha_bypass_description: "Fai saltare la verifica ad un utente",
+    captcha_bypass_use: "captcha bypass [@Пользователь/ID]",
+    captcha_bypass_description: "Опустить тест капча для данного пользователя",
     captcha_bypass_examples:
         "\`captcha bypass @Polliog\`\n" +
         "\`captcha bypass 173569203977060353\`",
-    captcha_bypassed_cmd: "L'utente e' stato verificato correttamente",
+    captcha_bypassed_cmd: "Пользователь успешно прошел проверку",
     //CAPTCHA RESEND
-    captcha_resend_use: "captcha resend [@Utente/ID]",
-    captcha_resend_description: "Fai rifare la verifica ad un utente",
+    captcha_resend_use: "captcha resend [@Пользователь/ID]",
+    captcha_resend_description: "Повторите тест капча пользователя",
     captcha_resend_examples:
         "\`captcha resend @Polliog\`\n" +
         "\`captcha resend 173569203977060353\`",
-    captcha_resend_cmd: "Verifica iniziata con successo",
+    captcha_resend_cmd: "Проверка капча успешно начата",
     //TICKETS
     //TICKETS INTERNAL
-    ticketsInt_opened: "Ticket Aperto",
-    ticketsInt_openedInChannel: (channel) => `Ticket aperto nel canale ${channel}`,
-    ticketsInt_openedby: (member) => `Ticket aperto da ${member}`,
-    ticketsInt_reopenedby: (member) => `Ticket riaperto da ${member}`,
-    ticketsInt_reopened: "Ticket Riaperto",
-    ticketsInt_panel: "Panel",
-    ticketsInt_ticket: "Ticket",
-    ticketsInt_close: "Chiudi",
-    ticketsInt_closed: "Chiuso",
-    ticketsInt_closedPhrase: "Ticket Chiuso",
-    ticketsInt_closedby: (member) => `Ticket chiuso da ${member}`,
-    ticketsInt_closedOptions: "📝 : Trascrivi il ticket\n\n🗑️ : Elimina il ticket\n\n🔁    : Riapri il ticket",
-    ticketsInt_transcriptSavedTitle: "Trascrizione Salvata",
-    ticketsInt_transcriptSavedDescriptionChannel: (channel) => `Trascrizione inviata nel canale ${channel}`,
-    ticketsInt_transcriptSavedDescriptionUser: (user) => `Trascrizione salvata da ${user}`,
-    ticketsInt_transcriptSavedInfos: "Per visualizzare la trascrizione scarica il file qui sopra allegato",
-    ticketsInt_delete_ask: "Vuoi davvero eliminare questo ticket?",
-    ticketsInt_deleted_logs: "Ticket Eliminato",
+    ticketsInt_opened: "Билет Открыт",
+    ticketsInt_openedInChannel: (channel) => `Билет открыт на канале ${channel}`,
+    ticketsInt_openedby: (member) => `Билет открыт у ${member}`,
+    ticketsInt_reopenedby: (member) => `Билет повторно открыт у ${member}`,
+    ticketsInt_reopened: "Билет повторно открыт",
+    ticketsInt_panel: "Панель",
+    ticketsInt_ticket: "Билет",
+    ticketsInt_close: "Закройте",
+    ticketsInt_closed: "Закрыт",
+    ticketsInt_closedPhrase: "Билет закрыт",
+    ticketsInt_closedby: (member) => `Билет закрыт у ${member}`,
+    ticketsInt_closedOptions: "📝 : Сделать копию билета\n\n🗑️ : Удалить билет\n\n🔁    : Повторно открыть билет",
+    ticketsInt_transcriptSavedTitle: "Копия сохранена",
+    ticketsInt_transcriptSavedDescriptionChannel: (channel) => `Копия отправлена на канал ${channel}`,
+    ticketsInt_transcriptSavedDescriptionUser: (user) => `Копию сохранил ${user}`,
+    ticketsInt_transcriptSavedInfos: "Для просмотра копии откройте файл, прикрепленный выше ",
+    ticketsInt_delete_ask: "Вы действительно хотите удалить этот билет?",
+    ticketsInt_deleted_logs: "Билет удален",
     //TICKETS COMMANDS
-    tickets_use: "tickets [Categoria] {Opzioni}",
+    tickets_use: "билеты [Категория] {Опции}",
     tickets_description:
-        "I Tickets permetto di gestire in maniera piu' ordinata delle richieste da parte dell'utenza, creando un ticket tramite l'apposito comando" +
-        "si creerà un `panel` (messaggio con sotto un bottone) dal quale interagendosi si crea un ticket privato.\n" +
-        "**I ticket prendono i permessi dalla categoria in cui vengono creati**\n\n" +
+        "Билеты позволяют управлять запросами пользователей более упорядоченно, создавая билет с помощью специальной команды," +
+        "будет создана `panel` (сообщение с кнопкой внизу), взаимодействуя с которой, можно будет создать личный билет.\n" +
+        "**Билеты обладают разрешениями категории, в которой они созданы**\n\n" +
         ":small_blue_diamond: `ticket create`\n" +
-        "Avvia la creazione del pannello dal quale creare i tickets\n" +
+        "Запустить создание панели для создания билетов\n" +
         ":small_blue_diamond: `ticket panel [panelID]`\n" +
-        "Ricrea un pannello gia' creato in precedenza\n" +
+        "Воссоздать ранее созданную панель\n" +
         ":small_blue_diamond: `ticket edit [panelID]`\n" +
-        "Modifica le impostazioni di un panel\n" +
+        "Изменить настройки панели\n" +
         ":small_blue_diamond: `ticket delete [panelID]`\n" +
-        "Cancella definitivamente un panel\n" +
-        ":small_blue_diamond: `ticket logs [#Canale/ID | None]`\n" +
-        "Imposta un canale per i logs dei ticket, inserisci `none` per disattivare i logs\n" +
-        ":small_blue_diamond: `ticket transcript-logs [#Canale/ID | None]`\n" +
-        "Imposta un canale per inviare i transcript in un canale diverso da quello dei logs, inserisci \`none\` per disattivare i logs\n" +
+        "Окончательно удалить панель\n" +
+        ":small_blue_diamond: `ticket logs [#Канал/ID | None]`\n" +
+        "Установка канала для регистров билетов, используйте `none`, чтобы отключить регистры \n" +
+        ":small_blue_diamond: `ticket transcript-logs [#Канал/ID | None]`\n" +
+        "Установка специального канала для пересылки копий билетов, отличного от канала регистров, используйте \`none\`, чтобы отключить регистры\n" +
         ":small_blue_diamond: `ticket info (panelID)`\n" +
-        "Visualizza le informazioni su un panel, se nessun panel viene inserito verranno mostrati tutti panel\n" +
+        "Показ информации о панели, если не указана конкретная панель, будут показаны все панели\n" +
         ":small_blue_diamond: `ticket [Open/Close/Transcript]`\n" +
-        "Apri/Chiudi o trascrivi il ticket in cui e' stato eseguito il comando",
-    tickets_examples: "A causa del grosso numero di comandi, tutti gli esempi sono presenti nelle varie categorie^^",
+        "Откройте/Закройте/сохраните копия билета, в котором выполнялась команда",
+    tickets_examples: "Из-за большого количества команд все примеры присутствуют в разных категориях^^",
     tickets_small_desc: "Configura la verifica tramite captcha",
     //tickets create
-    tickets_creation_sys: "Sistema di creazione tickets",
-    tickets_create_message: "Desideri iniziare la creazione di un nuovo panel?\n**Il panel verra' creato in questo canale**",
-    ticket_create_exited: "Creazione del panel annullata.",
-    tickets_create_insert_title: "Digita un titolo per il ticket",
-    tickets_create_insert_message: "Digita un messaggio da far mandare al bot quando viene creato un nuovo ticket",
-    tickets_create_insert_category: "Digita l'ID o il nome della categoria dove far creare i tickets.\n\n" +
-        "**Nota**: I tickets (canali) prenderanno i permessi da questa categoria",
-    tickets_create_invalid_category: "Categoria non valida, riprova",
-    tickets_create_insert_upmessage: "Digita il messaggio esterno all'embed, utile a pingare i ruoli del supporto",
-    tickets_create_insert_role: "Digita l'ID o tagga il ruolo che si dovra' occupare dei tickets.\n\n" +
-        "**Nota**: A questo ruolo verranno forzatamente aggiunti i permessi di scrivere nel ticket (canale) *se necessario*",
-    tickets_create_invalid_role: "Ruolo non valido, riprova",
-    tickets_create_confirm_message: "Confermi la creazione di un nuovo panel con le seguenti impostazioni?",
-    tickets_create_confirm_message_how: "Digita \`y\` per confermare o \`n\` per annullare",
+    tickets_creation_sys: "Система создания билетов",
+    tickets_create_message: "Желаете начать создание новой панели?\n**Панель будет создана на этом канале**",
+    ticket_create_exited: "Создание панели отменено.",
+    tickets_create_insert_title: "Введите название билета",
+    tickets_create_insert_message: "Введите сообщение, которое будет отправлять бот при создании нового билета",
+    tickets_create_insert_category: "Введите ID или название категории, где будут созданы билеты.\n\n" +
+        "**Примечание**: Билеты (каналы) получат разрешения этой категории",
+    tickets_create_invalid_category: "Категория недействительна, попробуйте еще раз",
+    tickets_create_insert_upmessage: "Чтобы добавить роли поддержки, используйте не встроенные сообщения, а обычные",
+    tickets_create_insert_role: "Наберите ID или добавьте роль, которая будет заниматься билетами.\n\n" +
+        "**Примечание**: К данной роли будут принудительно добавлены права на запись на канале с билетами (canale) *при необходимости*",
+    tickets_create_invalid_role: "Недопустимая роль, попробуйте еще раз",
+    tickets_create_confirm_message: "Подтвердите создание новой панели со следующими настройками?",
+    tickets_create_confirm_message_how: "Введите \`y\` для подтверждения или \`n\` для отмены",
     //tickets general
-    tickets_panel: 'Per creare un ticket clicca il bottone :tickets: sottostante',
-    tickets_panel_footer: "Tickets by NISD",
-    create_ticket: "Crea Ticket",
+    tickets_panel: 'Для создания билета нажмите кнопку :билеты: внизу',
+    tickets_panel_footer: "Билеты от NISD",
+    create_ticket: "Создание билета",
     //ticket panel
-    invalid_ticket_panel: 'Pannello non trovato, utilizza \`tickets info\` per vedere gli ID dei pannelli esistenti',
+    invalid_ticket_panel: 'Панель не найдена, используйте \`tickets info\` для показа ID существующих панелей',
     tickets_panel_use: "ticket panel [panelID]",
-    tickets_panel_description: "Ricrea un pannello gia' creato in precedenza",
+    tickets_panel_description: "Воссоздать созданную ранее панель",
     tickets_panel_examples: "ticket panel ID",
     //ticket edit
-    tickets_edit_title: "Cosa vuoi modificare?",
-    tickets_edit_sys: "Sistema di modifica tickets",
+    tickets_edit_title: "Что вы хотите изменить?",
+    tickets_edit_sys: "Система модификации билетов ",
     tickets_edit_use: "ticket edit [panelID]",
-    tickets_edit_description: "Modifica le impostazioni di un panel\n",
-    tickets_edit_exited: "Modifica annullata",
+    tickets_edit_description: "Измените настройки панели\n",
+    tickets_edit_exited: "Отмена изменения",
     tickets_edit_examples: "ticket edit ID",
-    tickets_edited: "Impostazioni del pannello salvate",
-    tickets_edited_title: "Impostazioni del pannello salvate, utilizzare il comando \`ticket panel [panelID]\` per renderle effettive",
+    tickets_edited: "Настройки панели сохранены",
+    tickets_edited_title: "Настройки панели сохранены, использовать команду \`ticket panel [panelID]\` для их активации",
     //ticket delete
     tickets_delete_use: "ticket delete [panelID]",
-    tickets_delete_description: "Cancella definitivamente un panel\n",
+    tickets_delete_description: "Окончательно удалить панель\n",
     tickets_delete_examples: "ticket delete ID",
     tickets_delete_title: (panelID) => {
-        return `Cancellare il ticket panel \`${panelID}\`?`
+        return `Удалить панель билетов \`${panelID}\`?`
     },
-    tickets_delete_confirmed: ":accettato_gif: Ticket panel eliminato",
-    tickets_delete_exited: ":negato_gif: Operazione Annullata",
-    tickets_delete_sys: "Sistema di eliminazione tickets",
+    tickets_delete_confirmed: ":accettato_gif: Панель билетов удалена",
+    tickets_delete_exited: ":negato_gif: Отмена операции",
+    tickets_delete_sys: "Система удаления билетов",
     //ticket info
     tickets_info_title: "NISD Tickets Info",
     tickets_info_description: (logs, tlogs) => {
         return `**Logs**: ${logs}\n**Transcript Logs**: ${tlogs}\n`
     },
     //ticket logs
-    tickets_logs_use: "ticket logs [#Canale/ID | None]",
-    tickets_logs_description: "Imposta un canale per i logs dei ticket, inserisci \`none\` per disattivare i logs",
+    tickets_logs_use: "ticket logs [#Канал/ID | None]",
+    tickets_logs_description: "Установите канал для регистров билетов, использовать \`none\`, чтобы отключить регистры",
     tickets_logs_examples: "ticket logs ID\nticket logs none",
     tickets_logs_success: (none, channel) => {
-        return none ? "Da ora non verranno piu' mandati logs relativi ai tickets" : `Canale dei ticket logs aggiornato, nuovo canale: ${channel}`
+        return none ? "Регистры билетов больше не будут отправляться" : `Канал регистров билетов обновлен, новый канал: ${channel}`
     },
     //ticket transcript-logs
-    tickets_transcriptlogs_use: "ticket transcript-logs [#Canale/ID | None]",
-    tickets_transcriptlogs_description: "Imposta un canale per inviare i transcript in un canale diverso da quello dei logs, inserisci \`none\` per disattivare i logs",
+    tickets_transcriptlogs_use: "ticket transcript-logs [#Канал/ID | None]",
+    tickets_transcriptlogs_description: "Установка специального канала для пересылки копий билетов, отличного от канала регистров, используйте \`none\`, чтобы отключить регистры",
     tickets_transcriptlogs_examples: "ticket transcript-logs ID\nticket transcript-logs none",
     tickets_transcriptlogs_success: (none, channel) => {
-        return none ? "Da ora le trascrizioni ritorneranno ad essere mandate nel canale logs (se settato) o nel ticket (in caso contrario)" : `Canale delle trascrizioni aggiornato, nuovo canale: ${channel}`
+        return none ? "С этого моменты копии билетов опять будут отправляться на канале регистров (если определен) или билетов (в противном случае)" : `Канал дял пересылки копий билетов обновлен, новый канал: ${channel}`
     },
     //language
-    lang_use: "lang [language]",
-    lang_description: "Scegli la lingua per il bot in questo server",
+    lang_use: "lang [язык]",
+    lang_description: "Выберите язык бота на данном сервере",
     lang_examples: "`lang it`\n`lang en`\n`lang ru`",
 }
+
+
