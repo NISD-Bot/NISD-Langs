@@ -15,11 +15,12 @@ Here you can find the list of all the langs files available with translators.
 
 If a language doesn't support the bot version (some variables are missing), the missing variables will be replaced by the default language or auto-translated.
 
-| Lang                                | Authors                                                                                                                      | Bot Supported Version (latest 1.1) |
-|-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
-| [it (italiano)](./langs/lang.it.js) | [@Polliog#7772](https://github.com/Polliog), [𝓝𝓪𝓴𝓪𝓶𝓸𝓽𝓸 𝓢𝓱𝓲𝓰𝓮𝓽𝓸𝓴𝓲#0016](https://github.com/Massimiliano2004) | 1.1                                |
-| [en (english)](./langs/lang.en.js)  | [@Toofu#0001](https://t.me/toofuchan)                                                                                        | 1.1                                |
-| [ru (Pусский)](./langs/lang.ru.js)  | [@El Nobil Chapo Bonanz#3985](https://github.com/ElNobilChapo)                                                                                              | 1                                  |
+| Lang                                | Authors                                                                                                                  | Bot Supported Version (latest 1.1) |
+|-------------------------------------|--------------------------------------------------------------------------------------------------------------------------|------------------------------------|
+| [it (italiano)](./langs/lang.it.js) | [Polliog#7772](https://github.com/Polliog), [𝓝𝓪𝓴𝓪𝓶𝓸𝓽𝓸 𝓢𝓱𝓲𝓰𝓮𝓽𝓸𝓴𝓲#0016](https://github.com/Massimiliano2004) | 1.1                                |
+| [en (english)](./langs/lang.en.js)  | [Toofu#0001](https://t.me/toofuchan)                                                                                     | 1.1                                |
+| [ru (Pусский)](./langs/lang.ru.js)  | [El Nobil Chapo Bonanz#3985](https://github.com/ElNobilChapo)                                                            | 1                                  |
+| [jp (日本語)](./langs/lang.jp.js)         | [TeknoSenpai#0957](https://github.com/TeknoSenpai/)                                                                      | 1                                  |
 
 # Meta
 ***

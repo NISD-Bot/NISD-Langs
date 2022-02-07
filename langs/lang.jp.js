@@ -4,7 +4,7 @@
     @Translated by: @TeknoSenpai#0957 (https://github.com/TeknoSenpai/)
 */
 
-module.exports = {
+const lang = {
     lang: "jp", //ファイルの言語
     //ボットの一般的な単語
     maintenance: "メインテナンス中",
@@ -32,19 +32,41 @@ module.exports = {
     action: "アックション",
     limit: "リミット",
     time: "時間",
+    changes: "Changes",
     actions: "アックション",
     measure: "測定",
     actual_mode: "現在のモード",
     mode: "モード",
     role: "ロールー",
     title: "タイトル",
+    position: "Position",
+    channel: "Channel",
+    type: "Type",
+    allowed: "Allowed",
+    color: "Color",
+    hoist: "Hoist",
+    pexs: "Permissions",
+    content: "Content",
+    integration: "Integration",
+    old: "Old",
+    new: "New",
+    description: "Description",
+    invite: "Invite",
+    previous_channel: "Previous channel",
+    not_allowed: "Not Allowed",
     embed_message: "エンベッドメッセージ",
     external_message: "外部メッセージ",
     category: "カテゴリー",
     support_role: "サポートのロールー",
+    joined_at: "Joined at",
+    created_at: "Created at",
+    server_deaf: "Deaf",
+    server_mute: "Mute",
     //ボットの便利なアクション
     to_add: "追加される",
     to_remove: "削除する",
+    // Interaction Replies
+    interaction_success: "Action completed",
     //ボットエラー、適切と思われるように翻訳
     bot_error: "内部エラーが発生しました。エラーは自動的に開発者に送信されます",
     error: "エラー",
@@ -59,6 +81,7 @@ module.exports = {
     owner_restriction: "サーバー所有者のみがこのコマンドを実行できます",
     owner_restriction_plus: "このコマンドを実行できるのは、サーバーの所有者または`manager`の役割を持つ人だけです。",
     command_not_found: "コマンドが見つかりません",
+    user_not_found: "User not found",
     /*
         time_left: ウニックスタイムスタンプ
         cmd: コマンド
@@ -490,6 +513,9 @@ module.exports = {
     antispam_action_small_desc: "ボットがスパムを検出した場合に実行するアクションを設定します",
     antispam_action_examples: "`antispam action ban`\n" +
         "`antispam action none`",
+    antispam_action_updated: (action) => {
+        return `AntiSpam action updated **Action**: \`${action}\``
+    },
     //antispam enable/disable
     antispam_enabled: "スパム対策が有効になっています！",
     antispam_disabled: "スパム対策が無効になっています!",
@@ -1229,4 +1255,142 @@ module.exports = {
     lang_use: "lang [language]",
     lang_description: "このサーバー上のボットの言語を選択してください",
     lang_examples: "`lang it`\n`lang en`\n`lang jp`",
+    //autoroles
+    autoroles_use: "autoroles [user/bot | list] {role}",
+    autoroles_description: "Set roles for users / bots to add as soon as they enter the server, redoing the command with the same role will remove it from the list\n\n" +
+        ":small_blue_diamond: `autoroles user/bot [@Role/ID]`\n" +
+        "Add/Remove a role from the list\n" +
+        ":small_blue_diamond: `autoroles list`\n" +
+        "Check your current autoroles",
+    autoroles_examples:
+        "`autoroles user @Role`\n" +
+        "`autoroles bot id`\n" +
+        "`autoroles list`",
+    autoroles_small_desc: "Automatically add roles to new users/bots",
+    autoroles_add: (role) => {return `Added ${role} to autoroles`},
+    autoroles_remove: (role) => {return `Removed ${role} from autoroles`},
+    //autoroles list
+    autoroles_list: "AutoRoles List",
+    //logs
+    logs_use: "logs",
+    logs_description: "The logs allow you to keep track of all the actions performed on the server\n\n" +
+        "**This function is configurable only via [[Dashboard]](https://nisdbot.xyz/)**",
+    logs_small_description: "The logs allow you to keep track of all the actions performed on the server",
+    //logs events
+    logs_channelCreate_description: (channel) => {
+        switch (channel.type) {
+            case "GUILD_TEXT":
+                return `New text channel created (${channel})`
+            case "GUILD_VOICE":
+            case "GUILD_STAGE_VOICE":
+                return `New voice channel created (${channel})`
+            case "GUILD_CATEGORY":
+                return `New category created (${channel})`
+            default:
+                return `New channel created (${channel})`
+
+        }
+    },
+    logs_channelDelete_description: (channel) => {
+        switch (channel.type) {
+            case "GUILD_TEXT":
+                return `Text channel deleted (${channel.name})`
+            case "GUILD_VOICE":
+            case "GUILD_STAGE_VOICE":
+                return `Voice channel deleted (${channel.name})`
+            case "GUILD_CATEGORY":
+                return `Category deleted (${channel.name})`
+            default:
+                return `Channel deleted (${channel.name})`
+        }
+    },
+    logs_channelUpdate_description: (channel) => {
+        switch (channel.type) {
+            case "GUILD_TEXT":
+                return `Textual channel updated (${channel})`
+            case "GUILD_VOICE":
+            case "GUILD_STAGE_VOICE":
+                return `Voice channel updated (${channel})`
+            case "GUILD_CATEGORY":
+                return `Category updated (${channel.name})`
+            default:
+                return `Channel updated (${channel.name})`
+        }
+    },
+    overwrites_removed_for: "Permissions removed for",
+    added_overwrites_for: "Permissions added for",
+    logs_roleCreate_description: (role) => {
+        return `New role created (${role})`
+    },
+    logs_roleDelete_description: (role) => {
+        return `Role deleted (${role.name})`
+    },
+    logs_roleUpdate_description: (role) => {
+        return `Role updated (${role})`
+    },
+    logs_messageDelete_description: (channel) => {
+        return `Deleted message in ${channel} (${channel.name})`
+    },
+    logs_message_sent_above: "Message sent after embed due to length...",
+    logs_message_bulk_description: (count) => {
+        return `**${count}** messages have been deleted and saved`
+    },
+    logs_message_update_description: (message) => {
+        return `**${message.author.username}#${message.author.discriminator}** changed their message in ${message.channel}`
+    },
+    logs_member_remove_description: (member) => {
+        return `**${member.user.username}#${member.user.discriminator}** left the server`
+    },
+    logs_member_update_description: (member, author) => {
+        return `L'utente **${member.user.username}#${member.user.discriminator}** updated by ${author}`
+    },
+    logs_member_join_description: (member) => {
+        return `**${member}** joined the server`
+    },
+    logs_invite_used: (invite, user) => {
+
+        if (!user) {
+            user = "Uknown"
+        } else {
+            user = `${user.username}#${user.discriminator}`
+        }
+
+        return `Used invite ${invite} created by ${user}`
+    },
+    logs_invite_impossibile() {
+        return "Unable to find the invitation, a vanity url was probably used"
+    },
+    logs_member_kicked(member, author) {
+        return `**${member.user.username}#${member.user.discriminator}** has been kicked by ${author}`
+    },
+    logs_member_banned(user, author) {
+        return `**${user.username}#${user.discriminator}** has been banned by ${author}`
+    },
+    logs_member_unbanned(user, author) {
+        return `**${user.username}#${user.discriminator}** has been unbanned by ${author}`
+    },
+    logs_guild_updated(author) {
+        return `**${author.user.username}#${author.user.discriminator}** updated the server`
+    },
+    logs_emoji_create(emoji, author) {
+        return `**${author.user.username}#${author.user.discriminator}** created the emoji **${emoji.name}**`
+    },
+    logs_emoji_delete(emoji, author) {
+        return `**${author.user.username}#${author.user.discriminator}** deleted the emoji **${emoji.name}**`
+    },
+    logs_emoji_update(emoji, author) {
+        return `**${author.user.username}#${author.user.discriminator}** updated the emoji **${emoji.name}**`
+    },
+    logs_voice_update(member, author) {
+        return `**${member.user.username}#${member.user.discriminator}** had their voice state updated by **${author.user.username}#${author.user.discriminator}**`
+    },
+    logs_voice_join(member, channel) {
+        return `**${member.user.username}#${member.user.discriminator}** joined voice channel **${channel.name}**`
+    },
+    logs_voice_leave(member, channel) {
+        return `**${member.user.username}#${member.user.discriminator}** left voice channel **${channel.name}**`
+    },
+    logs_voice_switch(member, oldChannel, newChannel) {
+        return `**${member.user.username}#${member.user.discriminator}** switched from voice channel **${oldChannel.name}** to voice channel **${newChannel.name}**`
+    },
 }
