@@ -415,7 +415,7 @@ module.exports = {
     version: "バージョン",
     //antiflood
     antiflood_use: "antiflood [enable/disable | limit | action | time] {ナンバー} {アックション}",
-    antiflood_description: "L'AntiFlood permette di proteggere il server contro le persone che scrivono molti messaggi ripetutamente\n\n" +
+    antiflood_description: "AntiFloodを使用すると、多くのメッセージを繰り返し入力するユーザーからサーバーを保護できます\n\n" +
         ":small_blue_diamond: `antiflood [enable/disable]`\n" +
         "AntiFloodを有効または無効にします　\n" +
         ":small_blue_diamond: `antiflood limit [リミット]`\n" +
@@ -424,7 +424,7 @@ module.exports = {
         "ボットがフラッドを検出したときに実行するアクションを設定します\n" +
         ":small_blue_diamond: `antiflood time [時間]`\n" +
         "洪水が決定される時間を**秒単位で**設定します",
-    antiflood_small_desc: "Apri le impostazioni dell'AntiFlood",
+    antiflood_small_desc: "AntiFlood設定を開きます",
     antiflood_examples: "`antiflood enable`\n" +
         "`antiflood limit 4`\n" +
         "`antiflood action ban`\n" +
@@ -867,7 +867,7 @@ module.exports = {
         "禁止されている単語/フレーズを検出したときにボットが実行するアクションを変更し、ユーザーに対してアクションを実行しないアクションとして**none**を使用します（メッセージの削除に加えて）\n" +
         ":small_blue_diamond: `blacklist list`\n" +
         "禁止されている単語やフレーズの現在のリストを表示する",
-    blacklist_small_desc: "Apri le impostazioni della blacklist",
+    blacklist_small_desc: "ブラックリスト設定を開く",
     blacklist_examples: "\`blacklist enable\`\n" +
         "\`blacklist add \"parola\"\`\n" +
         "\`blacklist add \"una frase\" \`\n" +
@@ -876,7 +876,7 @@ module.exports = {
         "\`blacklist list\`",
     blacklist_enabled: "BlackListオンライン!",
     blacklist_disabled: "BlackListオフライン!",
-    blacklist_add_remove_use: "blacklist add/remove [Parola/Frase]",
+    blacklist_add_remove_use: "blacklist add/remove [単語/フレーズ]",
     blacklist_add_remove_description: " ブラックリストに単語またはフレーズを追加/削除し、「\`blacklist list\`」を使用して禁止されている単語/フレーズを表示します",
     blacklist_add_remove_examples: "\`blacklist add \"語\"\`\n" +
         "\`blacklist add \"フレーズ\"\`\n" +
@@ -1228,5 +1228,142 @@ module.exports = {
     //language
     lang_use: "lang [language]",
     lang_description: "このサーバー上のボットの言語を選択してください",
-    lang_examples: "`lang it`\n`lang en`\n`lang jp`",
+    lang_examples: "`lang it`\n`lang en`\n`lang jp`\n`lang ru`",
+    //autoroles
+    autoroles_use: "autoroles [user bot | list] {ロール}",
+    autoroles_description: "ユーザー/ボットがサーバーに入るとすぐに追加する役割を設定します。同じ役割でコマンドをやり直すと、リストから削除されます\n\n" +
+        ":small_blue_diamond: `autoroles user/bot [@Role/ID]`\n" +
+        "リストから役割を追加/削除します\ n" +
+        ":small_blue_diamond: `autoroles list`\n" +
+        "現在のオートロールを確認してください",
+    autoroles_examples: "`autoroles user @Role`\n" +
+        "`autoroles bot id`\n" +
+        "`autoroles list`",
+    autoroles_small_desc: "新しいユーザー/ボットに役割を自動的に追加します",
+    autoroles_add: (role) => { return `autorolesに${role}を追加しました` },
+    autoroles_remove: (role) => { return `autorolesから${role}を削除しました` },
+    //autoroles list
+    autoroles_list: "AutoRolesリスト",
+    //logs
+    logs_use: "logs",
+    logs_description: "ログを使用すると、サーバーで実行されたすべてのアクションを追跡できます\n\n" +
+        "**この機能は、[[ダッシュボード]](https://nisdbot.xyz/)を介してのみ構成できます。**",
+    logs_small_description: "ログを使用すると、サーバーで実行されたすべてのアクションを追跡できます",
+    //logs events
+    logs_channelCreate_description: (channel) => {
+        switch (channel.type) {
+            case "GUILD_TEXT":
+                return `新しいテキストチャネルが作成されました (${channel})`
+            case "GUILD_VOICE":
+            case "GUILD_STAGE_VOICE":
+                return `新しい音声チャネルが作成されました (${channel})`
+            case "GUILD_CATEGORY":
+                return `新しいカテゴリが作成されました (${channel})`
+            default:
+                return `新しいチャネルが作成されました (${channel})`
+
+        }
+    },
+    logs_channelDelete_description: (channel) => {
+        switch (channel.type) {
+            case "GUILD_TEXT":
+                return `テキストチャネルが削除されました (${channel.name})`
+            case "GUILD_VOICE":
+            case "GUILD_STAGE_VOICE":
+                return `音声チャンネルが削除されました (${channel.name})`
+            case "GUILD_CATEGORY":
+                return `カテゴリが削除されました (${channel.name})`
+            default:
+                return `チャンネルが削除されました (${channel.name})`
+        }
+    },
+    logs_channelUpdate_description: (channel) => {
+        switch (channel.type) {
+            case "GUILD_TEXT":
+                return `テキストチャネルが更新されました (${channel})`
+            case "GUILD_VOICE":
+            case "GUILD_STAGE_VOICE":
+                return `音声チャンネルが更新されました (${channel})`
+            case "GUILD_CATEGORY":
+                return `カテゴリが更新されました (${channel.name})`
+            default:
+                return `チャンネルが更新されました (${channel.name})`
+        }
+    },
+    overwrites_removed_for: "の権限が削除されました",
+    added_overwrites_for: "追加された権限",
+    logs_roleCreate_description: (role) => {
+        return `新しい役割が作成されました (${role})`
+    },
+    logs_roleDelete_description: (role) => {
+        return `役割が削除されました (${role.name})`
+    },
+    logs_roleUpdate_description: (role) => {
+        return `役割が更新されました (${role})`
+    },
+    logs_messageDelete_description: (channel) => {
+        return `${channel}のメッセージを削除しました (${channel.name})`
+    },
+    logs_message_sent_above: "長さのために埋め込み後に送信されたメッセージ",
+    logs_message_bulk_description: (count) => {
+        return `**${count}**メッセージが削除されて保存されました `
+    },
+    logs_message_update_description: (message) => {
+        return `**${message.author.username}＃${message.author.discriminator}**は${message.channel}**${message.author.username}＃${message.author.discriminator}のメッセージを変更しました**${message.channel}のメッセージを変更しました`
+    },
+    logs_member_remove_description: (member) => {
+        return ` **${member.user.username}＃${member.user.discriminator}**がサーバーを離れました`
+    },
+    logs_member_update_description: (member, author) => {
+        return `ユーザー**${member.user.username}＃${member.user.discriminator}**が${author}によって更新されました`
+    },
+    logs_member_join_description: (member) => {
+        return `${member}**がサーバーに参加しました`
+    },
+    logs_invite_used: (invite, user) => {
+
+        if (!user) {
+            user = "ユーザーわからない"
+        } else {
+            user = `${user.username}#${user.discriminator}`
+        }
+
+        return `${user}によって作成された招待${invite}を使用`
+    },
+    logs_invite_impossibile() {
+        return "招待状が見つかりません。バニティURLが使用された可能性があります"
+    },
+    logs_member_kicked(member, author) {
+        return `**${member.user.username}＃${member.user.discriminator}**が${author}によってキックされました`
+    },
+    logs_member_banned(user, author) {
+        return `**${user.username}＃${user.discriminator}**は${author}によって禁止されています`
+    },
+    logs_member_unbanned(user, author) {
+        return `**${user.username}＃${user.discriminator}**は${author}によって禁止が解除されました`
+    },
+    logs_guild_updated(author) {
+        return `**${author.user.username}＃${author.user.discriminator}**サーバーを更新しました`
+    },
+    logs_emoji_create(emoji, author) {
+        return `**${author.user.username}＃${author.user.discriminator}**が絵文字を作成しました**${emoji.name} **`
+    },
+    logs_emoji_delete(emoji, author) {
+        return `**${author.user.username}＃${author.user.discriminator}**絵文字を削除しました**${emoji.name} **`
+    },
+    logs_emoji_update(emoji, author) {
+        return `**${author.user.username}＃${author.user.discriminator}**絵文字を更新しました**${emoji.name} **`
+    },
+    logs_voice_update(member, author) {
+        return `**${member.user.username}＃${member.user.discriminator}**の音声状態が**${author.user.username}＃${author.user.discriminator}**によって更新されました`
+    },
+    logs_voice_join(member, channel) {
+        return `**${member.user.username}＃${member.user.discriminator}**が音声チャネルに参加しました**${channel.name}**`
+    },
+    logs_voice_leave(member, channel) {
+        return `**${member.user.username}＃${member.user.discriminator}**左音声チャネル**${channel.name}**`
+    },
+    logs_voice_switch(member, oldChannel, newChannel) {
+        return `**${member.user.username}＃${member.user.discriminator}**音声チャネル**${oldChannel.name}**から音声チャネル**${newChannel.name}**に切り替えました`
+    },
 }
