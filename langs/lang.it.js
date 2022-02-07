@@ -9,8 +9,7 @@
     - Tradurre totalmente il file (anche le annotazioni)
  */
 
-
-module.exports = {
+const lang = {
     lang: "it", // Lang del file
     //PAROLE GENERALI DEL BOT: Tradurle seguendo anche le maiuscole
     maintenance: "Manutenzione",
@@ -38,19 +37,41 @@ module.exports = {
     action: "Azione",
     limit: "Limite",
     time: "Tempo",
+    changes: "Modifiche",
     actions: "Azioni",
     measure: "Provvedimento",
     actual_mode: "Modalità attuale",
     mode: "Modalità",
     role: "Ruolo",
     title: "Titolo",
+    position: "Posizione",
+    channel: "Canale",
+    type: "Tipo",
+    allowed: "Consentiti",
+    color: "Colore",
+    hoist: "Separato",
+    pexs: "Permessi",
+    content: "Contenuto",
+    integration: "Integrazione",
+    old: "Vecchio",
+    new: "Nuovo",
+    description: "Descrizione",
+    invite: "Invito",
+    previous_channel: "Canale precedente",
+    not_allowed: "Non Consentiti",
     embed_message: "Messaggio Embed",
     external_message: "Messaggio Esterno",
     category: "Categoria",
     support_role: "Ruolo di Supporto",
+    joined_at: "Entrato il",
+    created_at: "Creato il",
+    server_deaf: "Deaf",
+    server_mute: "Mute",
     //Azioni utili per il bot tradurre seguendo le maiuscole
     to_add: "da Aggiungere",
     to_remove: "da Rimuovere",
+    // Interaction Replies
+    interaction_success: "Azione compiuta",
     //ERRORI del bot tradurre come meglio si crede
     bot_error: "Si e' verificato un errore interno, l'errore verrà inviato automaticamente ai developer",
     error: "Errore",
@@ -65,6 +86,7 @@ module.exports = {
     owner_restriction: "Solo l'Owner del server puo' eseguire questo comando",
     owner_restriction_plus: "Solo l'Owner del server o chi possiede un ruolo `manager` puo' eseguire questo comando",
     command_not_found: "Comando non trovato",
+    user_not_found: "Utente non trovato",
     /*
         time_left: timestamp unix
         cmd: comando
@@ -520,6 +542,9 @@ module.exports = {
     antispam_action_examples:
         "`antispam action ban`\n" +
         "`antispam action none`",
+    antispam_action_updated: (action) => {
+        return `Azione dell'AntiSpam aggiornata, **Azione**: \`${action}\``
+    },
     //antispam enable/disable
     antispam_enabled: "AntiSpam abilitato!",
     antispam_disabled: "AntiSpam disabled!",
@@ -1057,7 +1082,7 @@ module.exports = {
         ":small_blue_diamond: `captcha enable/disable`\n" +
         "Abilita/Disabilita la verifica tramite captcha\n" +
         ":small_blue_diamond: `captcha mode [fake | new | all]`\n" +
-        "Imposta su quali utenti eseguire gli utenti\n" +
+        "Imposta su quali utenti eseguirei la verifica" +
         ":small_blue_diamond: `captcha role [@Ruolo/ID]`\n" +
         "Seleziona un ruolo da aggiungere all'utente a verifica completa\n" +
         ":small_blue_diamond: `captcha action [ban | kick | mute | none]`\n" +
@@ -1071,9 +1096,7 @@ module.exports = {
         ":small_blue_diamond: `captcha log-channel [#Canale/ID | None]`\n" +
         "Seleziona un canale dove ricevere tutte le informazioni sulle verifiche\n" +
         ":small_blue_diamond: `captcha toggle-role [@Ruolo/ID | None]`\n" +
-        "Seleziona un ruolo da rimuovere una volta che l'utente si verifica\n" +
-        ":small_blue_diamond: `captcha info`\n" +
-        "Mostra l'attuale configurazione della verifica tramite captcha",
+        "Seleziona un ruolo da rimuovere una volta che l'utente si verifica",
     captcha_examples: "A causa del grosso numero di comandi, tutti gli esempi sono presenti nelle varie categorie^^",
     captcha_small_desc: "Configura la verifica tramite captcha",
     //captcha
@@ -1261,7 +1284,7 @@ module.exports = {
         ":small_blue_diamond: `ticket [Open/Close/Transcript]`\n" +
         "Apri/Chiudi o trascrivi il ticket in cui e' stato eseguito il comando",
     tickets_examples: "A causa del grosso numero di comandi, tutti gli esempi sono presenti nelle varie categorie^^",
-    tickets_small_desc: "Configura la verifica tramite captcha",
+    tickets_small_desc: "Configura i tickets nel tuo server",
     //tickets create
     tickets_creation_sys: "Sistema di creazione tickets",
     tickets_create_message: "Desideri iniziare la creazione di un nuovo panel?\n**Il panel verra' creato in questo canale**",
@@ -1328,4 +1351,142 @@ module.exports = {
     lang_use: "lang [language]",
     lang_description: "Scegli la lingua per il bot in questo server",
     lang_examples: "`lang it`\n`lang en`",
+    //autoroles
+    autoroles_use: "autoroles [user/bot | list] {role}",
+    autoroles_description: "Imposta dei ruoli da far aggiungere agli utenti/bots appena entrano nel server, rifacendo il comando il ruolo verra' tolto dalla lista\n\n" +
+        ":small_blue_diamond: `autoroles user/bot [@Role/ID]`\n" +
+        "Aggiungi/Rimuovi un ruolo dalla lista\n" +
+        ":small_blue_diamond: `autoroles list`\n" +
+        "Controlla gli autoroles impostati",
+    autoroles_examples:
+        "`autoroles user @Role`\n" +
+        "`autoroles bot id`\n" +
+        "`autoroles list`",
+    autoroles_small_desc: "Aggiungi automaticamente ai nuovi utenti/bots",
+    autoroles_add: (role) => {return `Aggiunto il ruolo: ${role} agli autoroles`},
+    autoroles_remove: (role) => {return `Rimosso il ruolo: ${role} dagli autoroles`},
+    //autoroles list
+    autoroles_list: "Lista AutoRoles",
+    //logs
+    logs_use: "logs",
+    logs_description: "I logs permettono di tenere traccia di tutte le azioni compiute nel server\n\n" +
+        "**Questa funzione e' configurabile soltanto tramite [[Dashboard]](https://nisdbot.xyz/)**",
+    logs_small_description: "I logs permettono di tenere traccia di tutte le azioni compiute nel server",
+    //logs events
+    logs_channelCreate_description: (channel) => {
+        switch (channel.type) {
+            case "GUILD_TEXT":
+                return `Nuovo canale testuale creato (${channel})`
+            case "GUILD_VOICE":
+            case "GUILD_STAGE_VOICE":
+                return `Nuovo canale vocale creato (${channel})`
+            case "GUILD_CATEGORY":
+                return `Nuova categoria creata (${channel})`
+            default:
+                return `Nuovo canale creato (${channel})`
+
+        }
+    },
+    logs_channelDelete_description: (channel) => {
+        switch (channel.type) {
+            case "GUILD_TEXT":
+                return `Canale testuale eliminato (${channel.name})`
+            case "GUILD_VOICE":
+            case "GUILD_STAGE_VOICE":
+                return `Canale vocale eliminato (${channel.name})`
+            case "GUILD_CATEGORY":
+                return `Categoria eliminata (${channel.name})`
+            default:
+                return `Canale eliminato (${channel.name})`
+        }
+    },
+    logs_channelUpdate_description: (channel) => {
+        switch (channel.type) {
+            case "GUILD_TEXT":
+                return `Canale testuale modificato (${channel})`
+            case "GUILD_VOICE":
+            case "GUILD_STAGE_VOICE":
+                return `Canale vocale modificato (${channel})`
+            case "GUILD_CATEGORY":
+                return `Categoria modificata (${channel.name})`
+            default:
+                return `Canale modificato (${channel.name})`
+        }
+    },
+    overwrites_removed_for: "Permessi rimossi per",
+    added_overwrites_for: "Aggiunti permessi per",
+    logs_roleCreate_description: (role) => {
+        return `Nuovo ruolo creato (${role})`
+    },
+    logs_roleDelete_description: (role) => {
+        return `Ruolo eliminato (${role.name})`
+    },
+    logs_roleUpdate_description: (role) => {
+        return `Ruolo modificato (${role})`
+    },
+    logs_messageDelete_description: (channel) => {
+        return `Messaggio eliminato in ${channel} (${channel.name})`
+    },
+    logs_message_sent_above: "Messaggio inviato dopo l'embed a causa della lunghezza...",
+    logs_message_bulk_description: (count) => {
+        return `**${count}** messaggi sono stati cancellati e salvati`
+    },
+    logs_message_update_description: (message) => {
+        return `**${message.author.username}#${message.author.discriminator}** ha modificato il proprio messaggio in ${message.channel}`
+    },
+    logs_member_remove_description: (member) => {
+        return `**${member.user.username}#${member.user.discriminator}** e' uscito dal server`
+    },
+    logs_member_update_description: (member, author) => {
+        return `L'utente **${member.user.username}#${member.user.discriminator}** e' stato modificato da ${author}`
+    },
+    logs_member_join_description: (member) => {
+        return `**${member}** e' entrato nel server`
+    },
+    logs_invite_used: (invite, user) => {
+
+        if (!user) {
+            user = "Sconosciuto"
+        } else {
+            user = `${user.username}#${user.discriminator}`
+        }
+
+        return `Usato l'invito ${invite} creato da ${user}`
+    },
+    logs_invite_impossibile() {
+        return "Impossibile trovare l'invito, probabilmente e' stato usato un vanity url"
+    },
+    logs_member_kicked(member, author) {
+        return `**${member.user.username}#${member.user.discriminator}** e' stato kickato da ${author}`
+    },
+    logs_member_banned(user, author) {
+        return `**${user.username}#${user.discriminator}** e' stato bannato da ${author}`
+    },
+    logs_member_unbanned(user, author) {
+        return `**${user.username}#${user.discriminator}** e' stato sbannato da ${author}`
+    },
+    logs_guild_updated(author) {
+        return `**${author.user.username}#${author.user.discriminator}** ha aggiornato il server`
+    },
+    logs_emoji_create(emoji, author) {
+        return `**${author.user.username}#${author.user.discriminator}** ha creato l'emoji **${emoji.name}**`
+    },
+    logs_emoji_delete(emoji, author) {
+        return `**${author.user.username}#${author.user.discriminator}** ha eliminato l'emoji **${emoji.name}**`
+    },
+    logs_emoji_update(emoji, author) {
+        return `**${author.user.username}#${author.user.discriminator}** ha modificato l'emoji **${emoji.name}**`
+    },
+    logs_voice_update(member, author) {
+        return `A **${member.user.username}#${member.user.discriminator}** e' stato modificato il proprio stato vocale da **${author.user.username}#${author.user.discriminator}**`
+    },
+    logs_voice_join(member, channel) {
+        return `**${member.user.username}#${member.user.discriminator}** e' entrato nel canale vocale **${channel.name}**`
+    },
+    logs_voice_leave(member, channel) {
+        return `**${member.user.username}#${member.user.discriminator}** e' uscito dal canale vocale **${channel.name}**`
+    },
+    logs_voice_switch(member, oldChannel, newChannel) {
+        return `**${member.user.username}#${member.user.discriminator}** e' passato dal canale vocale **${oldChannel.name}** al canale vocale **${newChannel.name}**`
+    },
 }
