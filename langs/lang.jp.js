@@ -185,7 +185,7 @@ module.exports = {
     manager_use: "manager [@ロール/ID/None]",
     manager_description: "サーバー所有者専用の設定を変更できる役割を設定し、 `none`を使用して役割を削除します。\n" +
         "`manager`ロールもAntiNukeによって自動的にバイパスされます" +
-        "\n\n :warning:　**コマンドは注意して使用してください。BOTスタッフはサーバーへのいかなる損害についても責任を負いません**",
+        "\n\n :warning: **コマンドは注意して使用してください。BOTスタッフはサーバーへのいかなる損害についても責任を負いません**",
     manager_small_desc: "所有者専用の設定を変更できる役割を設定する",
     manager_examples: "`manager @⚡ | Amministratore `\n" +
         "`manager 589443292673081385`\n" +
@@ -498,14 +498,14 @@ module.exports = {
     antinuke_description: "現在の設定を表示するには、\`antinuke info \`を使用します\n\n" +
         "AntiNukeの設定を変更します。特定の設定を変更するには、 `antinuke [カテゴリー]を使用します。`\n" +
         "ユーザーがボットが罰するアクションの「制限」に達した場合、各アクションには独自の罰があります\n" +
-        "antinukeglobal [number]を使用して、「グローバル」制限を設定できます。`\n\n" +
-        ":small_blue_diamond: \`antinuke ban [limit | action | enable/disable] {オプションス}\`\n" +
+        "\`antinukeglobal [number]\`を使用して、「グローバル」制限を設定できます \n\n" +
+        ":small_blue_diamond: \`antinuke ban [limit | action | enable/disable] {オプションス}\` \n" +
         "ボットのAntiNukeをトリガーする前に禁止番号を変更してください\n" +
-        ":small_blue_diamond: \`antinuke kick [limit | action | enable/disable] {オプションス}\`\n" +
+        ":small_blue_diamond: \`antinuke kick [limit | action | enable/disable] {オプションス}\` \n" +
         "ボットのAntiNukeをトリガーする前にキックの数を変更します\n" +
-        ":small_blue_diamond: \`antinuke rolecreate [limit | action | enable/disable] {オプションス}\`\n" +
+        ":small_blue_diamond: \`antinuke rolecreate [limit | action | enable/disable] {オプションス}\` \n" +
         "ボットのAntiNukeをトリガーする前に作成されたロールの数を変更します\n" +
-        ":small_blue_diamond: \`antinuke roledel [limit | action | enable/disable] {オプションス}\`\n" +
+        ":small_blue_diamond: \`antinuke roledel [limit | action | enable/disable] {オプションス}\` \n" +
         "ボットのAntiNukeをトリガーする前に、削除されたロールの数を変更してください\n" +
         ":small_blue_diamond: \`antinuke channelcreate [limit | action | enable/disable] {オプションス}\`\n" +
         "ボットのAntiNukeをトリガーする前に作成されたチャネルの数を変更します\n" +
