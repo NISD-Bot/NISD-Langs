@@ -38,41 +38,41 @@ const lang = {
     action: "Действие",
     limit: "Ограничение",
     time: "Время",
-    changes: "Changes",
+    changes: "Изменения",
     actions: "Действия",
     measure: "Мера",
     actual_mode: "Действующий режим",
     mode: "Режим",
     role: "Роль",
     title: "Титул",
-    position: "Position",
-    channel: "Channel",
-    type: "Type",
-    allowed: "Allowed",
-    color: "Color",
-    hoist: "Hoist",
-    pexs: "Permissions",
-    content: "Content",
-    integration: "Integration",
-    old: "Old",
-    new: "New",
-    description: "Description",
-    invite: "Invite",
-    previous_channel: "Previous channel",
-    not_allowed: "Not Allowed",
+    position: "Положение",
+    channel: "Канал",
+    type: "Тип",
+    allowed: "Разрешено",
+    color: "Цвет",
+    hoist: "Отдельный",
+    pexs: "Разрешения",
+    content: "Содержание",
+    integration: "Объединение",
+    old: "Старый",
+    new: "Новый",
+    description: "Описание",
+    invite: "Пригласить",
+    previous_channel: "Предыдущий канал",
+    not_allowed: "Не разрешено",
     embed_message: "Встроенное сообщение",
     external_message: "Внешнее сообщение",
     category: "Категория",
     support_role: "Роль поддержки",
-    joined_at: "Joined at",
-    created_at: "Created at",
-    server_deaf: "Deaf",
-    server_mute: "Mute",
+    joined_at: "Присоединился к",
+    created_at: "Создано в",
+    server_deaf: "Глухой",
+    server_mute: "Отключен",
     //Azioni utili per il bot tradurre seguendo le maiuscole
     to_add: "Добавить",
     to_remove: "Удалить",
     // Interaction Replies
-    interaction_success: "Action completed",
+    interaction_success: "Действие завершено",
     //ERRORI del bot tradurre come meglio si crede
     bot_error: "Произошел внутренний сбой, данные об ошибке автоматически будут оправлены разработчикам",
     error: "Ошибка",
@@ -87,7 +87,7 @@ const lang = {
     owner_restriction: "Только владелец сервера может воспользоваться данной командой",
     owner_restriction_plus: "Только владелец сервера или тот, у кого есть роль `manager` может выполнить эту команду",
     command_not_found: "Команда не найдена",
-    user_not_found: "User not found",
+    user_not_found: "Пользователь не найден",
     /*
         time_left: timestamp unix
         cmd: comando
@@ -544,7 +544,7 @@ const lang = {
         "`antispam action ban`\n" +
         "`antispam action none`",
     antispam_action_updated: (action) => {
-        return `AntiSpam action updated **Action**: \`${action}\``
+        return `AntiSpam action updated **Действие**: \`${action}\``
     },
     //antispam enable/disable
     antispam_enabled: "Антиспам подключен!",
@@ -1287,7 +1287,7 @@ const lang = {
         ":small_blue_diamond: `ticket [Open/Close/Transcript]`\n" +
         "Откройте/Закройте/сохраните копия билета, в котором выполнялась команда",
     tickets_examples: "Из-за большого количества команд все примеры присутствуют в разных категориях^^",
-    tickets_small_desc: "Configura la verifica tramite captcha",
+    tickets_small_desc: "Настроить тест капча",
     //tickets create
     tickets_creation_sys: "Система создания билетов",
     tickets_create_message: "Желаете начать создание новой панели?\n**Панель будет создана на этом канале**",
@@ -1332,9 +1332,9 @@ const lang = {
     tickets_delete_exited: ":negato_gif: Отмена операции",
     tickets_delete_sys: "Система удаления билетов",
     //ticket info
-    tickets_info_title: "NISD Tickets Info",
+    tickets_info_title: "Информация о билетах NISD",
     tickets_info_description: (logs, tlogs) => {
-        return `**Logs**: ${logs}\n**Transcript Logs**: ${tlogs}\n`
+        return `**Регистры**: ${logs}\n**Регистры копий**: ${tlogs}\n`
     },
     //ticket logs
     tickets_logs_use: "ticket logs [#Канал/ID | None]",
@@ -1346,9 +1346,9 @@ const lang = {
     //ticket transcript-logs
     tickets_transcriptlogs_use: "ticket transcript-logs [#Канал/ID | None]",
     tickets_transcriptlogs_description: "Установка специального канала для пересылки копий билетов, отличного от канала регистров, используйте \`none\`, чтобы отключить регистры",
-    tickets_transcriptlogs_examples: "ticket transcript-logs ID\nticket transcript-logs none",
+    tickets_transcriptlogs_examples: "ticket transcript - logs ID\nticket transcript- logs none",
     tickets_transcriptlogs_success: (none, channel) => {
-        return none ? "С этого моменты копии билетов опять будут отправляться на канале регистров (если определен) или билетов (в противном случае)" : `Канал дял пересылки копий билетов обновлен, новый канал: ${channel}`
+        return none ? "С этого моменты копии билетов опять будут отправляться на канале регистров (если определен) или билетов (в противном случае)" : `Канал для пересылки копий билетов обновлен, новый канал: ${channel}`
     },
     //language
     lang_use: "lang [язык]",
@@ -1356,142 +1356,141 @@ const lang = {
     lang_examples: "`lang it`\n`lang en`\n`lang ru`",
     //autoroles
     autoroles_use: "autoroles [user/bot | list] {role}",
-    autoroles_description: "Set roles for users / bots to add as soon as they enter the server, redoing the command with the same role will remove it from the list\n\n" +
+    autoroles_description: "Установить роли для пользователей / ботов так, чтобы они добавлялись, как только они заходят на сервер, повтор команды с той же ролью удалит ее из списка\n\n" +
         ":small_blue_diamond: `autoroles user/bot [@Role/ID]`\n" +
-        "Add/Remove a role from the list\n" +
+        "Добавить в/Удалить роль из списка\n" +
         ":small_blue_diamond: `autoroles list`\n" +
-        "Check your current autoroles",
+        "Проверить действительные автороли",
     autoroles_examples:
         "`autoroles user @Role`\n" +
         "`autoroles bot id`\n" +
         "`autoroles list`",
-    autoroles_small_desc: "Automatically add roles to new users/bots",
-    autoroles_add: (role) => {return `Added ${role} to autoroles`},
-    autoroles_remove: (role) => {return `Removed ${role} from autoroles`},
+    autoroles_small_desc: "Автоматически добавить роль новым пользователям/ботам",
+    autoroles_add: (role) => {return `Добавлена ${role} к autoroles`},
+    autoroles_remove: (role) => {return `Удалена ${role} из autoroles`},
     //autoroles list
-    autoroles_list: "AutoRoles List",
+    autoroles_list: "Список авторолей",
     //logs
     logs_use: "logs",
-    logs_description: "The logs allow you to keep track of all the actions performed on the server\n\n" +
-        "**This function is configurable only via [[Dashboard]](https://nisdbot.xyz/)**",
-    logs_small_description: "The logs allow you to keep track of all the actions performed on the server",
+    logs_description: "Журналы позволяют отслеживать все действия, выполняемые на сервере\n\n" +
+        "**Данная функция настраивается только через [[Приборная доска]](https://nisdbot.xyz/)**",
+    logs_small_description: "Журналы позволяют отслеживать все действия, выполняемые на сервере",
     //logs events
     logs_channelCreate_description: (channel) => {
         switch (channel.type) {
             case "GUILD_TEXT":
-                return `New text channel created (${channel})`
+                return `Создан новый текстовый канал (${channel})`
             case "GUILD_VOICE":
             case "GUILD_STAGE_VOICE":
-                return `New voice channel created (${channel})`
+                return `Создан новый голосовой канал (${channel})`
             case "GUILD_CATEGORY":
-                return `New category created (${channel})`
+                return `Создана новая категория (${channel})`
             default:
-                return `New channel created (${channel})`
+                return `Создан новый канал (${channel})`
 
         }
     },
     logs_channelDelete_description: (channel) => {
         switch (channel.type) {
             case "GUILD_TEXT":
-                return `Text channel deleted (${channel.name})`
+                return `Удален текстовый канал (${channel.name})`
             case "GUILD_VOICE":
             case "GUILD_STAGE_VOICE":
-                return `Voice channel deleted (${channel.name})`
+                return `Удален голосовой канал (${channel.name})`
             case "GUILD_CATEGORY":
-                return `Category deleted (${channel.name})`
+                return `Категория удалена (${channel.name})`
             default:
-                return `Channel deleted (${channel.name})`
+                return `Канал удален (${channel.name})`
         }
     },
     logs_channelUpdate_description: (channel) => {
         switch (channel.type) {
             case "GUILD_TEXT":
-                return `Textual channel updated (${channel})`
+                return `Текстовый канал обновлен (${channel})`
             case "GUILD_VOICE":
             case "GUILD_STAGE_VOICE":
-                return `Voice channel updated (${channel})`
+                return `Голосовой канал обновлен (${channel})`
             case "GUILD_CATEGORY":
-                return `Category updated (${channel.name})`
+                return `Категория обновлена (${channel.name})`
             default:
-                return `Channel updated (${channel.name})`
+                return `Канал обновлен (${channel.name})`
         }
     },
-    overwrites_removed_for: "Permissions removed for",
-    added_overwrites_for: "Permissions added for",
+    overwrites_removed_for: "Разрешения удалены для",
+    added_overwrites_for: "Разрешения добавлены для",
     logs_roleCreate_description: (role) => {
-        return `New role created (${role})`
+        return `Создана новая роль (${role})`
     },
     logs_roleDelete_description: (role) => {
-        return `Role deleted (${role.name})`
+        return `Роль удалена (${role.name})`
     },
     logs_roleUpdate_description: (role) => {
-        return `Role updated (${role})`
+        return `Роль обновлена (${role})`
     },
     logs_messageDelete_description: (channel) => {
-        return `Deleted message in ${channel} (${channel.name})`
+        return `Удалено сообщение на ${channel} (${channel.name})`
     },
-    logs_message_sent_above: "Message sent after embed due to length...",
+    logs_message_sent_above: "Сообщение отправлено после вставленного сообщения из-за его длины...",
     logs_message_bulk_description: (count) => {
-        return `**${count}** messages have been deleted and saved`
+        return `**${count}** сообщения были удалены и сохранены`
     },
     logs_message_update_description: (message) => {
-        return `**${message.author.username}#${message.author.discriminator}** changed their message in ${message.channel}`
+        return `**${message.author.username}#${message.author.discriminator}** изменил сообщение на ${message.channel}`
     },
     logs_member_remove_description: (member) => {
-        return `**${member.user.username}#${member.user.discriminator}** left the server`
+        return `**${member.user.username}#${member.user.discriminator}** покинул сервер`
     },
     logs_member_update_description: (member, author) => {
-        return `L'utente **${member.user.username}#${member.user.discriminator}** updated by ${author}`
+        return `Пользователь **${member.user.username}#${member.user.discriminator}** был изменен ${author}`
     },
     logs_member_join_description: (member) => {
-        return `**${member}** joined the server`
+        return `**${member}** зашел на сервер`
     },
     logs_invite_used: (invite, user) => {
 
         if (!user) {
-            user = "Uknown"
+            user = "Неизвестный"
         } else {
             user = `${user.username}#${user.discriminator}`
         }
 
-        return `Used invite ${invite} created by ${user}`
+        return `Использовано приглашение ${invite} созданное ${user}`
     },
     logs_invite_impossibile() {
-        return "Unable to find the invitation, a vanity url was probably used"
+        return "Не удалось найти приглашение, возможно, был использован a vanity url"
     },
     logs_member_kicked(member, author) {
-        return `**${member.user.username}#${member.user.discriminator}** has been kicked by ${author}`
+        return `**${member.user.username}#${member.user.discriminator}** был удален с сервера ${author}`
     },
     logs_member_banned(user, author) {
-        return `**${user.username}#${user.discriminator}** has been banned by ${author}`
+        return `**${user.username}#${user.discriminator}** был заблокирован ${author}`
     },
     logs_member_unbanned(user, author) {
-        return `**${user.username}#${user.discriminator}** has been unbanned by ${author}`
+        return `**${user.username}#${user.discriminator}** был разблокирован ${author}`
     },
     logs_guild_updated(author) {
-        return `**${author.user.username}#${author.user.discriminator}** updated the server`
+        return `**${author.user.username}#${author.user.discriminator}** сервер обновлен`
     },
     logs_emoji_create(emoji, author) {
-        return `**${author.user.username}#${author.user.discriminator}** created the emoji **${emoji.name}**`
+        return `**${author.user.username}#${author.user.discriminator}** создан смайлик **${emoji.name}**`
     },
     logs_emoji_delete(emoji, author) {
-        return `**${author.user.username}#${author.user.discriminator}** deleted the emoji **${emoji.name}**`
+        return `**${author.user.username}#${author.user.discriminator}** удален смайлик **${emoji.name}**`
     },
     logs_emoji_update(emoji, author) {
-        return `**${author.user.username}#${author.user.discriminator}** updated the emoji **${emoji.name}**`
+        return `**${author.user.username}#${author.user.discriminator}** обновлен смайлик **${emoji.name}**`
     },
     logs_voice_update(member, author) {
-        return `**${member.user.username}#${member.user.discriminator}** had their voice state updated by **${author.user.username}#${author.user.discriminator}**`
+        return `**${member.user.username}#${member.user.discriminator}** голосовой статус был обновлен **${author.user.username}#${author.user.discriminator}**`
     },
     logs_voice_join(member, channel) {
-        return `**${member.user.username}#${member.user.discriminator}** joined voice channel **${channel.name}**`
+        return `**${member.user.username}#${member.user.discriminator}** присоединился к голосовому каналу **${channel.name}**`
     },
     logs_voice_leave(member, channel) {
-        return `**${member.user.username}#${member.user.discriminator}** left voice channel **${channel.name}**`
+        return `**${member.user.username}#${member.user.discriminator}** оставил голосовой канал **${channel.name}**`
     },
     logs_voice_switch(member, oldChannel, newChannel) {
-        return `**${member.user.username}#${member.user.discriminator}** switched from voice channel **${oldChannel.name}** to voice channel **${newChannel.name}**`
+        return `**${member.user.username}#${member.user.discriminator}** переключился с голосового канала **${oldChannel.name}** на голосовой канал **${newChannel.name}**`
     },
 }
-
 
