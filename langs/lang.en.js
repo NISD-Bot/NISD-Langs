@@ -202,7 +202,7 @@ const lang = {
     bug_sent: "Bug report sent!",
     bug_use: "bug [message]",
     bug_description: "Report a bug to our support team (minimum 50 characters)\n" +
-        "Please include as much detail as possible in your report" +
+        "Please include as much detail as possible in your report\n" +
         ":warning: **Warning** any misuse of the command will lead to consequences!",
     bug_small_desc: 'Report an error to our support team',
     bug_examples: "`bug The warn command gives me this error...`",
@@ -305,7 +305,7 @@ const lang = {
     },
     //muterole
     muterole_use: "muterole [@Role/ID] (-n)",
-    muterole_description: "Set the role to use for the `mute` command" +
+    muterole_description: "Set the role to use for the `mute` command\n" +
         "**:warning: Using this command the BOT will try to set the role in all channels on the server, to avoid this add `-n` to the command**",
     muterole_small_desc: "Set the role to use for the `mute` command",
     muterole_examples:
@@ -331,9 +331,9 @@ const lang = {
     unwarn_description: "Remove a warning from a user, to find the number of a warning use `warnings [@User]`",
     unwarn_small_desc: "Remove a warning from a user",
     unwarn_examples:
-        "`unwarn ID`" +
-        "`unwarn @User`\n" +
-        "`unwarn @User I forgive you bro`",
+        "`unwarn ID 1`" +
+        "`unwarn @User 2`\n" +
+        "`unwarn @User 2 I forgive you bro`",
     user_unwarned: "Warn deleted",
     user_unwarned_dm: (guild) => {
         return `Warn deleted on ${guild.name}`
@@ -355,7 +355,7 @@ const lang = {
     warnings_description: "Watch warnings for a specific user",
     warnings_small_desc: "Watch warnings for a specific user",
     warnings_examples:
-        "`warnings ID`" +
+        "`warnings ID\n`" +
         "`warnings ID 2`\n" +
         "`warnings @Polliog`\n" +
         "`warnings @Polliog 2`",
@@ -392,7 +392,7 @@ const lang = {
     mod_dmUser: "Message User",
     mod_use: "mod logs | dms | delete {#Channel/ID/none} {True/False}",
     mod_description:
-        "**Change settings regarding moderation**" +
+        "**Change settings regarding moderation**\n" +
         ":small_blue_diamond: `mod logs [#Channel/ID/none]`\n" +
         "Set a channel to show the actions taken by the staff\n" +
         ":small_blue_diamond: `mod dms [True/False]`\n" +
@@ -461,11 +461,11 @@ const lang = {
     //anti-flood
     antiflood_use: "antiflood [enable/disable | limit | action | time] {Number} {Action}",
     antiflood_description:
-        "The AntiFlood allows you to protect the server against people who write a lot of messages repeatedly" +
+        "The AntiFlood allows you to protect the server against people who write a lot of messages repeatedly\n" +
         ":small_blue_diamond: `antiflood [enable/disable]`\n" +
-        "Enable or disable AntiFlood" +
+        "Enable or disable AntiFlood\n" +
         ":small_blue_diamond: `antiflood limit [Limit]`\n" +
-        "Set the maximum number of messages that can be sent in the given time" +
+        "Set the maximum number of messages that can be sent in the given time\n" +
         ":small_blue_diamond: `antiflood action [Ban | Kick | Warn | Mute | none]`\n" +
         "Set the action the bot takes when it detects flood\n" +
         ":small_blue_diamond: `antiflood time [Time]`\n" +
@@ -524,7 +524,7 @@ const lang = {
     antispam_description:
         "AntiSpam is a function that automatically deletes all spam messages (server invites) in the server" +
         ":small_blue_diamond: `antispam [enable/disable]`\n" +
-        "Enable or disable AntiSpam" +
+        "Enable or disable AntiSpam\n" +
         ":small_blue_diamond: `antispam action [Ban | Kick | Warn | Mute | none]`\n" +
         "Sets the action the bot takes when it detects a spam link",
     antispam_small_desc: "Open AntiSpam settings",
@@ -552,24 +552,24 @@ const lang = {
     //antinuke
     antinuke_use: "antinuke [Category] [limit | action | enable/disable] {Options}",
     antinuke_description:
-        "To view the current settings use \`antinuke info\`n\n" +
+        "To view the current settings use \`antinuke info\`\n\n" +
         "Edit AntiNuke settings, to change a specific setting use `antinuke [category]`\n" +
-        "If a user reaches the \"limit\" of an action, the bot punishes him, each action has its own punishment" +
-        "You can set a global limit through `antinuke global [number]`" + "You can set a global limit through `antinuke global [number]`" + "You can set a global limit through `antinuke global [number]`" +
+        "If a user reaches the \"limit\" of an action, the bot punishes him, each action has its own punishment\n" +
+        "You can set a global limit through `antinuke global [number]`\n\n" +
         ":small_blue_diamond: \`antinuke ban [limit | action | enable/disable] {Options}\`\n" +
-        "Change the number of bans before triggering the bot's AntiNuke" +
+        "Change the number of bans before triggering the bot's AntiNuke\n" +
         ":small_blue_diamond: \`antinuke kick [limit | action | enable/disable] {Options}\`\n" +
-        "Change the number of kicks before triggering the bot's AntiNuke" +
-        ":small_blue_diamond: \`antinuke rolecreate [limit | action | enable/disable] {Options}\`n" +
-        "Change the number of roles created before triggering the bot\'s AntiNuke" +
+        "Change the number of kicks before triggering the bot's AntiNuke\n" +
+        ":small_blue_diamond: \`antinuke rolecreate [limit | action | enable/disable] {Options}\`\n" +
+        "Change the number of roles created before triggering the bot\'s AntiNuke\n" +
         ":small_blue_diamond: \`antinuke roledel [limit | action | enable/disable] {Options}\`\n" +
-        "Change the number of roles deleted before triggering the bot\'s AntiNuke" +
+        "Change the number of roles deleted before triggering the bot\'s AntiNuke\n" +
         ":small_blue_diamond: \`antinuke channelcreate [limit | action | enable/disable] {Options}\`\n" +
         "Modify the number of channels created before triggering the AntiNuke of the bot\n" +
         ":small_blue_diamond: \`antinuke channeldel [limit | action | enable/disable] {Options}\`\n" +
         "Modify the number of channels deleted before triggering the AntiNuke of the bot\n" +
-        ":small_blue_diamond: \global [number]\`antinuke" +
-        "Set a new global limit" +
+        ":small_blue_diamond: \`global [number]\`antinuke\n" +
+        "Set a new global limit\n" +
         ":small_blue_diamond: \`antinuke info\`\n" +
         "Check the current AntiNuke settings",
     antinuke_small_desc: "View all AntiNuke settings",
@@ -577,18 +577,18 @@ const lang = {
         "`antinuke info`\n" +
         "`antinuke global 5`\n" +
         "`antinuke ban enable`\n" +
-        "antinuke kick action ban" +
+        "antinuke kick action ban\n" +
         "`antinuke rolecreate limit 4`" + "`antinuke rolecreate limit 4`",
     antinuke_warnings: "[ANTINUKE] Warning you are exceeding an AntiNuke limit",
     //antiban
     antiban_use: "antiban [limit | action | enable/disable] {Options}",
     antiban_description:
         "AntiBan is a function of AntiNuke that acts on users banning many members repeatedly\n" +
-        ":small_blue_diamond: \enable/disable anti-ban" +
-        "Enable/Disable AntiBan" +
-        ":small_blue_diamond: \AntiBan limit [Number]\`antiban" +
+        ":small_blue_diamond: \`enable/disable anti-ban\`\n" +
+        "Enable/Disable AntiBan\n" +
+        ":small_blue_diamond: \`AntiBan limit [Number]\`\n" +
         "Change the number of bans needed to activate AntiBan\n" +
-        ":small_blue_diamond: \Antiban action [Sanction]\`\n" +
+        ":small_blue_diamond: \`Antiban action [Sanction]\`\n" +
         "Modify the AntiBan sanction",
     antiban_small_desc: "Modify the AntiBan settings of the AntiNuke",
     antiban_examples:
@@ -621,9 +621,9 @@ const lang = {
     antikick_use: "antikick [limit | action | enable/disable] {Options}",
     antikick_description:
         "AntiKick is a function of AntiNuke that acts on users that expel many members repeatedly\n" +
-        ":small_blue_diamond: \`antikick enable/disable" +
-        "Enable/Disable Anti-Kick" +
-        ":small_blue_diamond: \`antikick limit [Number]\`" +
+        ":small_blue_diamond: \`antikick enable/disable\`\n" +
+        "Enable/Disable Anti-Kick\n" +
+        ":small_blue_diamond: \`antikick limit [Number]\`\n" +
         "Change the number of kicks needed to activate AntiKick\n" +
         ":small_blue_diamond: \`antikick action [Sanction]\`\n" +
         "Modify the AntiKick sanction",
@@ -657,10 +657,10 @@ const lang = {
     //antirolecreate
     antirolecreate_use: "antirolecreate [limit | action | enable/disable] {Options}",
     antirolecreate_description:
-        "AntiRoleCreate is a function of AntiNuke that acts on users who create many roles in a short time" +
+        "AntiRoleCreate is a function of AntiNuke that acts on users who create many roles in a short time\n" +
         ":small_blue_diamond: \`antirolecreate enable/disable\`\n" +
-        "Enable/Disable AntiRoleCreate" +
-        ":small_blue_diamond: \`AntiRoleCreate limit [Number]\`n" +
+        "Enable/Disable AntiRoleCreate\n" +
+        ":small_blue_diamond: \`AntiRoleCreate limit [Number]\`\n" +
         "Change the number of created roles needed to enable the AntiRoleCreate\n" +
         ":small_blue_diamond: \`antirolecreate action [Sanction]\`\n" +
         "Modify the AntiRoleCreate sanction",
@@ -669,7 +669,7 @@ const lang = {
         "`antirolecreate enable`\n" +
         "`antirolecreate disable`\n" +
         "`antirolecreate limit 5`\n" +
-        "`antirolecreate action ban`" + "`antirolecreate action ban`",
+        "`antirolecreate action ban`\n",
     antirolecreate_enabled: "AntiRoleCreate enabled!",
     antirolecreate_disabled: "AntiRoleCreate disabled!",
     antirolecreate_acted: "[ANTIROLECREATE] Large number of user-created roles detected",
@@ -694,9 +694,9 @@ const lang = {
     //antiroledelete
     antiroledelete_use: "antiroledelete [limit | action | enable/disable] {Options}",
     antiroledelete_description:
-        "AntiRoleDelete is a function of AntiNuke that acts on users who delete a lot of roles in a short time" +
+        "AntiRoleDelete is a function of AntiNuke that acts on users who delete a lot of roles in a short time\n" +
         ":small_blue_diamond: \`antiroledelete enable/disable\`\n" +
-        "Enable/Disable AntiRoleDelete" +
+        "Enable/Disable AntiRoleDelete\n" +
         ":small_blue_diamond: \`AntiRoleDelete limit [Number]\`\n" +
         "Change the number of deleted roles needed to activate the AntiRoleDelete\n" +
         ":small_blue_diamond: \`AntiRoleDelete action [Sanction]\`\n" +
@@ -705,7 +705,7 @@ const lang = {
     antiroledelete_examples:
         "`antiroledelete enable`\n" +
         "`antiroledelete disable`\n" +
-        "anti-roledelete limit 5" +
+        "`antiroledelete limit 5`\n" +
         "`antiroledelete action ban`",
     antiroledelete_enabled: "AntiRoleDelete enabled!",
     antiroledelete_disabled: "AntiRoleDelete disabled!",
@@ -731,9 +731,9 @@ const lang = {
     //antichannelcreate
     antichannelcreate_use: "antichannelcreate [limit | action | enable/disable] {Options}",
     antichannelcreate_description:
-        "AntiChannelCreate is a function of AntiNuke that acts on users who create many channels in a short time" +
+        "AntiChannelCreate is a function of AntiNuke that acts on users who create many channels in a short time\n" +
         ":small_blue_diamond: \`antichannelcreate enable/disable\`\n" +
-        "Enable/Disable AntiChannelCreate" +
+        "Enable/Disable AntiChannelCreate\n" +
         ":small_blue_diamond: \`antichannelcreate limit [Number]\`\n" +
         "Change the number of channels created necessary to activate the AntiChannelCreate\n" +
         ":small_blue_diamond: \`antichannelcreate action [Sanction]\`\n" +
@@ -743,7 +743,7 @@ const lang = {
         "`antichannelcreate enable`\n" +
         "`antichannelcreate disable`\n" +
         "`antichannelcreate limit 5`\n" +
-        "`antichannelcreate action ban`" + "`antichannelcreate action ban`",
+        "`antichannelcreate action ban`",
     antichannelcreate_enabled: "AntiChannelCreate enabled!",
     antichannelcreate_disabled: "AntiChannelCreate disabled!",
     antichannelcreate_acted: "[ANTICHANNELCREATE] Large number of user-created channels detected",
@@ -767,9 +767,9 @@ const lang = {
     //antichanneldelete
     antichanneldelete_use: "antichanneldelete [limit | action | enable/disable] {Options}",
     antichanneldelete_description:
-        "AntiChannelDelete is a function of AntiNuke that acts on users who delete a lot of channels in a short time" +
+        "AntiChannelDelete is a function of AntiNuke that acts on users who delete a lot of channels in a short time\n" +
         ":small_blue_diamond: \`antichanneldelete enable/disable\`\n" +
-        "Enable/Disable AntiChannelDelete" +
+        "Enable/Disable AntiChannelDelete\n" +
         ":small_blue_diamond: \`antichanneldelete limit [Number]\`\n" +
         "Change the number of deleted channels needed to activate AntiChannelDelete\n" +
         ":small_blue_diamond: \`antichanneldelete action [Sanzione]\`\n" +
@@ -778,8 +778,8 @@ const lang = {
     antichanneldelete_examples:
         "`antichanneldelete enable`\n" +
         "`antichanneldelete disable`\n" +
-        "antichanneldelete limit 5" +
-        "`antichanneldelete action ban`" + "`antichanneldelete action ban`",
+        "`antichanneldelete limit 5`\n" +
+        "`antichanneldelete action ban`",
     antichanneldelete_enabled: "AntiChannelDelete enabled!",
     antichanneldelete_disabled: "AntiChannelDelete disabled!",
     antichanneldelete_acted: "[ANTICHANNELDELETE] Large number of user-deleted channels detected",
@@ -824,19 +824,19 @@ const lang = {
     antiraid_description:
         "AntiRaid allows you to protect your server from many users entering in a short time" +
         ":small_blue_diamond: \`antiraid enable/disable\`\n" +
-        "Enable/Disable AntiRaid" +
-        ":small_blue_diamond: \limit [Number]\`antiraid" +
+        "Enable/Disable AntiRaid\n" +
+        ":small_blue_diamond: `limit [Number]`\n" +
         "Modify the number of users who entered within a certain time limit to enable AntiRaid\n" +
         ":small_blue_diamond: `antiraid time [Time]`\n" +
-        "Set the time **in seconds**, in which the raid \n is to be determined" +
-        ":small_blue_diamond: \`antiraid action [Sanction]\`n" +
+        "Set the time **in seconds**, in which the raid is determined\n" +
+        ":small_blue_diamond: \`antiraid action [Sanction]\`\n" +
         "Modifies the AntiRaid sanction",
     antiraid_small_desc: "Modify AntiRaid settings",
     antiraid_examples:
-        "anti-raid enable" + "anti-raid disable" +
-        "anti-raid disable" +
-        "anti-raid time 6" +
-        "anti-raid limit 5" +
+        "`antiraid enable`\n" +
+        "`antiraid disable`\n" +
+        "`antiraid time 6`\n" +
+        "`antiraid limit 5`\n" +
         "`antiraid action ban`",
     antiraid_enabled: "AntiRaid enabled!",
     antiraid_disabled: "AntiRaid disabled!",
@@ -1048,14 +1048,14 @@ const lang = {
     //bypasschannel
     bypasschannel_use: "bypasschannel [add/remove | list] {#Channel/ID}",
     bypasschannel_description:
-        "Creates a list of channels ignored by the bot\n³'s AutoMod" +
-        ":small_blue_diamond: \Bypasschannel add/remove [#Channel/ID]\`n" +
-        "Add/Remove a channel from the list of ignored channels" +
+        "Creates a list of channels ignored by the bot's AutoMod\n" +
+        ":small_blue_diamond: \`Bypasschannel add/remove [#Channel/ID]\`\n" +
+        "Add/Remove a channel from the list of ignored channels\n" +
         ":small_blue_diamond:\`bypasschannel list\`\n" +
         "Show ignored channel list",
     bypasschannel_small_desc: "Set channels to be ignored by the AutoMod",
     bypasschannel_examples:
-        "`bypasschannel add #channel\n" +
+        "`bypasschannel add #channel`\n" +
         "`bypasschannel remove id`\n" +
         "`bypasschannel list`",
     //bypasschannel add/remove
@@ -1097,7 +1097,7 @@ const lang = {
         ":small_blue_diamond: `captcha log-channel [#Channel/ID | None]`\n" +
         "Select a channel to receive all verification information\n" +
         ":small_blue_diamond: `captcha toggle-role [@Role/ID | None]`\n" +
-        "Select a role to remove once the user verifies themselves\n",
+        "Select a role to remove once the user verifies themselves",
     captcha_examples: "Due to the large number of commands, all examples are present in the various categories^^",
     captcha_small_desc: "Configure verification by captcha",
     //captcha
@@ -1268,7 +1268,7 @@ const lang = {
         "you will create a `panel` (message with a button underneath) from which you interact to create a private ticket.\n" +
         "**Tickets take permissions from the category in which they are created**\n\n" +
         ":small_blue_diamond: `ticket create`\n" +
-        "Start the creation of the panel from which to create the tickets" +
+        "Start the creation of the panel from which to create the tickets\n" +
         ":small_blue_diamond: `ticket panel [panelID]`\n" +
         "Recreate a previously created panel\n" +
         ":small_blue_diamond: `ticket edit [panelID]`\n" +
@@ -1490,4 +1490,21 @@ const lang = {
     logs_voice_switch(member, oldChannel, newChannel) {
         return `**${member.user.username}#${member.user.discriminator}** switched from voice channel **${oldChannel.name}** to voice channel **${newChannel.name}**`
     },
+    //antiscam
+    antiscam_use: "antiscam [enable/disable | action] {Action}",
+    antiscam_description: "Automatically delete and take action when sending malicious links\n" +
+        ":small_blue_diamond: `antiscam enable/disable`\n" +
+        "Enable / Disable AntiScam\n" +
+        ":small_blue_diamond: `antiscam action [Ban | Kick | Warn | Mute | none]`\n" +
+        "Select the action taken by the bot when detected a malicious link",
+    antiscam_small_desc: "Automatically delete and take action when sending malicious links",
+    antiscam_examples: "`antiscam enable`\n`antiscam ban`",
+    //antiscam enable
+    antiscam_enabled: "AntiScam enabled",
+    antiscam_disabled: "AntiScam disabled",
+    //antiscam action
+    antiscam_action_updated: (action) => {
+        return `AntiScam action updated, **Action**: \`${action}\``
+    },
+    antiscam_acted: "[NISD AutoMod] Malicious link detected!",
 }

@@ -330,9 +330,9 @@ const lang = {
     unwarn_description: "Rimuovi un avvertimento ad un utente, per trovare il numero di un warn utilizza `warnings [@Utente]`",
     unwarn_small_desc: "Rimuovi un avvertimento ad un utente",
     unwarn_examples:
-        "`unwarn ID`\n" +
-        "`unwarn @Utente`\n" +
-        "`unwarn @Utente ti perdono bro`",
+        "`unwarn ID 1`\n" +
+        "`unwarn @Utente 2`\n" +
+        "`unwarn @Utente 1 ti perdono bro`",
     user_unwarned: "Warn eliminato",
     user_unwarned_dm: (guild) => {
         return `Warn eliminato su ${guild.name}`
@@ -1489,4 +1489,21 @@ const lang = {
     logs_voice_switch(member, oldChannel, newChannel) {
         return `**${member.user.username}#${member.user.discriminator}** e' passato dal canale vocale **${oldChannel.name}** al canale vocale **${newChannel.name}**`
     },
+    //antiscam
+    antiscam_use: "antiscam [enable/disable | action] {Azione}",
+    antiscam_description: "Elimina automatica e prendi azioni all'invio di link malevoli\n" +
+        ":small_blue_diamond: `antiscam enable/disable`\n" +
+        "Abilita o disabilita l'antiscam\n" +
+        ":small_blue_diamond: `antiscam action [Ban | Kick | Warn | Mute | none]`\n" +
+        "Seleziona l'azione da eseguire quando rilevato un link malevolo",
+    antiscam_small_desc: "Elimina automatica e prendi azioni all'invio di link malevoli",
+    antiscam_examples: "`antiscam enable`\n`antiscam ban`",
+    //antiscam enable
+    antiscam_enabled: "AntiScam abilitato",
+    antiscam_disabled: "AntiScam disabilitato",
+    //antiscam action
+    antiscam_action_updated: (action) => {
+        return `Azione dell'AntiScam aggiornata, **Azione**: \`${action}\``
+    },
+    antiscam_acted: "[NISD AutoMod] Link malevolo rilevato!",
 }
