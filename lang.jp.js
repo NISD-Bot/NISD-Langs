@@ -4,7 +4,7 @@
     @Translated by: @TeknoSenpai#0957 (https://github.com/TeknoSenpai/)
 */
 
-const lang = {
+module.exports = {
     lang: "jp", //ファイルの言語
     //ボットの一般的な単語
     maintenance: "メインテナンス中",
@@ -32,41 +32,19 @@ const lang = {
     action: "アックション",
     limit: "リミット",
     time: "時間",
-    changes: "Changes",
     actions: "アックション",
     measure: "測定",
     actual_mode: "現在のモード",
     mode: "モード",
     role: "ロールー",
     title: "タイトル",
-    position: "Position",
-    channel: "Channel",
-    type: "Type",
-    allowed: "Allowed",
-    color: "Color",
-    hoist: "Hoist",
-    pexs: "Permissions",
-    content: "Content",
-    integration: "Integration",
-    old: "Old",
-    new: "New",
-    description: "Description",
-    invite: "Invite",
-    previous_channel: "Previous channel",
-    not_allowed: "Not Allowed",
     embed_message: "エンベッドメッセージ",
     external_message: "外部メッセージ",
     category: "カテゴリー",
     support_role: "サポートのロールー",
-    joined_at: "Joined at",
-    created_at: "Created at",
-    server_deaf: "Deaf",
-    server_mute: "Mute",
     //ボットの便利なアクション
     to_add: "追加される",
     to_remove: "削除する",
-    // Interaction Replies
-    interaction_success: "Action completed",
     //ボットエラー、適切と思われるように翻訳
     bot_error: "内部エラーが発生しました。エラーは自動的に開発者に送信されます",
     error: "エラー",
@@ -81,7 +59,6 @@ const lang = {
     owner_restriction: "サーバー所有者のみがこのコマンドを実行できます",
     owner_restriction_plus: "このコマンドを実行できるのは、サーバーの所有者または`manager`の役割を持つ人だけです。",
     command_not_found: "コマンドが見つかりません",
-    user_not_found: "User not found",
     /*
         time_left: ウニックスタイムスタンプ
         cmd: コマンド
@@ -513,9 +490,6 @@ const lang = {
     antispam_action_small_desc: "ボットがスパムを検出した場合に実行するアクションを設定します",
     antispam_action_examples: "`antispam action ban`\n" +
         "`antispam action none`",
-    antispam_action_updated: (action) => {
-        return `AntiSpam action updated **Action**: \`${action}\``
-    },
     //antispam enable/disable
     antispam_enabled: "スパム対策が有効になっています！",
     antispam_disabled: "スパム対策が無効になっています!",
