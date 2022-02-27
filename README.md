@@ -33,6 +33,6 @@ This project is licensed under the [GPL-3.0 License](LICENSE).
 
 1. Fork it (<https://github.com/Polliog/NISD-Langs/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
+3. Commit your changes (`git commit -m 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
