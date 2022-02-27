@@ -4,7 +4,7 @@
     @Translated by: @TeknoSenpai#0957 (https://github.com/TeknoSenpai/)
 */
 
-module.exports = {
+const lang = {
     lang: "jp", //ファイルの言語
     //ボットの一般的な単語
     maintenance: "メインテナンス中",
@@ -33,16 +33,35 @@ module.exports = {
     limit: "リミット",
     time: "時間",
     actions: "アックション",
+    changes: "チェンジ",
     measure: "測定",
     actual_mode: "現在のモード",
     mode: "モード",
     role: "ロールー",
     title: "タイトル",
+    position: "位置",
+    channel: "チャネル",
+    type: "タイプ",
+    allowed: "許可された",
+    color: "色",
+    hoist: "ホイスト",
+    pexs: "権限",
+    content: "コンテンツ",
+    integration: "統合",
+    old: "年",
+    new: "新しい",
+    description: "説明",
+    invite: "招待",
+    previous_channel: "前のチャンネル",
+    not_allowed: "禁じられている",
     embed_message: "エンベッドメッセージ",
     external_message: "外部メッセージ",
     category: "カテゴリー",
     support_role: "サポートのロールー",
-    //ボットの便利なアクション
+    joined_at: "参加しました",
+    created_at: "作成",
+    server_deaf: "聞こえない",
+    server_mute: "ミュトス",
     to_add: "追加される",
     to_remove: "削除する",
     //ボットエラー、適切と思われるように翻訳
@@ -59,6 +78,7 @@ module.exports = {
     owner_restriction: "サーバー所有者のみがこのコマンドを実行できます",
     owner_restriction_plus: "このコマンドを実行できるのは、サーバーの所有者または`manager`の役割を持つ人だけです。",
     command_not_found: "コマンドが見つかりません",
+    user_not_found: "ユーザーが見つかりません",
     /*
         time_left: ウニックスタイムスタンプ
         cmd: コマンド
@@ -493,6 +513,9 @@ module.exports = {
     //antispam enable/disable
     antispam_enabled: "スパム対策が有効になっています！",
     antispam_disabled: "スパム対策が無効になっています!",
+    antispam_action_updated: (action) => {
+        return `AntiSpamのアクションが更新されました, **アクション**: \`${action}\``
+    },
     //antinuke
     antinuke_use: "antinuke [カテゴリー] [limit | action | enable/disable] {オプションス}",
     antinuke_description: "現在の設定を表示するには、\`antinuke info \`を使用します\n\n" +
