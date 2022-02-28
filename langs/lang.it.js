@@ -23,7 +23,7 @@ const lang = {
     cmd_done: "Comando Eseguito",
     author: "Autore",
     reason: "Motivo",
-    reason_not_provided: "Non provveduto",
+    reason_not_provided: "Non fornito",
     user: "Utente",
     users: "Utenti",
     page: "Pagina",
@@ -73,7 +73,7 @@ const lang = {
     // Interaction Replies
     interaction_success: "Azione compiuta",
     //ERRORI del bot tradurre come meglio si crede
-    bot_error: "Si e' verificato un errore interno, l'errore verrà inviato automaticamente ai developer",
+    bot_error: "Si è verificato un errore interno, l'errore verrà inviato automaticamente ai developer",
     error: "Errore",
     insufficient_permissions: "Permessi insufficienti",
     invalid_user: "Utente non valido!",
@@ -83,8 +83,8 @@ const lang = {
     invalid_permission: "Al bot manca il permesso:",
     no_basic_permissions: "Al bot mancano i permessi base, come quello di inviare link incorporati e mandare messaggi",
     no_user_permission: "Per utilizzare il comando devi avere il permesso:",
-    owner_restriction: "Solo l'Owner del server puo' eseguire questo comando",
-    owner_restriction_plus: "Solo l'Owner del server o chi possiede un ruolo `manager` puo' eseguire questo comando",
+    owner_restriction: "Solo l'owner del server può eseguire questo comando",
+    owner_restriction_plus: "Solo l'owner del server o chi possiede un ruolo `manager` può eseguire questo comando",
     command_not_found: "Comando non trovato",
     user_not_found: "Utente non trovato",
     /*
@@ -94,14 +94,14 @@ const lang = {
     cmd_cooldown: (time_left, cmd) => {
         return `Potrai riutilizzare il comando \`${cmd}\` <t:${time_left}:R>` // utilizzare <t:> per il tempo (discord timestamp)
     },
-    already_banned: "L'utente risulta gia' bannato",
+    already_banned: "L'utente risulta già bannato",
     actual_channel: "Canale attuale",
     not_banned: "L'utente non risulta bannato",
     cant_ban: "Non posso bannare questo utente",
     cant_kick: "Non posso espellere questo utente",
-    user_rank_equal: "L'utente selezionato e' di grado maggiore o uguale al tuo",
-    invalid_mute_role: "Il ruolo `mute` selezionato non e' valido o inesistente, sei pregato di reimpostarlo tramite `setmuterole [@Ruolo/ID]`",
-    member_not_manageable: "Il BOT non puo' eseguire azioni su questo utente",
+    user_rank_equal: "L'utente selezionato è di grado maggiore o uguale al tuo",
+    invalid_mute_role: "Il ruolo `mute` selezionato non è valido o inesistente, sei pregato di reimpostarlo tramite `setmuterole [@Ruolo/ID]`",
+    member_not_manageable: "Il BOT non può eseguire azioni su questo utente",
     warn_not_exists: "Warn inesistente",
     no_warns: "L'utente non ha warns",
     bad_syntax: "Composizione del comando errata, controlla di aver usato correttamente le virgolette ecc",
@@ -124,11 +124,11 @@ const lang = {
     help_description: "Per controllare una sezione o un comando specifico usa `help [Sezione/Comando]`.\n" +
         "Se vuoi che questo comando venga mostrato in chat piuttosto che nei DMS aggiungi `-h` alla fine del comando. Quindi `help -h` o `help moderation -h`",
     arguments_legend: "**Legenda dei parametri**:\n" +
-        "`[]` - Significa che il parametro e' obbligatorio.\n" +
-        "`()` - Significa che il parametro e' opzionale.\n" +
-        "`{}` - Argomento condizionale, E' richiesto solo in alcuni casi.\n" +
+        "`[]` - Significa che il parametro è obbligatorio.\n" +
+        "`()` - Significa che il parametro è opzionale.\n" +
+        "`{}` - Argomento condizionale, è richiesto solo in alcuni casi.\n" +
         "`1 | 2 | 3` - Scegli tra queste opzioni.\n" +
-        "`[@Utente/ID]` Il parametro puo' essere sia il tag che l'id in un utente\n" +
+        "`[@Utente/ID]` Il parametro può essere sia il tag che l'id in un utente\n" +
         "**Non aggiungere anche i simboli {}, [], () ed emoji al comando**",
     cmd_utilize: "Utilizzo del comando",
     not_configured: "`Non configurato`",
@@ -211,10 +211,10 @@ const lang = {
     invite_me: "Invitami",
     //MANAGER
     manager_use: "manager [@Ruolo/ID/None]",
-    manager_description: "Imposta un ruolo che puo' modificare le impostazioni riservate solo all'owner del server, utilizzare `none` per rimuovere il ruolo.\n" +
-        "Il ruolo `manager` e' anche automaticamente bypassato dall'AntiNuke" +
+    manager_description: "Imposta un ruolo che può modificare le impostazioni riservate solo all'owner del server, utilizzare `none` per rimuovere il ruolo.\n" +
+        "Il ruolo `manager` è anche automaticamente bypassato dall'AntiNuke" +
         "\n\n :warning: **Utilizzare il comando con cautela, Lo staff del BOT non si prende responsibilità di eventuali danni al server**",
-    manager_small_desc: "Imposta un ruolo che puo' modificare le impostazioni riservate solo all'owner",
+    manager_small_desc: "Imposta un ruolo che può modificare le impostazioni riservate solo all'owner",
     manager_examples: "`manager @⚡ | Amministratore `\n" +
         "`manager 589443292673081385`\n" +
         "`manager none`",
@@ -246,7 +246,7 @@ const lang = {
     },
     ban_timeout: "Ban scaduto",
     ban_timeout_dm: (guild) => {
-        return `Il tuo ban su ${guild.name} e' scaduto, adesso puoi rientrare nel server`
+        return `Il tuo ban su ${guild.name} è scaduto, adesso puoi rientrare nel server`
     },
     //unban
     unban_use: "unban [@Utente/ID] (motivo)",
@@ -272,7 +272,7 @@ const lang = {
     },
     //mute
     mute_use: "mute [@Utente/ID] (tempo) (motivo)",
-    mute_description: "Muta un utente in modo che non possa piu' parlare. " +
+    mute_description: "Muta un utente in modo che non possa più parlare. " +
         "Se vuoi mutare temporaneamente un utente formatta il tempo come `3h 16m 8s` per 3 ore, 16 minuti e 8 secondi. " +
         "L'utente rimarrà mutato anche se esce e rientra dal server.\n" +
         "**Per favore tieni nota che con i server con un ruolo di default custom il comando potrebbe non funzionare a causa della sovrascrittura dei permessi**",
@@ -288,7 +288,7 @@ const lang = {
     },
     mute_timeout: "Mute scaduto",
     mute_timeout_dm: (guild) => {
-        return `Non sei piu' mutato su ${guild.name}, puoi tornare a parlare nel server`
+        return `Non sei più mutato su ${guild.name}, puoi tornare a parlare nel server`
     },
     //unmute
     unmute_use: "unmute [@Utente/ID] (motivo)",
@@ -305,7 +305,7 @@ const lang = {
     //muterole
     muterole_use: "muterole [@Ruolo/ID] (-n)",
     muterole_description: "Imposta il ruolo da utilizzare per il comando `mute`" +
-        "\n\n **:warning: Utilizzando il comando il BOT provera' a impostare il ruolo in tutti i canali presenti nel server, per evitare cio' aggiungi `-n` al comando**",
+        "\n\n **:warning: Utilizzando il comando il BOT proverà a impostare il ruolo in tutti i canali presenti nel server, per evitare ciò aggiungi `-n` al comando**",
     muterole_small_desc: "Imposta il ruolo da utilizzare per il comando `mute`",
     muterole_examples:
         "`muterole ID`\n" +
@@ -373,7 +373,7 @@ const lang = {
     },
     //prefix
     my_prefix: (prefix) => {
-        return `Il mio prefisso in questo server e' \`${prefix}\``
+        return `Il mio prefisso in questo server è \`${prefix}\``
     },
     prefix_use: "prefix [Prefix]",
     prefix_description: "Imposta un prefisso personalizzato al server, Il BOT risponderà al nuovo prefisso e al prefisso `nisd`. \n" +
@@ -425,7 +425,7 @@ const lang = {
         "`mod dms true`\n" +
         "`mod dms false`",
     mod_dms_true: "Adesso gli utenti verranno avvisati nei DMS",
-    mod_dms_false: "Adesso gli utenti non riceveranno piu' avvisi nei DMS",
+    mod_dms_false: "Adesso gli utenti non riceveranno più avvisi nei DMS",
     //mod delete
     mod_delete_use: "mod delete [True/False]",
     mod_delete_description: "Imposta se cancellare automaticamente il comando ad azione eseguita",
@@ -442,7 +442,7 @@ const lang = {
     report_examples:
         "`report Polliog ha offeso la mia persona :(`",
     report_min_chars: "Il messaggio deve essere lungo almeno 10 caratteri.",
-    report_not_configured: "Nel server non e' configurato nessun canale valido per le segnalazioni.",
+    report_not_configured: "Nel server non è configurato nessun canale valido per le segnalazioni.",
     report_sent: "Segnalazione inviata!",
     //poll
     poll_use: "poll \"[Titolo]\" \"[Opzione1]\" \"[Opzione2]\" \"(Opzioni)\"",
@@ -487,10 +487,10 @@ const lang = {
     //antiflood limit
     antiflood_limit_use: "antiflood limit [Limite]",
     antiflood_limit_description: "Imposta il numero massimo di messaggi inviabili nel tempo determinato\n" +
-        "**Piu' aumenterai il limite, maggiore saranno i messaggi da inviare per farlo attivare**",
+        "**Più aumenterai il limite, maggiore saranno i messaggi da inviare per farlo attivare**",
     antiflood_limit_small_desc: "Imposta il numero massimo di messaggi inviabili nel tempo determinato",
     antiflood_limit_examples: "`antiflood limit 5`",
-    antiflood_limit_min: "Il limite minino per l'AntiFlood e' di 3 messaggi",
+    antiflood_limit_min: "Il limite minino per l'AntiFlood è di 3 messaggi",
     antiflood_limit_updated: (limit) => {
         return `Limite dell'AntiFlood modificato, **Nuovo Limite**: \`${limit}\``
     },
@@ -510,7 +510,7 @@ const lang = {
     antiflood_time_small_desc: "Imposta il tempo in cui va determinato il flood",
     antiflood_time_examples:
         "`antiflood time 4`",
-    antiflood_time_min: "Il tempo limite minino per l'AntiFlood e' di 3 secondi",
+    antiflood_time_min: "Il tempo limite minino per l'AntiFlood è di 3 secondi",
     antiflood_time_updated: (time) => {
         return `Tempo dell'AntiFlood aggiornato, **Tempo nuovo**: \`${time} Secondi\``
     },
@@ -521,7 +521,7 @@ const lang = {
     //antispam
     antispam_use: "antispam [enable/disable | action] {Azione}",
     antispam_description:
-        "L'AntiSpam e' una funzione che cancella automaticamente tutti i messaggi di spam (inviti dei server) nel server\n\n" +
+        "L'AntiSpam è una funzione che cancella automaticamente tutti i messaggi di spam (inviti dei server) nel server\n\n" +
         ":small_blue_diamond: `antispam [enable/disable]`\n" +
         "Abilita o disabilita l'AntiSpam\n" +
         ":small_blue_diamond: `antispam action [Ban | Kick | Warn | Mute | none]`\n" +
@@ -582,7 +582,7 @@ const lang = {
     //antiban
     antiban_use: "antiban [limit | action | enable/disable] {Opzioni}",
     antiban_description:
-        "L'AntiBan e' una funzione dell'AntiNuke che agisce sugli utenti che bannano molti membri ripetutamente\n\n" +
+        "L'AntiBan è una funzione dell'AntiNuke che agisce sugli utenti che bannano molti membri ripetutamente\n\n" +
         ":small_blue_diamond: \`antiban enable/disable\`\n" +
         "Abilita/Disabilita l'AntiBan\n" +
         ":small_blue_diamond: \`antiban limit [Numero]\`\n" +
@@ -619,7 +619,7 @@ const lang = {
     //antikick
     antikick_use: "antikick [limit | action | enable/disable] {Opzioni}",
     antikick_description:
-        "L'AntiKick e' una funzione dell'AntiNuke che agisce sugli utenti che espellono molti membri ripetutamente\n\n" +
+        "L'AntiKick è una funzione dell'AntiNuke che agisce sugli utenti che espellono molti membri ripetutamente\n\n" +
         ":small_blue_diamond: \`antikick enable/disable\`\n" +
         "Abilita/Disabilita l'AntiKick\n" +
         ":small_blue_diamond: \`antikick limit [Numero]\`\n" +
@@ -656,7 +656,7 @@ const lang = {
     //antirolecreate
     antirolecreate_use: "antirolecreate [limit | action | enable/disable] {Opzioni}",
     antirolecreate_description:
-        "L'AntiRoleCreate e' una funzione dell'AntiNuke che agisce sugli utenti che creano molti ruoli in poco tempo\n\n" +
+        "L'AntiRoleCreate è una funzione dell'AntiNuke che agisce sugli utenti che creano molti ruoli in poco tempo\n\n" +
         ":small_blue_diamond: \`antirolecreate enable/disable\`\n" +
         "Abilita/Disabilita l'AntiRoleCreate\n" +
         ":small_blue_diamond: \`antirolecreate limit [Numero]\`\n" +
@@ -693,7 +693,7 @@ const lang = {
     //antiroledelete
     antiroledelete_use: "antiroledelete [limit | action | enable/disable] {Opzioni}",
     antiroledelete_description:
-        "L'AntiRoleDelete e' una funzione dell'AntiNuke che agisce sugli utenti che eliminano molti ruoli in poco tempo\n\n" +
+        "L'AntiRoleDelete è una funzione dell'AntiNuke che agisce sugli utenti che eliminano molti ruoli in poco tempo\n\n" +
         ":small_blue_diamond: \`antiroledelete enable/disable\`\n" +
         "Abilita/Disabilita l'AntiRoleDelete\n" +
         ":small_blue_diamond: \`antiroledelete limit [Numero]\`\n" +
@@ -730,7 +730,7 @@ const lang = {
     //antichannelcreate
     antichannelcreate_use: "antichannelcreate [limit | action | enable/disable] {Opzioni}",
     antichannelcreate_description:
-        "L'AntiChannelCreate e' una funzione dell'AntiNuke che agisce sugli utenti che creano molti canali in poco tempo\n\n" +
+        "L'AntiChannelCreate è una funzione dell'AntiNuke che agisce sugli utenti che creano molti canali in poco tempo\n\n" +
         ":small_blue_diamond: \`antichannelcreate enable/disable\`\n" +
         "Abilita/Disabilita l'AntiChannelCreate\n" +
         ":small_blue_diamond: \`antichannelcreate limit [Numero]\`\n" +
@@ -766,7 +766,7 @@ const lang = {
     //antichanneldelete
     antichanneldelete_use: "antichanneldelete [limit | action | enable/disable] {Opzioni}",
     antichanneldelete_description:
-        "L'AntiChannelDelete e' una funzione dell'AntiNuke che agisce sugli utenti che eliminano molti canali in poco tempo\n\n" +
+        "L'AntiChannelDelete è una funzione dell'AntiNuke che agisce sugli utenti che eliminano molti canali in poco tempo\n\n" +
         ":small_blue_diamond: \`antichanneldelete enable/disable\`\n" +
         "Abilita/Disabilita l'AntiChannelDelete\n" +
         ":small_blue_diamond: \`antichanneldelete limit [Numero]\`\n" +
@@ -804,7 +804,7 @@ const lang = {
     antinukeglobal_description:
         "**Imposta il limite globale dell'AntiNuke**\n" +
         "Per limite globale si intende la somma di tutte le azioni commesse dall'utente e registrate dall'AntiNuke del BOT negli ultimi ±30 secondi.\n" +
-        "**Il BOT terra' conto solo delle azioni di funzioni attivate, per vedere che funzioni dell'AntiNuke sono attivate utilizza `antinuke info`**",
+        "**Il BOT terrà conto solo delle azioni di funzioni attivate, per vedere che funzioni dell'AntiNuke sono attivate utilizza `antinuke info`**",
     antinukeglobal_small_desc: "Imposta il limite globale dell'AntiNuke",
     antinukeglobal_examples:
         "`antinuke global 10`",
@@ -843,10 +843,10 @@ const lang = {
     //antiraid limit
     antiraid_limit_use: "antiraid limit [Limite]",
     antiraid_limit_description: "Imposta il numero massimo di utenti entrati nel tempo determinato\n" +
-        "**Piu' aumenterai il limite, maggiore saranno gli utenti entrati per farlo attivare**",
+        "**Più aumenterai il limite, maggiore saranno gli utenti entrati per farlo attivare**",
     antiraid_limit_small_desc: "Imposta il numero massimo di utenti entrati nel tempo determinato",
     antiraid_limit_examples: "`antiraid limit 5`",
-    antiraid_limit_min: "Il limite minino per l'AntiRaid e' di 3 utenti",
+    antiraid_limit_min: "Il limite minino per l'AntiRaid è di 3 utenti",
     antiraid_limit_updated: (limit) => {
         return `Limite dell'AntiRaid modificato, **Nuovo Limite**: \`${limit}\``
     },
@@ -866,7 +866,7 @@ const lang = {
     antiraid_time_small_desc: "Imposta il tempo in cui va determinato il raid",
     antiraid_time_examples:
         "`antiraid time 4`",
-    antiraid_time_min: "Il tempo limite minino per l'AntiRaid e' di 3 secondi",
+    antiraid_time_min: "Il tempo limite minino per l'AntiRaid è di 3 secondi",
     antiraid_time_updated: (time) => {
         return `Tempo dell'AntiRaid aggiornato, **Tempo nuovo**: \`${time} Secondi\``
     },
@@ -897,7 +897,7 @@ const lang = {
     autoaction_add_examples:
         "`autoaction add 5 mute 12h`",
     autoaction_already_exists: (number) => {
-        return `Esiste gia' un altro provvedimento impostato per \`${number}\` warns. Controlla gli altri provvedimenti tramite il comando \`autoaction list\``
+        return `Esiste già un altro provvedimento impostato per \`${number}\` warns. Controlla gli altri provvedimenti tramite il comando \`autoaction list\``
     },
     autoaction_added: (number, action, time) => {
         let real_action
@@ -918,7 +918,7 @@ const lang = {
                 break
         }
 
-        let send = `Impostazioni aggiornate, da ora raggiunti i \`${number}\` warns, l'utente verra' ${real_action}`
+        let send = `Impostazioni aggiornate, da ora raggiunti i \`${number}\` warns, l'utente verrà ${real_action}`
 
         if (time !== null) {
             send = send + ' temporaneamente'
@@ -965,7 +965,7 @@ const lang = {
     //blacklist
     blacklist_use: "blacklist [enable/disable | add/remove | action | list] {Opzioni}",
     blacklist_description:
-        "La blacklist e' una lista di parole vietate che verranno automaticamente eliminate, anche se comprese nelle frasi, **Il bot tenterà di rilevare anche frasi/parole simili (con caratteri speciali o poco diversi)**\n\n" +
+        "La blacklist è una lista di parole vietate che verranno automaticamente eliminate, anche se comprese nelle frasi, **Il bot tenterà di rilevare anche frasi/parole simili (con caratteri speciali o poco diversi)**\n\n" +
         ":small_blue_diamond: `blacklist enable/disable`\n" +
         "Abilita/Disabilita la blacklist nel server\n" +
         ":small_blue_diamond: `blacklist add/remove [Parola/Frase]`" +
@@ -991,8 +991,8 @@ const lang = {
         "\`blacklist add \"una frase\"\`\n" +
         "\`blacklist remove \"parola\"\`\n" +
         "\`blacklist remove \"una frase\"\`\n",
-    blacklist_word_already_added: "La parola/frase inserita e' gia' nella blacklist",
-    blacklist_word_not: "La parola/frase inserita non e' presente nella blacklist",
+    blacklist_word_already_added: "La parola/frase inserita è già nella blacklist",
+    blacklist_word_not: "La parola/frase inserita non è presente nella blacklist",
     blacklisted_word_added: (word) => {
         return `BlackList aggiornata, **Aggiunto**: \`${word}\``
     },
@@ -1034,8 +1034,8 @@ const lang = {
     bypassrole_add_remove_examples:
         "\`bypassrole add @ruolo\`\n" +
         "\`bypassrole remove id\`\n",
-    bypassrole_role_already: "Il ruolo selezionato e' gia' ignorato",
-    bypassrole_role_not: "Il ruolo selezionato non e' nella lista dei ruoli ignorati",
+    bypassrole_role_already: "Il ruolo selezionato è già ignorato",
+    bypassrole_role_not: "Il ruolo selezionato non è nella lista dei ruoli ignorati",
     bypassrole_role_added: (role) => {
         return `Ruolo aggiunto, **Ruolo**: ${role}`
     },
@@ -1063,8 +1063,8 @@ const lang = {
     bypasschannel_add_remove_examples:
         "\`bypasschannel add #canale\`\n" +
         "\`bypasschannel remove id\`\n",
-    bypasschannel_channel_already: "Il canale selezionato e' gia' ignorato",
-    bypasschannel_channel_not: "Il canale selezionato non e' nella lista dei canali ignorati",
+    bypasschannel_channel_already: "Il canale selezionato è già ignorato",
+    bypasschannel_channel_not: "Il canale selezionato non è nella lista dei canali ignorati",
     bypasschannel_channel_added: (channel) => {
         return `Canale aggiunto, **Canale**: ${channel}`
     },
@@ -1078,7 +1078,7 @@ const lang = {
     captcha_description:
         "La verifica tramite Captcha permette di inviare un codice in privato all'utente che per essere verificato dovrà riscriverlo.\n" +
         "Ognuno dei comandi qui sotto contiene una pagina di help a se dove sono contenute maggiori informazioni\n" +
-        "**Per funzionare, la verifica necessita di un ruolo da assegnare ed e' consigliato impostare un canale per i log.**\n\n" +
+        "**Per funzionare, la verifica necessita di un ruolo da assegnare ed è consigliato impostare un canale per i log.**\n\n" +
         ":small_blue_diamond: `captcha enable/disable`\n" +
         "Abilita/Disabilita la verifica tramite captcha\n" +
         ":small_blue_diamond: `captcha mode [fake | new | all]`\n" +
@@ -1177,7 +1177,7 @@ const lang = {
     captcha_embed_bypass_title: "Verifica Bypassata",
     autocaptcha_embed_impossible_title: "Verifica automatica, impossibile",
     captcha_embed_description: (minutes, tries) => {
-        return `**Per accedere al server e' necessario inviare il codice sottostante in questa chat**\n` +
+        return `**Per accedere al server è necessario inviare il codice sottostante in questa chat**\n` +
             `**Tempo per inviare il codice**: \`${minutes} Minuti\`\n` +
             `**Tentativi rimanenti**: \`${tries}\`\n\n` +
             `**Codice da inviare**:`
@@ -1192,18 +1192,18 @@ const lang = {
         }
     },
     captcha_embed_stopped_description: (member) => {
-        return `L'utente ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` e' uscito dal server, di conseguenza la sua verifica e' stata annullata`
+        return `L'utente ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` è uscito dal server, di conseguenza la sua verifica è stata annullata`
     },
     captcha_embed_started_description: (member) => {
         return `L'utente ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` ha iniziato la verifica`
     },
-    captcha_embed_auto_description_user: "E' stato rilevato che gia' possiedi il ruolo nel server, per tanto sei stato verificato automaticamente",
+    captcha_embed_auto_description_user: "è stato rilevato che già possiedi il ruolo nel server, per tanto sei stato verificato automaticamente",
     captcha_embed_auto_description: (member) => {
-        return `L'utente ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` e' stato automaticamente verificato, in quanto aveva il ruolo da aggiungere`
+        return `L'utente ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` è stato automaticamente verificato, in quanto aveva il ruolo da aggiungere`
     },
     captcha_embed_completed_description_user: "Verifica eseguita con successo, a breve riceverai il ruolo",
     captcha_embed_completed_description: (member) => {
-        return `L'utente ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` si e' verificato con successo`
+        return `L'utente ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` si è verificato con successo`
     },
     captcha_embed_failed_description: (member) => {
         return `L'utente ${member.user.username}#${member.user.discriminator} || \`${member.user.id}\` ha fallito la verifica`
@@ -1218,11 +1218,11 @@ const lang = {
     captcha_owner_error: (member, error) => {
         return `Sembrerebbe esserci stato un errore durante la verifica dell'utente \`${member.user.username}#${member.user.discriminator} || ${member.user.id}\`\n\n` +
             `**Errore**: \`${error}\`\n\n` +
-            `*E' consigliabile impostare un canale per i log del captcha se non si vuole piu' ricevere questi messaggi*`
+            `*è consigliabile impostare un canale per i log del captcha se non si vuole più ricevere questi messaggi*`
     },
-    captcha_error_invalid_role: "Il ruolo da assegnare a verifica completa e' mancante/non valido",
-    captcha_error_invalid_togglerole: "Il ruolo da rimuovere a verifica completa e' mancante/non valido",
-    captcha_error_invalid_permissions: "Il bot non puo' eseguire la verifica in quanto non ha i permessi necessari",
+    captcha_error_invalid_role: "Il ruolo da assegnare a verifica completa è mancante/non valido",
+    captcha_error_invalid_togglerole: "Il ruolo da rimuovere a verifica completa è mancante/non valido",
+    captcha_error_invalid_permissions: "Il bot non può eseguire la verifica in quanto non ha i permessi necessari",
     captcha_error_dm_blocked: (member) => {
         return `L'utente \`${member.user.username}#${member.user.discriminator} || ${member.user.id}\` ha i DM bloccati, quindi non posso eseguire la verifica`
     },
@@ -1233,7 +1233,7 @@ const lang = {
     captcha_bypass_examples:
         "\`captcha bypass @Polliog\`\n" +
         "\`captcha bypass 173569203977060353\`",
-    captcha_bypassed_cmd: "L'utente e' stato verificato correttamente",
+    captcha_bypassed_cmd: "L'utente è stato verificato correttamente",
     //CAPTCHA RESEND
     captcha_resend_use: "captcha resend [@Utente/ID]",
     captcha_resend_description: "Fai rifare la verifica ad un utente",
@@ -1264,13 +1264,13 @@ const lang = {
     //TICKETS COMMANDS
     tickets_use: "tickets [Categoria] {Opzioni}",
     tickets_description:
-        "I Tickets permetto di gestire in maniera piu' ordinata delle richieste da parte dell'utenza, creando un ticket tramite l'apposito comando" +
+        "I Tickets permetto di gestire in maniera più ordinata delle richieste da parte dell'utenza, creando un ticket tramite l'apposito comando" +
         "si creerà un `panel` (messaggio con sotto un bottone) dal quale interagendosi si crea un ticket privato.\n" +
         "**I ticket prendono i permessi dalla categoria in cui vengono creati**\n\n" +
         ":small_blue_diamond: `ticket create`\n" +
         "Avvia la creazione del pannello dal quale creare i tickets\n" +
         ":small_blue_diamond: `ticket panel [panelID]`\n" +
-        "Ricrea un pannello gia' creato in precedenza\n" +
+        "Ricrea un pannello già creato in precedenza\n" +
         ":small_blue_diamond: `ticket edit [panelID]`\n" +
         "Modifica le impostazioni di un panel\n" +
         ":small_blue_diamond: `ticket delete [panelID]`\n" +
@@ -1282,12 +1282,12 @@ const lang = {
         ":small_blue_diamond: `ticket info (panelID)`\n" +
         "Visualizza le informazioni su un panel, se nessun panel viene inserito verranno mostrati tutti panel\n" +
         ":small_blue_diamond: `ticket [Open/Close/Transcript]`\n" +
-        "Apri/Chiudi o trascrivi il ticket in cui e' stato eseguito il comando",
+        "Apri/Chiudi o trascrivi il ticket in cui è stato eseguito il comando",
     tickets_examples: "A causa del grosso numero di comandi, tutti gli esempi sono presenti nelle varie categorie^^",
     tickets_small_desc: "Configura i tickets nel tuo server",
     //tickets create
     tickets_creation_sys: "Sistema di creazione tickets",
-    tickets_create_message: "Desideri iniziare la creazione di un nuovo panel?\n**Il panel verra' creato in questo canale**",
+    tickets_create_message: "Desideri iniziare la creazione di un nuovo panel?\n**Il panel verrà creato in questo canale**",
     ticket_create_exited: "Creazione del panel annullata.",
     tickets_create_insert_title: "Digita un titolo per il ticket",
     tickets_create_insert_message: "Digita un messaggio da far mandare al bot quando viene creato un nuovo ticket",
@@ -1295,7 +1295,7 @@ const lang = {
         "**Nota**: I tickets (canali) prenderanno i permessi da questa categoria",
     tickets_create_invalid_category: "Categoria non valida, riprova",
     tickets_create_insert_upmessage: "Digita il messaggio esterno all'embed, utile a pingare i ruoli del supporto",
-    tickets_create_insert_role: "Digita l'ID o tagga il ruolo che si dovra' occupare dei tickets.\n\n" +
+    tickets_create_insert_role: "Digita l'ID o tagga il ruolo che si dovrà occupare dei tickets.\n\n" +
         "**Nota**: A questo ruolo verranno forzatamente aggiunti i permessi di scrivere nel ticket (canale) *se necessario*",
     tickets_create_invalid_role: "Ruolo non valido, riprova",
     tickets_create_confirm_message: "Confermi la creazione di un nuovo panel con le seguenti impostazioni?",
@@ -1307,7 +1307,7 @@ const lang = {
     //ticket panel
     invalid_ticket_panel: 'Pannello non trovato, utilizza \`tickets info\` per vedere gli ID dei pannelli esistenti',
     tickets_panel_use: "ticket panel [panelID]",
-    tickets_panel_description: "Ricrea un pannello gia' creato in precedenza",
+    tickets_panel_description: "Ricrea un pannello già creato in precedenza",
     tickets_panel_examples: "ticket panel ID",
     //ticket edit
     tickets_edit_title: "Cosa vuoi modificare?",
@@ -1338,7 +1338,7 @@ const lang = {
     tickets_logs_description: "Imposta un canale per i logs dei ticket, inserisci \`none\` per disattivare i logs",
     tickets_logs_examples: "ticket logs ID\nticket logs none",
     tickets_logs_success: (none, channel) => {
-        return none ? "Da ora non verranno piu' mandati logs relativi ai tickets" : `Canale dei ticket logs aggiornato, nuovo canale: ${channel}`
+        return none ? "Da ora non verranno più mandati logs relativi ai tickets" : `Canale dei ticket logs aggiornato, nuovo canale: ${channel}`
     },
     //ticket transcript-logs
     tickets_transcriptlogs_use: "ticket transcript-logs [#Canale/ID | None]",
@@ -1353,7 +1353,7 @@ const lang = {
     lang_examples: "`lang it`\n`lang en`",
     //autoroles
     autoroles_use: "autoroles [user/bot | list] {role}",
-    autoroles_description: "Imposta dei ruoli da far aggiungere agli utenti/bots appena entrano nel server, rifacendo il comando il ruolo verra' tolto dalla lista\n\n" +
+    autoroles_description: "Imposta dei ruoli da far aggiungere agli utenti/bots appena entrano nel server, rifacendo il comando il ruolo verrà tolto dalla lista\n\n" +
         ":small_blue_diamond: `autoroles user/bot [@Role/ID]`\n" +
         "Aggiungi/Rimuovi un ruolo dalla lista\n" +
         ":small_blue_diamond: `autoroles list`\n" +
@@ -1370,7 +1370,7 @@ const lang = {
     //logs
     logs_use: "logs",
     logs_description: "I logs permettono di tenere traccia di tutte le azioni compiute nel server\n\n" +
-        "**Questa funzione e' configurabile soltanto tramite [[Dashboard]](https://nisdbot.xyz/)**",
+        "**Questa funzione è configurabile soltanto tramite [[Dashboard]](https://nisdbot.xyz/)**",
     logs_small_description: "I logs permettono di tenere traccia di tutte le azioni compiute nel server",
     //logs events
     logs_channelCreate_description: (channel) => {
@@ -1435,13 +1435,13 @@ const lang = {
         return `**${message.author.username}#${message.author.discriminator}** ha modificato il proprio messaggio in ${message.channel}`
     },
     logs_member_remove_description: (member) => {
-        return `**${member.user.username}#${member.user.discriminator}** e' uscito dal server`
+        return `**${member.user.username}#${member.user.discriminator}** è uscito dal server`
     },
     logs_member_update_description: (member, author) => {
-        return `L'utente **${member.user.username}#${member.user.discriminator}** e' stato modificato da ${author}`
+        return `L'utente **${member.user.username}#${member.user.discriminator}** è stato modificato da ${author}`
     },
     logs_member_join_description: (member) => {
-        return `**${member}** e' entrato nel server`
+        return `**${member}** è entrato nel server`
     },
     logs_invite_used: (invite, user) => {
 
@@ -1454,16 +1454,16 @@ const lang = {
         return `Usato l'invito ${invite} creato da ${user}`
     },
     logs_invite_impossibile() {
-        return "Impossibile trovare l'invito, probabilmente e' stato usato un vanity url"
+        return "Impossibile trovare l'invito, probabilmente è stato usato un vanity url"
     },
     logs_member_kicked(member, author) {
-        return `**${member.user.username}#${member.user.discriminator}** e' stato kickato da ${author}`
+        return `**${member.user.username}#${member.user.discriminator}** è stato kickato da ${author}`
     },
     logs_member_banned(user, author) {
-        return `**${user.username}#${user.discriminator}** e' stato bannato da ${author}`
+        return `**${user.username}#${user.discriminator}** è stato bannato da ${author}`
     },
     logs_member_unbanned(user, author) {
-        return `**${user.username}#${user.discriminator}** e' stato sbannato da ${author}`
+        return `**${user.username}#${user.discriminator}** è stato sbannato da ${author}`
     },
     logs_guild_updated(author) {
         return `**${author.user.username}#${author.user.discriminator}** ha aggiornato il server`
@@ -1478,16 +1478,16 @@ const lang = {
         return `**${author.user.username}#${author.user.discriminator}** ha modificato l'emoji **${emoji.name}**`
     },
     logs_voice_update(member, author) {
-        return `A **${member.user.username}#${member.user.discriminator}** e' stato modificato il proprio stato vocale da **${author.user.username}#${author.user.discriminator}**`
+        return `A **${member.user.username}#${member.user.discriminator}** è stato modificato il proprio stato vocale da **${author.user.username}#${author.user.discriminator}**`
     },
     logs_voice_join(member, channel) {
-        return `**${member.user.username}#${member.user.discriminator}** e' entrato nel canale vocale **${channel.name}**`
+        return `**${member.user.username}#${member.user.discriminator}** è entrato nel canale vocale **${channel.name}**`
     },
     logs_voice_leave(member, channel) {
-        return `**${member.user.username}#${member.user.discriminator}** e' uscito dal canale vocale **${channel.name}**`
+        return `**${member.user.username}#${member.user.discriminator}** è uscito dal canale vocale **${channel.name}**`
     },
     logs_voice_switch(member, oldChannel, newChannel) {
-        return `**${member.user.username}#${member.user.discriminator}** e' passato dal canale vocale **${oldChannel.name}** al canale vocale **${newChannel.name}**`
+        return `**${member.user.username}#${member.user.discriminator}** è passato dal canale vocale **${oldChannel.name}** al canale vocale **${newChannel.name}**`
     },
     //antiscam
     antiscam_use: "antiscam [enable/disable | action] {Azione}",
