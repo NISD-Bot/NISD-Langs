@@ -20,8 +20,8 @@ If a language doesn't support the bot version (some variables are missing), the 
 | [it (italiano)](./langs/lang.it.js) | [Polliog#7772](https://github.com/Polliog), [𝓝𝓪𝓴𝓪𝓶𝓸𝓽𝓸 𝓢𝓱𝓲𝓰𝓮𝓽𝓸𝓴𝓲#0016](https://github.com/Massimiliano2004) | 1.2                                |
 | [en (english)](./langs/lang.en.js)  | [Toofu#0001](https://t.me/toofuchan)                                                                                     | 1.2                                |
 | [ru (Pусский)](./langs/lang.ru.js)  | [El Nobil Chapo Bonanz#3985](https://github.com/ElNobilChapo)                                                            | 1.1                                |
-| [jp (日本語)](./langs/lang.jp.js)      | [TeknoSenpai#0957](https://github.com/TeknoSenpai/)                                                                      | 1.1                                |
-| [fr (Français)](./langs/lang.fr.js) | [TeknoSenpai#0957](https://github.com/TeknoSenpai/)                                                                      | 1.1                                |
+| [jp (日本語)](./langs/lang.jp.js)      | [TeknoSenpai#0957](https://github.com/TeknoSenpai/)                                                                      | 1.2                                |
+| [fr (Français)](./langs/lang.fr.js) | [TeknoSenpai#0957](https://github.com/TeknoSenpai/)                                                                      | 1.2                                |
 
 
 # Meta
