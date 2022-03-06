@@ -1390,4 +1390,21 @@ const lang = {
     logs_voice_switch(member, oldChannel, newChannel) {
         return `**${member.user.username}#${member.user.discriminator}** est passé du canal vocal **${oldChannel.name}** au canal vocal **${newChannel.name}**`
     },
+    //antiscam
+    antiscam_use: "antiscam [enable/disable | action] {Azione}",
+    antiscam_description: "Supprimer automatiquement et prendre des mesures lors de l'envoi de liens malveillants\n" +
+        ":small_blue_diamond: `antiscam enable/disable`\n" +
+        "Abilita o disabilita l'antiscam\n" +
+        ":small_blue_diamond: `antiscam action [Ban | Kick | Warn | Mute | none]`\n" +
+        "Seleziona l'azione da eseguire quando rilevato un link malevolo",
+    antiscam_small_desc: "Elimina automatica e prendi azioni all'invio di link malevoli",
+    antiscam_examples: "`antiscam enable`\n`antiscam ban`",
+    //antiscam enable
+    antiscam_enabled: "AntiScam activé",
+    antiscam_disabled: "AntiScam deactivé",
+    //antiscam action
+    antiscam_action_updated: (action) => {
+        return `Action AntiScam mise à jour, **Action**: \`${action}\``
+    },
+    antiscam_acted: "[NISD AutoMod] Lien malveillant détecté!",
 }

@@ -32,41 +32,38 @@ const lang = {
     action: "アックション",
     limit: "リミット",
     time: "時間",
-    changes: "Changes",
     actions: "アックション",
+    changes: "チェンジ",
     measure: "測定",
     actual_mode: "現在のモード",
     mode: "モード",
     role: "ロールー",
     title: "タイトル",
-    position: "Position",
-    channel: "Channel",
-    type: "Type",
-    allowed: "Allowed",
-    color: "Color",
-    hoist: "Hoist",
-    pexs: "Permissions",
-    content: "Content",
-    integration: "Integration",
-    old: "Old",
-    new: "New",
-    description: "Description",
-    invite: "Invite",
-    previous_channel: "Previous channel",
-    not_allowed: "Not Allowed",
+    position: "位置",
+    channel: "チャネル",
+    type: "タイプ",
+    allowed: "許可された",
+    color: "色",
+    hoist: "ホイスト",
+    pexs: "権限",
+    content: "コンテンツ",
+    integration: "統合",
+    old: "年",
+    new: "新しい",
+    description: "説明",
+    invite: "招待",
+    previous_channel: "前のチャンネル",
+    not_allowed: "禁じられている",
     embed_message: "エンベッドメッセージ",
     external_message: "外部メッセージ",
     category: "カテゴリー",
     support_role: "サポートのロールー",
-    joined_at: "Joined at",
-    created_at: "Created at",
-    server_deaf: "Deaf",
-    server_mute: "Mute",
-    //ボットの便利なアクション
+    joined_at: "参加しました",
+    created_at: "作成",
+    server_deaf: "聞こえない",
+    server_mute: "ミュトス",
     to_add: "追加される",
     to_remove: "削除する",
-    // Interaction Replies
-    interaction_success: "Action completed",
     //ボットエラー、適切と思われるように翻訳
     bot_error: "内部エラーが発生しました。エラーは自動的に開発者に送信されます",
     error: "エラー",
@@ -81,7 +78,7 @@ const lang = {
     owner_restriction: "サーバー所有者のみがこのコマンドを実行できます",
     owner_restriction_plus: "このコマンドを実行できるのは、サーバーの所有者または`manager`の役割を持つ人だけです。",
     command_not_found: "コマンドが見つかりません",
-    user_not_found: "User not found",
+    user_not_found: "ユーザーが見つかりません",
     /*
         time_left: ウニックスタイムスタンプ
         cmd: コマンド
@@ -513,12 +510,12 @@ const lang = {
     antispam_action_small_desc: "ボットがスパムを検出した場合に実行するアクションを設定します",
     antispam_action_examples: "`antispam action ban`\n" +
         "`antispam action none`",
-    antispam_action_updated: (action) => {
-        return `AntiSpam action updated **Action**: \`${action}\``
-    },
     //antispam enable/disable
     antispam_enabled: "スパム対策が有効になっています！",
     antispam_disabled: "スパム対策が無効になっています!",
+    antispam_action_updated: (action) => {
+        return `AntiSpamのアクションが更新されました, **アクション**: \`${action}\``
+    },
     //antinuke
     antinuke_use: "antinuke [カテゴリー] [limit | action | enable/disable] {オプションス}",
     antinuke_description: "現在の設定を表示するには、\`antinuke info \`を使用します\n\n" +
@@ -1392,4 +1389,21 @@ const lang = {
     logs_voice_switch(member, oldChannel, newChannel) {
         return `**${member.user.username}＃${member.user.discriminator}**音声チャネル**${oldChannel.name}**から音声チャネル**${newChannel.name}**に切り替えました`
     },
+    //antiscam
+    antiscam_use: "antiscam [enable/disable | action] {アックション}",
+    antiscam_description: "悪意のあるリンクを送信するときに自動的に削除してアクションを実行する\n" +
+        ":small_blue_diamond: `antiscam enable/disable`\n" +
+        "詐欺防止を有効または無効にする\n" +
+        ":small_blue_diamond: `antiscam action [Ban | Kick | Warn | Mute | none]`\n" +
+        "悪意のあるリンクが検出されたときに実行するアクションを選択します",
+    antiscam_small_desc: "自動削除し、悪意のあるリンクを送信するときにアクションを実行します",
+    antiscam_examples: "`antiscam enable`\n`antiscam ban`",
+    //antiscam enable
+    antiscam_enabled: "AntiScamオンライン",
+    antiscam_disabled: "AntiScamオフライン",
+    //antiscam action
+    antiscam_action_updated: (action) => {
+        return `更新されたAntiScamアクション、**アクション**: \`${action}\``
+    },
+    antiscam_acted: "[NISD AutoMod] 悪意のあるリンクが検出されました！",
 }
