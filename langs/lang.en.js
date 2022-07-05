@@ -405,7 +405,7 @@ const lang = {
     mod_logs_channel_saved: (channel) => {
         return `Channel for moderation logs updated, **New channel**: ${channel}`
     },
-    mod_logs_disabled: "Moderation logs disabled!",
+    mod_logs_disabled: "Moderation logs disabled",
     //mod dms
     mod_dms_use: "mod dms [True/False]",
     mod_dms_description: "Set whether or not to send a private message to the user when the action is taken",
